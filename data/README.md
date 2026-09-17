@@ -10,6 +10,10 @@ Ranking: 60% skill-name similarity + 40% taxonomy-text similarity
 
 
 
+--------------
+
+
+
 
 Top-1: 75.0%
 
