@@ -28,3 +28,9 @@ Precision: 46.7%
 Recall: 88.9%
 
 F1: 0.607
+
+
+----------------------
+
+
+retrieval output file `embedding_e5_domain_aware_results.csv`
