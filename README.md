@@ -77,19 +77,6 @@ Service
 Monitoring
 ```
 
-You already have substantial experience from the AIDC labs here:
-
-* [x] Docker
-* [x] Kubernetes
-* [x] Helm
-* [x] vLLM
-* [x] Prometheus
-* [x] Grafana
-* [x] HPA
-* [x] SLO / TTFT monitoring
-
-So this should **not** be treated as starting from zero.
-
 ---
 
 ## 4. Deployment
