@@ -15,10 +15,10 @@ You have:
 
 ### Still Useful Here
 
-* [ ] Finish the embedding/reranking experiment
-* [ ] Decide the final evaluation methodology
-* [ ] Document baseline vs. improved model
-* [ ] Finalize the evaluation dataset
+* [x] Finish the embedding/reranking experiment
+* [x] Decide the final evaluation methodology
+* [x] Document baseline vs. improved model
+* [x] Finalize the evaluation dataset
 
 ---
 
