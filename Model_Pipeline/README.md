@@ -264,15 +264,15 @@ The comparison will consider:
 **Status: COMPLETE**
 
 ---
-
 ## 15. Next Stage
 
 The Model / Pipeline stage is complete.
 
-The next stage is Infrastructure.
+The next stage is **Infrastructure**.
 
 The existing AIDC infrastructure will be used to prepare the environment for deploying and serving the model.
 
+```text
 Completed Model / Pipeline
           ↓
 Infrastructure
@@ -280,14 +280,15 @@ Infrastructure
 Deployment
           ↓
 Benchmarking
+```
 
 The Infrastructure stage will cover the existing AIDC environment, including:
 
-Kubernetes
-GPU resources
-Containerized model serving
-vLLM
-Kubernetes services
-Prometheus
-Grafana
-Monitoring infrastructure
+* Kubernetes
+* GPU resources
+* Containerized model serving
+* vLLM
+* Kubernetes services
+* Prometheus
+* Grafana
+* Monitoring infrastructure
