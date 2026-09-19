@@ -1,0 +1,242 @@
+[
+  {
+    "file_name": "Decision Trees Revised.pptx",
+    "topic_tags": [
+      "Gini impurity calculation",
+      "entropy and information gain",
+      "decision tree pruning (pre- vs post-pruning)",
+      "max_depth/min_samples hyperparameter tuning",
+      "reading a plotted decision tree"
+    ],
+    "competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty": "Intermediate",
+    "learning_objectives": [
+      "Explain how Gini impurity and entropy quantify node purity when choosing a split.",
+      "Compute Gini impurity for a candidate split across multiple features.",
+      "Tune max_depth, min_samples_split, and min_samples_leaf to control overfitting.",
+      "Apply pre- and post-pruning to simplify an overfit decision tree."
+    ]
+  },
+  {
+    "file_name": "HandsOn1_Window_Functions.md",
+    "topic_tags": [
+      "SQL window functions (OVER clause)",
+      "PARTITION BY",
+      "ROW_NUMBER, RANK, DENSE_RANK",
+      "LAG and LEAD functions",
+      "NTILE bucketing"
+    ],
+    "competencies": [
+      "Data processing"
+    ],
+    "difficulty": "Intermediate",
+    "learning_objectives": [
+      "Write SQL window function queries using OVER combined with PARTITION BY.",
+      "Differentiate ROW_NUMBER, RANK, and DENSE_RANK when ranking rows within a partition.",
+      "Use LAG and LEAD to compare a row's value against preceding or following rows.",
+      "Apply NTILE to bucket rows into quantile groups."
+    ]
+  },
+  {
+    "file_name": "Introduction to Pandas_.pptx",
+    "topic_tags": [
+      "Pandas Series vs. DataFrame",
+      "custom Index labels",
+      "duplicate index handling",
+      "MultiIndex from columns",
+      "loc vs. iloc selection"
+    ],
+    "competencies": [
+      "Data sharing"
+    ],
+    "difficulty": "Beginner",
+    "learning_objectives": [
+      "Distinguish a pandas Series from a DataFrame and describe how they relate.",
+      "Create a DataFrame with custom index labels, including duplicate labels.",
+      "Build a MultiIndex from multiple columns.",
+      "Select data correctly using loc vs. iloc."
+    ]
+  },
+  {
+    "file_name": "Lecture - Decision Trees.ipynb",
+    "topic_tags": [
+      "bootstrap aggregating (bagging)",
+      "Random Forest feature sub-sampling and de-correlation",
+      "gradient boosting bias reduction",
+      "out-of-bag (OOB) scoring",
+      "Random Forest feature importance interpretation"
+    ],
+    "competencies": [
+      "Knowledge of big data tools and platforms"
+    ],
+    "difficulty": "Advanced",
+    "learning_objectives": [
+      "Explain how bagging reduces variance by training on bootstrap samples.",
+      "Describe how Random Forest de-correlates trees via feature subsampling.",
+      "Use out-of-bag (OOB) scoring to estimate performance without a held-out set.",
+      "Interpret Random Forest feature importances.",
+      "Contrast bagging and gradient boosting in how each addresses bias vs. variance."
+    ]
+  },
+  {
+    "file_name": "Lecture - Pandas Basics.ipynb",
+    "topic_tags": [
+      "DataFrame inspection (shape/head/info/describe)",
+      "boolean filtering with & and |",
+      "groupby aggregation",
+      "value_counts",
+      "missing-data drop vs. fill strategy"
+    ],
+    "competencies": [
+      "Data collection and analysis"
+    ],
+    "difficulty": "Beginner",
+    "learning_objectives": [
+      "Inspect a DataFrame's structure using shape, head, info, and describe.",
+      "Filter rows using boolean conditions combined with & and |.",
+      "Aggregate data with groupby and summarize categories with value_counts.",
+      "Choose between dropna and fillna to handle missing values."
+    ]
+  },
+  {
+    "file_name": "Lecture_ML_Workflow.ipynb",
+    "topic_tags": [
+      "train/test split methodology",
+      "linear regression coefficient interpretation",
+      "model persistence with joblib",
+      "K-Nearest Neighbors classification",
+      "confusion matrix and precision/recall/F1 basics"
+    ],
+    "competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty": "Beginner",
+    "learning_objectives": [
+      "Apply the frame-prepare-split-fit-predict-evaluate workflow to a new dataset.",
+      "Fit a Linear Regression model and interpret its coefficients.",
+      "Persist and reload a trained model using joblib.",
+      "Train a KNN classifier and evaluate it with a confusion matrix and precision/recall/F1."
+    ]
+  },
+  {
+    "file_name": "ML Workflow Introduction.pptx",
+    "topic_tags": [
+      "end-to-end ML workflow stages",
+      "train/test split and KNN classification",
+      "confusion matrix, precision/recall, ROC",
+      "overfitting and learning curves",
+      "feature engineering pipeline"
+    ],
+    "competencies": [
+      "Knowledge of big data tools and platforms"
+    ],
+    "difficulty": "Beginner",
+    "learning_objectives": [
+      "Describe the end-to-end ML workflow from data loading through deployment.",
+      "Train and evaluate a simple KNN classifier.",
+      "Interpret a confusion matrix, precision/recall, and ROC curve.",
+      "Recognize overfitting using learning curves."
+    ]
+  },
+  {
+    "file_name": "Prompt_Engineering.ipynb",
+    "topic_tags": [
+      "zero-shot vs. few-shot prompting",
+      "chain-of-thought reasoning",
+      "structured output / constrained decoding",
+      "prompt evaluation harness design",
+      "multi-turn context management and prompt chaining"
+    ],
+    "competencies": [
+      "Communication systems and protocols design"
+    ],
+    "difficulty": "Advanced",
+    "learning_objectives": [
+      "Compare zero-shot and few-shot prompting strategies on a classification task.",
+      "Apply chain-of-thought prompting to improve reasoning-heavy outputs.",
+      "Build a quantitative evaluation harness to benchmark prompting strategies.",
+      "Enforce structured JSON outputs via constrained decoding.",
+      "Chain prompts across multiple turns to decompose a complex task."
+    ]
+  },
+  {
+    "file_name": "Retrieval_Augmented_Generation.ipynb",
+    "topic_tags": [
+      "text chunking strategies",
+      "embedding-based retrieval (sentence-transformers)",
+      "retrieve-then-generate pipeline",
+      "RAG failure-mode diagnosis (retrieval vs. generation)",
+      "grounded citation and separate evaluation of retrieval/generation"
+    ],
+    "competencies": [
+      "Web pages optimization"
+    ],
+    "difficulty": "Advanced",
+    "learning_objectives": [
+      "Chunk documents appropriately for downstream retrieval.",
+      "Build an embedding-based retrieval step using sentence-transformers.",
+      "Implement a retrieve-then-generate RAG pipeline with grounded citations.",
+      "Diagnose whether a RAG failure stems from retrieval or generation."
+    ]
+  },
+  {
+    "file_name": "SQL_Foundations_for_Data_Science.pptx",
+    "topic_tags": [
+      "SQL JOIN types (INNER/LEFT/RIGHT/FULL OUTER)",
+      "GROUP BY and HAVING aggregation",
+      "WHERE/ORDER BY/LIMIT filtering",
+      "SQL-based feature engineering for ML pipelines"
+    ],
+    "competencies": [
+      "Data preparation"
+    ],
+    "difficulty": "Intermediate",
+    "learning_objectives": [
+      "Write SQL queries combining SELECT, WHERE, ORDER BY, and LIMIT.",
+      "Choose the correct JOIN type for a given task.",
+      "Aggregate data with GROUP BY and filter groups with HAVING.",
+      "Engineer ML features directly in SQL."
+    ]
+  },
+  {
+    "file_name": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+    "topic_tags": [
+      "CRISP-DM framework",
+      "supervised vs. unsupervised learning",
+      "classification vs. regression distinction",
+      "NumPy boolean masking",
+      "rules-based vs. ML approach selection"
+    ],
+    "competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty": "Beginner",
+    "learning_objectives": [
+      "Explain the phases of the CRISP-DM framework.",
+      "Distinguish supervised from unsupervised learning.",
+      "Differentiate classification from regression tasks.",
+      "Decide when a rules-based approach is preferable to ML."
+    ]
+  },
+  {
+    "file_name": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+    "topic_tags": [
+      "decision tree interpretability vs. ensemble accuracy tradeoff",
+      "boosting overfitting pattern",
+      "CatBoost categorical encoding",
+      "LightGBM histogram-based speed optimization",
+      "stacking diminishing returns"
+    ],
+    "competencies": [
+      "Web pages optimization"
+    ],
+    "difficulty": "Advanced",
+    "learning_objectives": [
+      "Evaluate the interpretability/accuracy tradeoff between single trees and ensembles.",
+      "Recognize the overfitting pattern typical of boosting.",
+      "Compare CatBoost, LightGBM, and stacking on practical tradeoffs."
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+﻿file_name,predicted_difficulty,ground_truth_difficulty,match
+Decision Trees Revised.pptx,Intermediate,Intermediate,True
+HandsOn1_Window_Functions.md,Intermediate,Intermediate,True
+Introduction to Pandas_.pptx,Beginner,Beginner,True
+Lecture - Decision Trees.ipynb,Advanced,Advanced,True
+Lecture - Pandas Basics.ipynb,Beginner,Beginner,True
+Lecture_ML_Workflow.ipynb,Intermediate,Beginner,False
+ML Workflow Introduction.pptx,Beginner,Beginner,True
+Prompt_Engineering.ipynb,Advanced,Advanced,True
+Retrieval_Augmented_Generation.ipynb,Advanced,Advanced,True
+SQL_Foundations_for_Data_Science.pptx,Intermediate,Intermediate,True
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,Beginner,Beginner,True
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,Advanced,Advanced,True
+
+# Accuracy: 0.917 (11/12)
+# Confusion matrix (rows=actual, cols=predicted)
+actual\predicted,Beginner,Intermediate,Advanced
+Beginner,4,1,0
+Intermediate,0,3,0
+Advanced,0,0,4
