@@ -1,0 +1,13 @@
+file_name,gt_competencies,pred_competencies,precision,recall,f1,exact_match
+Decision Trees Revised.pptx,"Artificial intelligence, machine learning and deep learning application; Machine Learning (ML)",Machine Learning (ML),1.0,0.5,0.6666666666666666,False
+HandsOn1_Window_Functions.md,Database management and configuration; Data processing,Data analytics; Data processing,0.5,0.5,0.5,False
+Introduction to Pandas_.pptx,Data preparation; Data processing,Data cleaning,0.0,0.0,0.0,False
+Lecture - Decision Trees.ipynb,"Artificial intelligence, machine learning and deep learning application; Data analytics; Machine Learning (ML)",Machine Learning (ML); Programming,0.5,0.3333333333333333,0.4,False
+Lecture - Pandas Basics.ipynb,Data analytics; Data preparation; Data processing,Data cleaning,0.0,0.0,0.0,False
+Lecture_ML_Workflow.ipynb,Data analytics; Machine Learning (ML); Data preparation,Data engineering; Programming,0.0,0.0,0.0,False
+ML Workflow Introduction.pptx,Data analytics; Machine Learning (ML); Data preparation,Machine Learning (ML),1.0,0.3333333333333333,0.5,False
+Prompt_Engineering.ipynb,"Natural language Processing (NLP); Artificial intelligence, machine learning and deep learning application",Testing; Software development and integration,0.0,0.0,0.0,False
+Retrieval_Augmented_Generation.ipynb,"Natural language Processing (NLP); Artificial intelligence, machine learning and deep learning application; Data processing",Machine Learning (ML),0.0,0.0,0.0,False
+SQL_Foundations_for_Data_Science.pptx,Database management and configuration; Data preparation; Data processing,Data cleaning,0.0,0.0,0.0,False
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,"Artificial intelligence, machine learning and deep learning application; Machine Learning (ML); Data analytics",Machine Learning (ML),1.0,0.3333333333333333,0.5,False
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,"Artificial intelligence, machine learning and deep learning application; Machine Learning (ML); Data analytics",Machine Learning (ML),1.0,0.3333333333333333,0.5,False
