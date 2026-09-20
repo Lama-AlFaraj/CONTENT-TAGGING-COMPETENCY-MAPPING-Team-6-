@@ -1,0 +1,6 @@
+# Versions that ran on Colab (Python 3.13, Tesla T4). Installed with: pip install vllm httpx
+# vLLM pulls in its own torch; do not install torch separately.
+vllm==0.29.0
+httpx==0.28.1
+# Seen after install: torch 2.13.0 (cu130), torchvision 0.28.0 (cu130), transformers 5.16.1
+# torchaudio is uninstalled on purpose (built for CUDA 12.8, conflicts with torch's CUDA 13.0).
