@@ -1,0 +1,61 @@
+file_name,rank,mapped_skill,similarity_score
+Decision Trees Revised.pptx,1,Knowledge of big data tools and platforms,0.8044
+Decision Trees Revised.pptx,2,Machine Learning (ML),0.8014
+Decision Trees Revised.pptx,3,Communication systems and protocols design,0.7966
+Decision Trees Revised.pptx,4,RAN architecture,0.7961
+Decision Trees Revised.pptx,5,Data sharing,0.7935
+HandsOn1_Window_Functions.md,1,Knowledge of big data tools and platforms,0.8004
+HandsOn1_Window_Functions.md,2,Data processing,0.7966
+HandsOn1_Window_Functions.md,3,Data warehousing,0.7956
+HandsOn1_Window_Functions.md,4,Data sharing,0.7947
+HandsOn1_Window_Functions.md,5,Data preparation,0.7932
+Introduction to Pandas_.pptx,1,Knowledge of big data tools and platforms,0.8011
+Introduction to Pandas_.pptx,2,Machine Learning (ML),0.7962
+Introduction to Pandas_.pptx,3,Communication systems and protocols design,0.7933
+Introduction to Pandas_.pptx,4,Data collection and analysis,0.7906
+Introduction to Pandas_.pptx,5,Data ethics,0.7884
+Lecture - Decision Trees.ipynb,1,Knowledge of big data tools and platforms,0.8035
+Lecture - Decision Trees.ipynb,2,Data collection and analysis,0.7965
+Lecture - Decision Trees.ipynb,3,Machine Learning (ML),0.7919
+Lecture - Decision Trees.ipynb,4,Data sharing,0.7913
+Lecture - Decision Trees.ipynb,5,Database modelling,0.7911
+Lecture - Pandas Basics.ipynb,1,Data collection and analysis,0.8043
+Lecture - Pandas Basics.ipynb,2,Data preparation,0.799
+Lecture - Pandas Basics.ipynb,3,Knowledge of big data tools and platforms,0.7948
+Lecture - Pandas Basics.ipynb,4,Data ethics,0.7929
+Lecture - Pandas Basics.ipynb,5,Data sharing,0.7917
+Lecture_ML_Workflow.ipynb,1,Machine Learning (ML),0.829
+Lecture_ML_Workflow.ipynb,2,Knowledge of big data tools and platforms,0.806
+Lecture_ML_Workflow.ipynb,3,"Artificial intelligence, machine learning and deep learning application",0.8049
+Lecture_ML_Workflow.ipynb,4,Pre-sales preparation,0.7972
+Lecture_ML_Workflow.ipynb,5,Data preparation,0.7972
+ML Workflow Introduction.pptx,1,Machine Learning (ML),0.8251
+ML Workflow Introduction.pptx,2,Knowledge of big data tools and platforms,0.8113
+ML Workflow Introduction.pptx,3,Data collection and analysis,0.8028
+ML Workflow Introduction.pptx,4,"Artificial intelligence, machine learning and deep learning application",0.8021
+ML Workflow Introduction.pptx,5,IoT tech design and development,0.7978
+Prompt_Engineering.ipynb,1,Embedded firmware development,0.7906
+Prompt_Engineering.ipynb,2,Communication systems and protocols design,0.7904
+Prompt_Engineering.ipynb,3,Scripting and programming languages,0.7887
+Prompt_Engineering.ipynb,4,Knowledge of big data tools and platforms,0.7846
+Prompt_Engineering.ipynb,5,IoT tech design and development,0.7835
+Retrieval_Augmented_Generation.ipynb,1,Data collection and analysis,0.8038
+Retrieval_Augmented_Generation.ipynb,2,RAN architecture,0.8002
+Retrieval_Augmented_Generation.ipynb,3,Agile and DevOps methodology application,0.8
+Retrieval_Augmented_Generation.ipynb,4,Knowledge of big data tools and platforms,0.7997
+Retrieval_Augmented_Generation.ipynb,5,Communication systems and protocols design,0.7982
+SQL_Foundations_for_Data_Science.pptx,1,Database modelling,0.8123
+SQL_Foundations_for_Data_Science.pptx,2,Machine Learning (ML),0.8026
+SQL_Foundations_for_Data_Science.pptx,3,Knowledge of big data tools and platforms,0.8025
+SQL_Foundations_for_Data_Science.pptx,4,Data preparation,0.8014
+SQL_Foundations_for_Data_Science.pptx,5,Data design,0.795
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,1,Machine Learning (ML),0.8331
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,2,Knowledge of big data tools and platforms,0.8158
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,3,"Artificial intelligence, machine learning and deep learning application",0.8045
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,4,Database modelling,0.8024
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,5,Scripting and programming languages,0.8006
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,1,Knowledge of big data tools and platforms,0.806
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,2,Web pages optimization,0.8012
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,3,Data sharing,0.7962
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,4,Machine Learning (ML),0.7955
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,5,Data collection and analysis,0.7943

@@ -1,0 +1,14 @@
+﻿cd ~/aidc/CONTENT-TAGGING-COMPETENCY-MAPPING-Team-6-/Model
+ls -lh evaluation_data/file_name,model_name,content_type,predicted_tags,difficulty_level,confidence,notes
+Decision Trees Revised.pptx,,,,,,
+HandsOn1_Window_Functions.md,,,,,,
+Introduction to Pandas_.pptx,,,,,,
+Lecture - Decision Trees.ipynb,,,,,,
+Lecture - Pandas Basics.ipynb,,,,,,
+Lecture_ML_Workflow.ipynb,,,,,,
+ML Workflow Introduction.pptx,,,,,,
+Prompt_Engineering.ipynb,,,,,,
+Retrieval_Augmented_Generation.ipynb,,,,,,
+SQL_Foundations_for_Data_Science.pptx,,,,,,
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,,,,,,
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,,,,,,

@@ -1,0 +1,283 @@
+file_name,source_tag,rank,mapped_skill,similarity_score
+Decision Trees Revised.pptx,decision tree intuition,1,Communication systems and protocols design,0.8049
+Decision Trees Revised.pptx,decision tree intuition,2,Machine Learning (ML),0.7923
+Decision Trees Revised.pptx,decision tree intuition,3,"Artificial intelligence, machine learning and deep learning application",0.7913
+Decision Trees Revised.pptx,Gini impurity,1,5G RAN architecture,0.7734
+Decision Trees Revised.pptx,Gini impurity,2,O-RU design and development,0.77
+Decision Trees Revised.pptx,Gini impurity,3,Electronic circuit boards design and integration,0.7692
+Decision Trees Revised.pptx,entropy and information gain,1,Threat intelligence and detection,0.8103
+Decision Trees Revised.pptx,entropy and information gain,2,Knowledge of big data tools and platforms,0.7949
+Decision Trees Revised.pptx,entropy and information gain,3,Energy management and efficiency,0.7931
+Decision Trees Revised.pptx,root node / best split selection,1,RAN architecture,0.8068
+Decision Trees Revised.pptx,root node / best split selection,2,Web pages optimization,0.7856
+Decision Trees Revised.pptx,root node / best split selection,3,Communication systems and protocols design,0.7785
+Decision Trees Revised.pptx,Gini impurity worked calculation across candidate features,1,O-RU design and development,0.7808
+Decision Trees Revised.pptx,Gini impurity worked calculation across candidate features,2,Radio intelligent controller development,0.7792
+Decision Trees Revised.pptx,Gini impurity worked calculation across candidate features,3,Data processing,0.7777
+Decision Trees Revised.pptx,"numeric feature threshold selection (sorted values, midpoint testing)",1,Software applications test design,0.7912
+Decision Trees Revised.pptx,"numeric feature threshold selection (sorted values, midpoint testing)",2,Data collection and analysis,0.7895
+Decision Trees Revised.pptx,"numeric feature threshold selection (sorted values, midpoint testing)",3,Applications development,0.7865
+Decision Trees Revised.pptx,recursive tree construction (root to leaf),1,RAN architecture,0.7737
+Decision Trees Revised.pptx,recursive tree construction (root to leaf),2,5G RAN architecture,0.7717
+Decision Trees Revised.pptx,recursive tree construction (root to leaf),3,Machine Learning (ML),0.7678
+Decision Trees Revised.pptx,max_depth tuning,1,Web pages optimization,0.7813
+Decision Trees Revised.pptx,max_depth tuning,2,Machine Learning (ML),0.7813
+Decision Trees Revised.pptx,max_depth tuning,3,"Artificial intelligence, machine learning and deep learning application",0.7745
+Decision Trees Revised.pptx,min_samples_split,1,Small cell design and optimization,0.786
+Decision Trees Revised.pptx,min_samples_split,2,RAN architecture,0.7817
+Decision Trees Revised.pptx,min_samples_split,3,Wireless network planning and optimization,0.7725
+Decision Trees Revised.pptx,min_samples_leaf,1,Small cell design and optimization,0.783
+Decision Trees Revised.pptx,min_samples_leaf,2,Wireless network planning and optimization,0.776
+Decision Trees Revised.pptx,min_samples_leaf,3,Machine Learning (ML),0.7749
+Decision Trees Revised.pptx,max_features,1,Web pages optimization,0.7815
+Decision Trees Revised.pptx,max_features,2,Knowledge of big data tools and platforms,0.7693
+Decision Trees Revised.pptx,max_features,3,Automation tool proficiency,0.7675
+Decision Trees Revised.pptx,pre-pruning,1,Pre-sales preparation,0.8001
+Decision Trees Revised.pptx,pre-pruning,2,Natural language Processing (NLP),0.7846
+Decision Trees Revised.pptx,pre-pruning,3,Data preparation,0.7771
+Decision Trees Revised.pptx,post-pruning,1,Natural language Processing (NLP),0.7889
+Decision Trees Revised.pptx,post-pruning,2,Data processing,0.7736
+Decision Trees Revised.pptx,post-pruning,3,Data cleaning,0.7717
+Decision Trees Revised.pptx,overfitting vs underfitting,1,Machine Learning (ML),0.7795
+Decision Trees Revised.pptx,overfitting vs underfitting,2,"Virtual, augmented and mixed reality application",0.7788
+Decision Trees Revised.pptx,overfitting vs underfitting,3,OTN design,0.7714
+Decision Trees Revised.pptx,reading a plotted tree,1,Wireless network planning and optimization,0.7588
+Decision Trees Revised.pptx,reading a plotted tree,2,Data visualisation and storyboarding,0.7565
+Decision Trees Revised.pptx,reading a plotted tree,3,Data collection and analysis,0.7563
+HandsOn1_Window_Functions.md,SQL window functions (OVER),1,Data warehousing,0.7795
+HandsOn1_Window_Functions.md,SQL window functions (OVER),2,Data processing,0.7749
+HandsOn1_Window_Functions.md,SQL window functions (OVER),3,Programming,0.7732
+HandsOn1_Window_Functions.md,PARTITION BY,1,Data processing,0.7887
+HandsOn1_Window_Functions.md,PARTITION BY,2,Data sharing,0.7872
+HandsOn1_Window_Functions.md,PARTITION BY,3,Data preparation,0.7816
+HandsOn1_Window_Functions.md,"ROW_NUMBER, RANK, DENSE_RANK",1,Communication systems and protocols design,0.7971
+HandsOn1_Window_Functions.md,"ROW_NUMBER, RANK, DENSE_RANK",2,RAN architecture,0.7952
+HandsOn1_Window_Functions.md,"ROW_NUMBER, RANK, DENSE_RANK",3,5G RAN architecture,0.7865
+HandsOn1_Window_Functions.md,LEAD and LAG,1,Knowledge of big data tools and platforms,0.7825
+HandsOn1_Window_Functions.md,LEAD and LAG,2,Machine Learning (ML),0.7824
+HandsOn1_Window_Functions.md,LEAD and LAG,3,Web pages optimization,0.7792
+HandsOn1_Window_Functions.md,NTILE bucketing,1,Data preparation,0.7877
+HandsOn1_Window_Functions.md,NTILE bucketing,2,Natural language Processing (NLP),0.777
+HandsOn1_Window_Functions.md,NTILE bucketing,3,IoT tech design and development,0.7687
+HandsOn1_Window_Functions.md,moving/cumulative window aggregates,1,Cloud development and operations management,0.7787
+HandsOn1_Window_Functions.md,moving/cumulative window aggregates,2,Website traffic monitoring,0.7765
+HandsOn1_Window_Functions.md,moving/cumulative window aggregates,3,"Virtual, augmented and mixed reality application",0.7733
+HandsOn1_Window_Functions.md,window functions vs GROUP BY,1,Programming,0.7842
+HandsOn1_Window_Functions.md,window functions vs GROUP BY,2,Applications integration,0.7736
+HandsOn1_Window_Functions.md,window functions vs GROUP BY,3,Data collection and analysis,0.772
+Introduction to Pandas_.pptx,pandas Series basics,1,Communication systems and protocols design,0.7793
+Introduction to Pandas_.pptx,pandas Series basics,2,Knowledge of big data tools and platforms,0.776
+Introduction to Pandas_.pptx,pandas Series basics,3,Quantum mechanics,0.7658
+Introduction to Pandas_.pptx,pandas DataFrame basics,1,Communication systems and protocols design,0.7965
+Introduction to Pandas_.pptx,pandas DataFrame basics,2,Data collection and analysis,0.7963
+Introduction to Pandas_.pptx,pandas DataFrame basics,3,Knowledge of big data tools and platforms,0.7957
+Introduction to Pandas_.pptx,Series-DataFrame relationship,1,Knowledge of big data tools and platforms,0.7923
+Introduction to Pandas_.pptx,Series-DataFrame relationship,2,Data warehousing,0.7868
+Introduction to Pandas_.pptx,Series-DataFrame relationship,3,Data preparation,0.7856
+Introduction to Pandas_.pptx,custom index labels,1,Style guide and specifications design,0.7657
+Introduction to Pandas_.pptx,custom index labels,2,Communication systems and protocols design,0.7656
+Introduction to Pandas_.pptx,custom index labels,3,RAN architecture,0.7552
+Introduction to Pandas_.pptx,duplicate index handling,1,Communication systems and protocols design,0.7657
+Introduction to Pandas_.pptx,duplicate index handling,2,Cyber and data breach incident management,0.7638
+Introduction to Pandas_.pptx,duplicate index handling,3,Cloud development and operations management,0.7576
+Introduction to Pandas_.pptx,set_index and MultiIndex,1,Database management and configuration,0.7798
+Introduction to Pandas_.pptx,set_index and MultiIndex,2,Frequency Spectrum Management,0.7797
+Introduction to Pandas_.pptx,set_index and MultiIndex,3,Data warehousing,0.7717
+Introduction to Pandas_.pptx,loc vs iloc,1,RAN architecture,0.78
+Introduction to Pandas_.pptx,loc vs iloc,2,IoT tech design and development,0.7772
+Introduction to Pandas_.pptx,loc vs iloc,3,Machine Learning (ML),0.777
+Lecture - Decision Trees.ipynb,DecisionTreeRegressor,1,Data processing,0.7897
+Lecture - Decision Trees.ipynb,DecisionTreeRegressor,2,Database modelling,0.783
+Lecture - Decision Trees.ipynb,DecisionTreeRegressor,3,Machine Learning (ML),0.7784
+Lecture - Decision Trees.ipynb,voting ensembles,1,Data collection and analysis,0.7583
+Lecture - Decision Trees.ipynb,voting ensembles,2,Cloud Management and E2E Service Orchestration Design,0.7572
+Lecture - Decision Trees.ipynb,voting ensembles,3,Cloud computing integration,0.7535
+Lecture - Decision Trees.ipynb,bagging (bootstrap aggregating),1,Data collection and analysis,0.7984
+Lecture - Decision Trees.ipynb,bagging (bootstrap aggregating),2,Data warehousing,0.7939
+Lecture - Decision Trees.ipynb,bagging (bootstrap aggregating),3,Programming,0.7926
+Lecture - Decision Trees.ipynb,Random Forest,1,Knowledge of big data tools and platforms,0.7545
+Lecture - Decision Trees.ipynb,Random Forest,2,Frequency Spectrum Management,0.7539
+Lecture - Decision Trees.ipynb,Random Forest,3,Programming,0.7533
+Lecture - Decision Trees.ipynb,feature subsampling and de-correlation,1,Machine Learning (ML),0.7987
+Lecture - Decision Trees.ipynb,feature subsampling and de-correlation,2,Applications development,0.7879
+Lecture - Decision Trees.ipynb,feature subsampling and de-correlation,3,Communication systems and protocols design,0.7877
+Lecture - Decision Trees.ipynb,out-of-bag (OOB) scoring,1,OTN design,0.7682
+Lecture - Decision Trees.ipynb,out-of-bag (OOB) scoring,2,RAN architecture,0.7647
+Lecture - Decision Trees.ipynb,out-of-bag (OOB) scoring,3,O-RU design and development,0.7592
+Lecture - Decision Trees.ipynb,Gradient Boosting basics,1,Machine Learning (ML),0.7962
+Lecture - Decision Trees.ipynb,Gradient Boosting basics,2,Knowledge of big data tools and platforms,0.7937
+Lecture - Decision Trees.ipynb,Gradient Boosting basics,3,"Game programming, development, and testing",0.7916
+Lecture - Decision Trees.ipynb,feature importance interpretation,1,Key analysis techniques,0.8041
+Lecture - Decision Trees.ipynb,feature importance interpretation,2,IT system assessment and evaluation,0.7904
+Lecture - Decision Trees.ipynb,feature importance interpretation,3,Vulnerability assessment and detection,0.787
+Lecture - Decision Trees.ipynb,bias-variance tradeoff,1,RAN architecture,0.7733
+Lecture - Decision Trees.ipynb,bias-variance tradeoff,2,Data sharing,0.7704
+Lecture - Decision Trees.ipynb,bias-variance tradeoff,3,"Cyber risk, governance and compliance",0.7703
+Lecture - Decision Trees.ipynb,sklearn Pipeline with ColumnTransformer,1,Machine Learning (ML),0.7867
+Lecture - Decision Trees.ipynb,sklearn Pipeline with ColumnTransformer,2,Data preparation,0.7829
+Lecture - Decision Trees.ipynb,sklearn Pipeline with ColumnTransformer,3,Knowledge of big data tools and platforms,0.7805
+Lecture - Pandas Basics.ipynb,"DataFrame inspection (shape, head, info, describe)",1,Data collection and analysis,0.8129
+Lecture - Pandas Basics.ipynb,"DataFrame inspection (shape, head, info, describe)",2,Data visualisation and storyboarding,0.7938
+Lecture - Pandas Basics.ipynb,"DataFrame inspection (shape, head, info, describe)",3,Data processing,0.7899
+Lecture - Pandas Basics.ipynb,loc vs iloc selection,1,Small cell design and optimization,0.7838
+Lecture - Pandas Basics.ipynb,loc vs iloc selection,2,Communication systems and protocols design,0.7832
+Lecture - Pandas Basics.ipynb,loc vs iloc selection,3,RAN architecture,0.7827
+Lecture - Pandas Basics.ipynb,boolean filtering with & and |,1,Data cleaning,0.7763
+Lecture - Pandas Basics.ipynb,boolean filtering with & and |,2,Communication systems and protocols design,0.7758
+Lecture - Pandas Basics.ipynb,boolean filtering with & and |,3,Data collection and analysis,0.7734
+Lecture - Pandas Basics.ipynb,value_counts,1,Data sharing,0.7785
+Lecture - Pandas Basics.ipynb,value_counts,2,Data collection and analysis,0.7704
+Lecture - Pandas Basics.ipynb,value_counts,3,Data cleaning,0.7618
+Lecture - Pandas Basics.ipynb,groupby aggregation,1,Data collection and analysis,0.773
+Lecture - Pandas Basics.ipynb,groupby aggregation,2,Data preparation,0.7597
+Lecture - Pandas Basics.ipynb,groupby aggregation,3,Data sharing,0.759
+Lecture - Pandas Basics.ipynb,"missing-value handling (dropna, fillna)",1,Data preparation,0.7956
+Lecture - Pandas Basics.ipynb,"missing-value handling (dropna, fillna)",2,Natural language Processing (NLP),0.7848
+Lecture - Pandas Basics.ipynb,"missing-value handling (dropna, fillna)",3,Data processing,0.7811
+Lecture - Pandas Basics.ipynb,reading/writing CSV,1,Data collection and analysis,0.8189
+Lecture - Pandas Basics.ipynb,reading/writing CSV,2,Data preparation,0.8058
+Lecture - Pandas Basics.ipynb,reading/writing CSV,3,Software development and integration,0.8007
+Lecture_ML_Workflow.ipynb,end-to-end ML workflow (frame/prepare/split/fit/predict/evaluate),1,Data preparation,0.8226
+Lecture_ML_Workflow.ipynb,end-to-end ML workflow (frame/prepare/split/fit/predict/evaluate),2,Machine Learning (ML),0.8217
+Lecture_ML_Workflow.ipynb,end-to-end ML workflow (frame/prepare/split/fit/predict/evaluate),3,"Artificial intelligence, machine learning and deep learning application",0.8029
+Lecture_ML_Workflow.ipynb,train/test split,1,RAN architecture,0.8049
+Lecture_ML_Workflow.ipynb,train/test split,2,Test planning,0.7949
+Lecture_ML_Workflow.ipynb,train/test split,3,Testing,0.7889
+Lecture_ML_Workflow.ipynb,Linear Regression for regression tasks,1,Machine Learning (ML),0.8235
+Lecture_ML_Workflow.ipynb,Linear Regression for regression tasks,2,Data collection and analysis,0.8152
+Lecture_ML_Workflow.ipynb,Linear Regression for regression tasks,3,Programming,0.8147
+Lecture_ML_Workflow.ipynb,"regression metrics (MAE, RMSE, R2)",1,Wireless network planning and optimization,0.7978
+Lecture_ML_Workflow.ipynb,"regression metrics (MAE, RMSE, R2)",2,Machine Learning (ML),0.7958
+Lecture_ML_Workflow.ipynb,"regression metrics (MAE, RMSE, R2)",3,Data collection and analysis,0.7954
+Lecture_ML_Workflow.ipynb,model persistence with joblib,1,"Artificial intelligence, machine learning and deep learning application",0.7998
+Lecture_ML_Workflow.ipynb,model persistence with joblib,2,Database modelling,0.7965
+Lecture_ML_Workflow.ipynb,model persistence with joblib,3,Machine Learning (ML),0.7944
+Lecture_ML_Workflow.ipynb,KNN classification,1,OTN design,0.7799
+Lecture_ML_Workflow.ipynb,KNN classification,2,Natural language Processing (NLP),0.7667
+Lecture_ML_Workflow.ipynb,KNN classification,3,Machine Learning (ML),0.7645
+Lecture_ML_Workflow.ipynb,confusion matrix,1,5G RAN architecture,0.7771
+Lecture_ML_Workflow.ipynb,confusion matrix,2,RAN architecture,0.7731
+Lecture_ML_Workflow.ipynb,confusion matrix,3,Quantum mechanics,0.7721
+Lecture_ML_Workflow.ipynb,"precision, recall, F1",1,Frequency Spectrum Management,0.7763
+Lecture_ML_Workflow.ipynb,"precision, recall, F1",2,Data collection and analysis,0.7754
+Lecture_ML_Workflow.ipynb,"precision, recall, F1",3,Machine Learning (ML),0.7739
+ML Workflow Introduction.pptx,"ML workflow steps (load, label, explore, split, train, predict, evaluate, deploy)",1,Machine Learning (ML),0.8406
+ML Workflow Introduction.pptx,"ML workflow steps (load, label, explore, split, train, predict, evaluate, deploy)",2,"Artificial intelligence, machine learning and deep learning application",0.8184
+ML Workflow Introduction.pptx,"ML workflow steps (load, label, explore, split, train, predict, evaluate, deploy)",3,Data preparation,0.8158
+ML Workflow Introduction.pptx,KNN classifier code walkthrough,1,Communication systems and protocols design,0.7883
+ML Workflow Introduction.pptx,KNN classifier code walkthrough,2,RAN architecture,0.7827
+ML Workflow Introduction.pptx,KNN classifier code walkthrough,3,5G RAN architecture,0.7777
+ML Workflow Introduction.pptx,data-collection-to-deployment pipeline,1,Cloud development and operations management,0.8206
+ML Workflow Introduction.pptx,data-collection-to-deployment pipeline,2,Agile and DevOps methodology application,0.8106
+ML Workflow Introduction.pptx,data-collection-to-deployment pipeline,3,Infrastructure deployment,0.805
+ML Workflow Introduction.pptx,feature engineering overview,1,Radio frequency engineering,0.8149
+ML Workflow Introduction.pptx,feature engineering overview,2,Embedded firmware development,0.813
+ML Workflow Introduction.pptx,feature engineering overview,3,Applications development,0.8051
+ML Workflow Introduction.pptx,"model evaluation (confusion matrix, precision/recall, ROC)",1,Communication systems and protocols design,0.8205
+ML Workflow Introduction.pptx,"model evaluation (confusion matrix, precision/recall, ROC)",2,Machine Learning (ML),0.8118
+ML Workflow Introduction.pptx,"model evaluation (confusion matrix, precision/recall, ROC)",3,Database modelling,0.81
+ML Workflow Introduction.pptx,overfitting and learning curves,1,Machine Learning (ML),0.8125
+ML Workflow Introduction.pptx,overfitting and learning curves,2,Knowledge of big data tools and platforms,0.7984
+ML Workflow Introduction.pptx,overfitting and learning curves,3,"Artificial intelligence, machine learning and deep learning application",0.7959
+ML Workflow Introduction.pptx,feature importance and interpretation,1,Key analysis techniques,0.804
+ML Workflow Introduction.pptx,feature importance and interpretation,2,IT system assessment and evaluation,0.7987
+ML Workflow Introduction.pptx,feature importance and interpretation,3,Applications development,0.7983
+Prompt_Engineering.ipynb,chat roles and prompt templates,1,Communication systems and protocols design,0.7986
+Prompt_Engineering.ipynb,chat roles and prompt templates,2,Programming,0.7836
+Prompt_Engineering.ipynb,chat roles and prompt templates,3,RAN architecture,0.7788
+Prompt_Engineering.ipynb,zero-shot prompting,1,Frequency Spectrum Management,0.7729
+Prompt_Engineering.ipynb,zero-shot prompting,2,Small cell design and optimization,0.7564
+Prompt_Engineering.ipynb,zero-shot prompting,3,RAN architecture,0.7547
+Prompt_Engineering.ipynb,few-shot / in-context learning,1,Machine Learning (ML),0.7984
+Prompt_Engineering.ipynb,few-shot / in-context learning,2,Small cell design and optimization,0.7917
+Prompt_Engineering.ipynb,few-shot / in-context learning,3,"Artificial intelligence, machine learning and deep learning application",0.7818
+Prompt_Engineering.ipynb,chain-of-thought prompting,1,Natural language Processing (NLP),0.784
+Prompt_Engineering.ipynb,chain-of-thought prompting,2,Threat intelligence and detection,0.7818
+Prompt_Engineering.ipynb,chain-of-thought prompting,3,Machine Learning (ML),0.7809
+Prompt_Engineering.ipynb,prompt evaluation harness and parse-failure rate,1,Security assessment and testing,0.7853
+Prompt_Engineering.ipynb,prompt evaluation harness and parse-failure rate,2,Automation tool proficiency,0.7847
+Prompt_Engineering.ipynb,prompt evaluation harness and parse-failure rate,3,O-RU design and development,0.7832
+Prompt_Engineering.ipynb,structured output / constrained decoding,1,Software-defined radio programming,0.7973
+Prompt_Engineering.ipynb,structured output / constrained decoding,2,RAN architecture,0.7967
+Prompt_Engineering.ipynb,structured output / constrained decoding,3,Communication systems and protocols design,0.7919
+Prompt_Engineering.ipynb,prompt chaining,1,Communication systems and protocols design,0.7744
+Prompt_Engineering.ipynb,prompt chaining,2,Automation tool proficiency,0.7715
+Prompt_Engineering.ipynb,prompt chaining,3,Cable/ system wiring and equipment installation,0.7714
+Prompt_Engineering.ipynb,embedding-based dynamic few-shot selection,1,Embedded firmware development,0.7745
+Prompt_Engineering.ipynb,embedding-based dynamic few-shot selection,2,Embedded systems design,0.7743
+Prompt_Engineering.ipynb,embedding-based dynamic few-shot selection,3,Machine Learning (ML),0.7737
+Retrieval_Augmented_Generation.ipynb,RAG pipeline overview (index/retrieve/generate),1,Agile and DevOps methodology application,0.8025
+Retrieval_Augmented_Generation.ipynb,RAG pipeline overview (index/retrieve/generate),2,Data engineering,0.7901
+Retrieval_Augmented_Generation.ipynb,RAG pipeline overview (index/retrieve/generate),3,Communication systems and protocols design,0.7888
+Retrieval_Augmented_Generation.ipynb,document chunking,1,Data cleaning,0.787
+Retrieval_Augmented_Generation.ipynb,document chunking,2,Website traffic monitoring,0.7841
+Retrieval_Augmented_Generation.ipynb,document chunking,3,Web pages optimization,0.7801
+Retrieval_Augmented_Generation.ipynb,embedding-based retrieval,1,Embedded firmware development,0.7927
+Retrieval_Augmented_Generation.ipynb,embedding-based retrieval,2,Embedded systems design,0.7893
+Retrieval_Augmented_Generation.ipynb,embedding-based retrieval,3,Communication systems and protocols design,0.7739
+Retrieval_Augmented_Generation.ipynb,retrieve-then-generate loop,1,Data collection and analysis,0.7785
+Retrieval_Augmented_Generation.ipynb,retrieve-then-generate loop,2,Threat intelligence and detection,0.7703
+Retrieval_Augmented_Generation.ipynb,retrieve-then-generate loop,3,Communication systems and protocols design,0.77
+Retrieval_Augmented_Generation.ipynb,citation and grounding,1,Data collection and analysis,0.7913
+Retrieval_Augmented_Generation.ipynb,citation and grounding,2,Data ethics,0.7815
+Retrieval_Augmented_Generation.ipynb,citation and grounding,3,Knowledge of big data tools and platforms,0.7735
+Retrieval_Augmented_Generation.ipynb,retrieval failure vs generation failure,1,Cyber and data breach incident management,0.7886
+Retrieval_Augmented_Generation.ipynb,retrieval failure vs generation failure,2,Disaster recovery management,0.7855
+Retrieval_Augmented_Generation.ipynb,retrieval failure vs generation failure,3,Troubleshooting and risk analysis,0.7839
+Retrieval_Augmented_Generation.ipynb,separate RAG evaluation,1,RAN architecture,0.8267
+Retrieval_Augmented_Generation.ipynb,separate RAG evaluation,2,5G RAN architecture,0.8088
+Retrieval_Augmented_Generation.ipynb,separate RAG evaluation,3,Communication systems and protocols design,0.7985
+SQL_Foundations_for_Data_Science.pptx,DDL vs DML vs DCL,1,Machine Learning (ML),0.7971
+SQL_Foundations_for_Data_Science.pptx,DDL vs DML vs DCL,2,"Artificial intelligence, machine learning and deep learning application",0.7864
+SQL_Foundations_for_Data_Science.pptx,DDL vs DML vs DCL,3,Communication systems and protocols design,0.7811
+SQL_Foundations_for_Data_Science.pptx,SELECT/WHERE/ORDER BY/LIMIT filtering,1,Web pages optimization,0.7899
+SQL_Foundations_for_Data_Science.pptx,SELECT/WHERE/ORDER BY/LIMIT filtering,2,Pre-sales preparation,0.7789
+SQL_Foundations_for_Data_Science.pptx,SELECT/WHERE/ORDER BY/LIMIT filtering,3,Website traffic monitoring,0.7782
+SQL_Foundations_for_Data_Science.pptx,"JOIN types (INNER, LEFT, RIGHT, FULL OUTER)",1,Data preparation,0.7863
+SQL_Foundations_for_Data_Science.pptx,"JOIN types (INNER, LEFT, RIGHT, FULL OUTER)",2,Data collection and analysis,0.783
+SQL_Foundations_for_Data_Science.pptx,"JOIN types (INNER, LEFT, RIGHT, FULL OUTER)",3,RAN architecture,0.7812
+SQL_Foundations_for_Data_Science.pptx,GROUP BY and HAVING aggregation,1,Data collection and analysis,0.8017
+SQL_Foundations_for_Data_Science.pptx,GROUP BY and HAVING aggregation,2,Data preparation,0.7948
+SQL_Foundations_for_Data_Science.pptx,GROUP BY and HAVING aggregation,3,Data sharing,0.7907
+SQL_Foundations_for_Data_Science.pptx,SQL-based feature engineering,1,Applications development,0.8173
+SQL_Foundations_for_Data_Science.pptx,SQL-based feature engineering,2,Data design,0.8056
+SQL_Foundations_for_Data_Science.pptx,SQL-based feature engineering,3,Embedded firmware development,0.8051
+SQL_Foundations_for_Data_Science.pptx,multi-table joins for a training set,1,Database management and configuration,0.7924
+SQL_Foundations_for_Data_Science.pptx,multi-table joins for a training set,2,Data preparation,0.7889
+SQL_Foundations_for_Data_Science.pptx,multi-table joins for a training set,3,"Artificial intelligence, machine learning and deep learning application",0.7882
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,CRISP-DM framework,1,Communication systems and protocols design,0.8
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,CRISP-DM framework,2,Agile and DevOps methodology application,0.7839
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,CRISP-DM framework,3,5G RAN architecture,0.78
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,overlapping data science skill areas,1,Applications development,0.8016
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,overlapping data science skill areas,2,Data engineering,0.8001
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,overlapping data science skill areas,3,Data analytics,0.7986
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,ML vs traditional programming,1,Machine Learning (ML),0.8581
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,ML vs traditional programming,2,Programming,0.8177
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,ML vs traditional programming,3,"Artificial intelligence, machine learning and deep learning application",0.8159
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,supervised vs unsupervised learning,1,Machine Learning (ML),0.8358
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,supervised vs unsupervised learning,2,"Artificial intelligence, machine learning and deep learning application",0.8043
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,supervised vs unsupervised learning,3,Natural language Processing (NLP),0.7939
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,classification vs regression,1,Machine Learning (ML),0.812
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,classification vs regression,2,Programming,0.803
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,classification vs regression,3,Data collection and analysis,0.7976
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,rules-based vs ML approach selection,1,Machine Learning (ML),0.8522
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,rules-based vs ML approach selection,2,"Artificial intelligence, machine learning and deep learning application",0.8311
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,rules-based vs ML approach selection,3,Communication systems and protocols design,0.806
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,NumPy boolean masking,1,Natural language Processing (NLP),0.7889
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,NumPy boolean masking,2,Programming,0.7748
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,NumPy boolean masking,3,Communication systems and protocols design,0.7717
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,decision tree interpretability vs accuracy tradeoff,1,Communication systems and protocols design,0.7965
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,decision tree interpretability vs accuracy tradeoff,2,Data processing,0.793
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,decision tree interpretability vs accuracy tradeoff,3,Threat intelligence and detection,0.7907
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,gradient boosting overfitting pattern,1,OTN design,0.7748
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,gradient boosting overfitting pattern,2,5G RAN architecture,0.7715
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,gradient boosting overfitting pattern,3,Small cell design and optimization,0.771
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,CatBoost native categorical handling,1,Knowledge of big data tools and platforms,0.773
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,CatBoost native categorical handling,2,Software development and integration,0.7698
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,CatBoost native categorical handling,3,Programming,0.7683
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,LightGBM histogram-based speed optimization,1,Web pages optimization,0.8048
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,LightGBM histogram-based speed optimization,2,Frequency Spectrum Management,0.7781
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,LightGBM histogram-based speed optimization,3,"Game programming, development, and testing",0.7727
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,stacking ensembles and diminishing returns,1,Data preparation,0.7754
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,stacking ensembles and diminishing returns,2,Wireless network planning and optimization,0.7753
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,stacking ensembles and diminishing returns,3,RAN architecture,0.7751

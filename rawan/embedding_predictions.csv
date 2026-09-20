@@ -1,0 +1,16 @@
+course_id,predicted_skill,similarity_score
+C001,Machine Learning (ML),0.8387
+C001,"Artificial intelligence, machine learning and deep learning application",0.8053
+C001,Database modelling,0.8015
+C001,Data processing,0.8012
+C001,Knowledge of big data tools and platforms,0.7995
+C002,Cloud security,0.8274
+C002,Cloud infrastructure management,0.8228
+C002,Cloud development and operations management,0.8201
+C002,Cloud computing,0.8112
+C002,Cloud solutions design and implementation,0.8093
+C003,Data preparation,0.8379
+C003,Data cleaning,0.8355
+C003,Data collection and analysis,0.8196
+C003,Data processing,0.8097
+C003,Data ethics,0.7912
