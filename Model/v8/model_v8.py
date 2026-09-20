@@ -433,15 +433,13 @@ def build_retrieval_query(
     """
     Build a focused E5 retrieval query.
 
-    Retrieval is based primarily on:
+    Retrieval uses:
     1. Qwen topic tags
     2. Qwen semantic summary
+    3. A limited preview of the raw content
 
-    Raw document content is intentionally excluded from the
-    retrieval query because it can introduce many generic
-    tokens that dilute lexical matching.
-
-    The full content remains available to the reranker.
+    The raw content preview is intentionally limited so that
+    generic document text does not dominate the retrieval query.
     """
 
     tags_text = ", ".join(predicted_tags)
@@ -458,8 +456,16 @@ def build_retrieval_query(
             f"Semantic summary: {semantic_summary}"
         )
 
-    return "\n".join(parts)
+    content_preview = " ".join(
+        str(content).split()
+    )[:1200]
 
+    if content_preview:
+        parts.append(
+            f"Content context: {content_preview}"
+        )
+
+    return "\n".join(parts)
 
 def retrieve_candidates(
     chunk_results,
