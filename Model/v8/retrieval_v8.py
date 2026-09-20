@@ -48,23 +48,31 @@ def normalize_text(text: str) -> str:
 
     return text
 
-
 def lexical_overlap_score(
     query_text: str,
     taxonomy_text: str,
 ) -> float:
     """
-    Token-overlap score used in the hybrid retrieval experiment.
+    Token-overlap score for hybrid retrieval.
 
-    Score:
-        |query_tokens ∩ taxonomy_tokens|
-        --------------------------------
-              |query_tokens|
+    Uses query-token coverage, but removes very common
+    generic English stopwords so that technical terms
+    contribute more strongly to lexical matching.
     """
 
-    query_tokens = set(
-        normalize_text(query_text).split()
-    )
+    STOPWORDS = {
+        "the", "a", "an", "and", "or", "of", "to", "in",
+        "on", "for", "with", "from", "by", "is", "are",
+        "be", "as", "at", "this", "that", "these", "those",
+        "using", "used", "use", "based", "including",
+        "content", "topics", "semantic", "summary",
+    }
+
+    query_tokens = {
+        token
+        for token in normalize_text(query_text).split()
+        if token not in STOPWORDS
+    }
 
     taxonomy_tokens = set(
         normalize_text(taxonomy_text).split()
@@ -344,7 +352,7 @@ class TaxonomyRetriever:
     def retrieve_from_chunks(
         self,
         chunk_queries: List[str],
-        top_k_per_chunk: int = 5,
+        top_k_per_chunk: int = 10,
         final_k: int = 10,
     ) -> List[Dict]:
         """
@@ -452,11 +460,14 @@ class TaxonomyRetriever:
             # strongest hybrid match.
             #
             # Supporting signal:
-            # repeated retrieval across chunks.
+            # average retrieval quality across chunks.
+            # Repeated retrieval receives a small bonus.
             final_score = (
-                item["max_score"]
-                +
-                0.02 * min(
+                0.70 * item["max_score"]
+                + 0.30 * (
+                    item["sum_score"] / item["hits"]
+                )
+                + 0.02 * min(
                     item["hits"],
                     3,
                 )
@@ -469,11 +480,28 @@ class TaxonomyRetriever:
             ranked.append(item)
 
         ranked.sort(
-            key=lambda x: x[
-                "retrieval_score"
-            ],
+            key=lambda x: x["retrieval_score"],
             reverse=True,
         )
+
+        print("\n" + "=" * 70)
+        print("V8 RETRIEVAL CANDIDATES")
+        print("=" * 70)
+
+        for rank, item in enumerate(
+            ranked[:final_k],
+            start=1,
+        ):
+            print(
+                f"{rank:02d}. "
+                f"{item['skill_name_en']} | "
+                f"retrieval={item['retrieval_score']:.4f} | "
+                f"E5={item['best_e5_score']:.4f} | "
+                f"lexical={item['best_lexical_score']:.4f} | "
+                f"hits={item['hits']}"
+            )
+
+        print("=" * 70)
 
         # Reassign final candidate rank.
         ranked = ranked[:final_k]

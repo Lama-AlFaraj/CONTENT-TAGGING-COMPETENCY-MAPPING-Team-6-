@@ -424,31 +424,39 @@ technical concepts, methods, tools, and learning topics.
 
     return ""
 
+
 def build_retrieval_query(
     content,
     predicted_tags,
     semantic_summary="",
 ):
+    """
+    Build a focused E5 retrieval query.
 
-    tags_text = ", ".join(
-        predicted_tags
-    )
+    Retrieval is based primarily on:
+    1. Qwen topic tags
+    2. Qwen semantic summary
 
-    # Keep the E5 query concise and semantically focused.
-    excerpt = str(content).strip()[:1200]
+    Raw document content is intentionally excluded from the
+    retrieval query because it can introduce many generic
+    tokens that dilute lexical matching.
 
-    parts = [
-        f"Topics: {tags_text}",
-    ]
+    The full content remains available to the reranker.
+    """
+
+    tags_text = ", ".join(predicted_tags)
+
+    parts = []
+
+    if tags_text:
+        parts.append(
+            f"Topics: {tags_text}"
+        )
 
     if semantic_summary:
         parts.append(
             f"Semantic summary: {semantic_summary}"
         )
-
-    parts.append(
-        f"Content evidence: {excerpt}"
-    )
 
     return "\n".join(parts)
 
