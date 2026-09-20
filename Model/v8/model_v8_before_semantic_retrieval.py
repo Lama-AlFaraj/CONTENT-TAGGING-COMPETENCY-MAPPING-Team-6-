@@ -356,101 +356,23 @@ def run_tagger(content):
 # STAGE 2 — RETRIEVAL
 # ============================================================
 
-def generate_semantic_summary(
-    content,
-    predicted_tags,
-):
-    """
-    Generate a short semantic summary for E5 retrieval.
-
-    The summary uses only the current content chunk and the predicted
-    topic tags. It must not use gold labels or taxonomy competencies.
-    """
-
-    tags_text = ", ".join(predicted_tags)
-
-    system_prompt = """
-You create concise semantic search queries for competency retrieval.
-
-Return ONLY valid JSON with this exact structure:
-{"summary": "one concise sentence"}
-
-The summary must describe technical concepts actually taught or
-demonstrated in the supplied content.
-
-Do not:
-- name Saudi taxonomy competencies
-- invent unsupported topics
-- discuss difficulty
-- explain your reasoning
-- use bullet points
-"""
-
-    user_prompt = f"""
-Predicted topic tags:
-{tags_text}
-
-Content:
-{str(content).strip()[:3500]}
-
-Write one concise semantic summary containing the most important
-technical concepts, methods, tools, and learning topics.
-"""
-
-    try:
-        result = generate_json(
-            system_prompt,
-            user_prompt,
-            max_new_tokens=120,
-        )
-
-        if isinstance(result, dict):
-            summary = (
-                result.get("summary")
-                or result.get("semantic_summary")
-                or result.get("text")
-                or ""
-            )
-        else:
-            summary = str(result)
-
-        summary = str(summary).strip()
-
-        if summary:
-            return summary[:1000]
-
-    except Exception as exc:
-        print(f"Semantic summary generation failed: {exc}")
-
-    return ""
-
 def build_retrieval_query(
     content,
     predicted_tags,
-    semantic_summary="",
 ):
 
     tags_text = ", ".join(
         predicted_tags
     )
 
-    # Keep the E5 query concise and semantically focused.
-    excerpt = str(content).strip()[:1200]
+    # E5 works best when the query is concise.
+    # Keep the semantic query focused on tags + an excerpt.
+    excerpt = str(content).strip()[:2500]
 
-    parts = [
-        f"Topics: {tags_text}",
-    ]
-
-    if semantic_summary:
-        parts.append(
-            f"Semantic summary: {semantic_summary}"
-        )
-
-    parts.append(
+    return (
+        f"Topics: {tags_text}\n"
         f"Content evidence: {excerpt}"
     )
-
-    return "\n".join(parts)
 
 
 def retrieve_candidates(
@@ -461,20 +383,9 @@ def retrieve_candidates(
 
     for item in chunk_results:
 
-        content = item["content"]
-        predicted_tags = item["result"]["predicted_tags"]
-
-        semantic_summary = generate_semantic_summary(
-            content,
-            predicted_tags,
-        )
-
-        item["semantic_summary"] = semantic_summary
-
         query = build_retrieval_query(
-            content,
-            predicted_tags,
-            semantic_summary,
+            item["content"],
+            item["result"]["predicted_tags"],
         )
 
         queries.append(query)
