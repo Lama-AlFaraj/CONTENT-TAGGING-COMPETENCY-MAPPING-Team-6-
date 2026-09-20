@@ -27,7 +27,7 @@
         ],
         "best_e5_score": 0.820854127407074,
         "best_lexical_score": 0.15384615384615385,
-        "retrieval_score": 0.6969995327179249,
+        "retrieval_score": 0.7015384853803195,
         "rank": 1
       },
       {
@@ -42,7 +42,7 @@
         ],
         "best_e5_score": 0.8204345107078552,
         "best_lexical_score": 0.07692307692307693,
-        "retrieval_score": 0.6523749718757776,
+        "retrieval_score": 0.6681874794226427,
         "rank": 2
       },
       {
@@ -56,7 +56,7 @@
         ],
         "best_e5_score": 0.811739981174469,
         "best_lexical_score": 0.0625,
-        "retrieval_score": 0.6450000238418578,
+        "retrieval_score": 0.645000023841858,
         "rank": 3
       },
       {
@@ -148,7 +148,7 @@
     ],
     "difficulty_level": "Intermediate",
     "confidence": 0.85,
-    "notes": "The document evidence clearly demonstrates the use of window functions, LAG(), NTILE(), and cumulative sum calculations, which are essential for data processing and preparation. The content involves collecting, cleaning, and transforming data to derive meaningful insights, aligning with both 'Data processing' and 'Data preparation' competencies.",
+    "notes": "The document evidence clearly demonstrates the use of window functions, LAG(), NTILE(), and cumulative sum calculations, which are all part of data processing and preparation tasks. The content involves creating and manipulating tables, performing aggregations, and calculating running totals, which are typical activities in data processing and preparation.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Data collection and analysis",
@@ -162,7 +162,7 @@
         ],
         "best_e5_score": 0.821844756603241,
         "best_lexical_score": 0.13333333333333333,
-        "retrieval_score": 0.6742112021843593,
+        "retrieval_score": 0.6763269003232321,
         "rank": 1
       },
       {
@@ -191,7 +191,7 @@
         ],
         "best_e5_score": 0.8083164095878601,
         "best_lexical_score": 0.05555555555555555,
-        "retrieval_score": 0.6329534931712681,
+        "retrieval_score": 0.6371482409371271,
         "rank": 3
       },
       {
@@ -281,7 +281,7 @@
     ],
     "difficulty_level": "Beginner",
     "confidence": 0.85,
-    "notes": "The document evidence clearly introduces the basic concepts of the Pandas library, including its primary data structures: Series and DataFrame. It explains how these structures help manage and analyze data more effectively compared to using separate lists or arrays. This content meaningfully teaches and demonstrates the skill of data processing, which involves utilizing various analytic tools and techniques to extract valuable insights and enhance decision-making.",
+    "notes": "The document evidence clearly introduces the basic concepts of the Pandas library, including its primary data structures: Series and DataFrame. It explains how these structures help manage and analyze data more effectively compared to using separate lists or arrays. This content meaningfully teaches and demonstrates the skill of data processing, which involves utilizing various analytic tools and techniques to extract valuable insights and enhance decision-making. The slides provide a comprehensive introduction to the core functionalities of Pandas, which aligns closely with the description of the 'Data processing' competency.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Data collection and analysis",
@@ -295,7 +295,7 @@
         ],
         "best_e5_score": 0.817503809928894,
         "best_lexical_score": 0.15789473684210525,
-        "retrieval_score": 0.6908452949398443,
+        "retrieval_score": 0.7031579185787,
         "rank": 1
       },
       {
@@ -310,7 +310,7 @@
         ],
         "best_e5_score": 0.7977666854858398,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6373784018817701,
+        "retrieval_score": 0.640000023841858,
         "rank": 2
       },
       {
@@ -447,7 +447,7 @@
         ],
         "best_e5_score": 0.808783769607544,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6461246943473815,
+        "retrieval_score": 0.6551066613197327,
         "rank": 2
       },
       {
@@ -463,7 +463,7 @@
         ],
         "best_e5_score": 0.7959722280502319,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6289323246479035,
+        "retrieval_score": 0.6335308527946473,
         "rank": 3
       },
       {
@@ -478,7 +478,7 @@
         ],
         "best_e5_score": 0.801514744758606,
         "best_lexical_score": 0.13333333333333333,
-        "retrieval_score": 0.6185383323033651,
+        "retrieval_score": 0.6257733996709188,
         "rank": 4
       },
       {
@@ -555,7 +555,7 @@
     ],
     "difficulty_level": "Beginner",
     "confidence": 0.8,
-    "notes": "The document evidence clearly demonstrates the use of data cleaning techniques such as handling missing values, using `dropna` and `fillna` methods, and performing groupby operations to calculate means. The content explicitly covers these topics under the section 'Handling Missing Data' and provides code examples for both dropping and filling missing values, which directly supports the 'Data cleaning' competency.",
+    "notes": "The document evidence clearly demonstrates the use of data cleaning techniques such as handling missing data, using `dropna` and `fillna` methods, and performing groupby operations to calculate means. The content explicitly covers these topics under the 'What you will learn' section and provides code examples for handling missing values, which directly supports the 'Data cleaning' competency.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Data collection and analysis",
@@ -569,7 +569,7 @@
         ],
         "best_e5_score": 0.8095213770866394,
         "best_lexical_score": 0.08333333333333333,
-        "retrieval_score": 0.668830838282903,
+        "retrieval_score": 0.6733333571751913,
         "rank": 1
       },
       {
@@ -612,7 +612,7 @@
         ],
         "best_e5_score": 0.8019949793815613,
         "best_lexical_score": 0.08333333333333333,
-        "retrieval_score": 0.62398732539018,
+        "retrieval_score": 0.627058158715566,
         "rank": 4
       },
       {
@@ -627,7 +627,7 @@
         ],
         "best_e5_score": 0.8143194913864136,
         "best_lexical_score": 0.05,
-        "retrieval_score": 0.6164539272785187,
+        "retrieval_score": 0.6171425557136536,
         "rank": 5
       },
       {
@@ -676,8 +676,8 @@
       "Machine Learning (ML)"
     ],
     "difficulty_level": "Beginner",
-    "confidence": 0.8,
-    "notes": "The document evidence clearly covers fundamental concepts of the machine learning workflow, including train-test split, evaluation metrics (MAE, RMSE, R-squared), fitting, predicting, and evaluating a regression model. The content also touches on saving and loading models, which are all core aspects of machine learning. Therefore, the 'Machine Learning (ML)' competency is genuinely supported by the document content.",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly covers fundamental concepts of the machine learning workflow, including train-test split, evaluation metrics (MAE, RMSE, R-squared), fitting, predicting, and evaluating a regression model. The content also includes practical examples and explanations of these concepts, making it suitable for beginners and meaningfully teaching the skills associated with machine learning.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Knowledge of big data tools and platforms",
@@ -692,22 +692,8 @@
         ],
         "best_e5_score": 0.8061755895614624,
         "best_lexical_score": 0.043478260869565216,
-        "retrieval_score": 0.6691715476305589,
+        "retrieval_score": 0.677391328189684,
         "rank": 1
-      },
-      {
-        "skill_name_en": "Machine Learning (ML)",
-        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
-        "max_score": 0.6304177068528675,
-        "sum_score": 0.6304177068528675,
-        "hits": 1,
-        "chunk_indices": [
-          1
-        ],
-        "best_e5_score": 0.8172194957733154,
-        "best_lexical_score": 0.09523809523809523,
-        "retrieval_score": 0.6504177068528675,
-        "rank": 2
       },
       {
         "skill_name_en": "Data collection and analysis",
@@ -721,7 +707,21 @@
         ],
         "best_e5_score": 0.8185584545135498,
         "best_lexical_score": 0.047619047619047616,
-        "retrieval_score": 0.6456291500443505,
+        "retrieval_score": 0.659047642889477,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.6304177068528675,
+        "sum_score": 0.6304177068528675,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8172194957733154,
+        "best_lexical_score": 0.09523809523809523,
+        "retrieval_score": 0.6504177068528675,
         "rank": 3
       },
       {
@@ -737,7 +737,7 @@
         ],
         "best_e5_score": 0.8023271560668945,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6340767598152159,
+        "retrieval_score": 0.6387028074264527,
         "rank": 4
       },
       {
@@ -752,7 +752,7 @@
         ],
         "best_e5_score": 0.8021492958068848,
         "best_lexical_score": 0.043478260869565216,
-        "retrieval_score": 0.6303034787851831,
+        "retrieval_score": 0.6351098602751027,
         "rank": 5
       },
       {
@@ -831,7 +831,7 @@
     ],
     "difficulty_level": "Beginner",
     "confidence": 0.85,
-    "notes": "The document evidence clearly demonstrates the steps involved in data preparation, such as loading, labeling, exploring, and splitting data into training and testing sets. Additionally, the content shows the process of preparing new data and making predictions, which aligns with data processing skills. These competencies are directly supported by the content and are essential for beginners in machine learning workflows.",
+    "notes": "The document evidence clearly demonstrates the steps involved in data preparation, including loading, labeling, exploring, and splitting data into training and testing sets. Additionally, the content shows the process of preparing new data and making predictions, which aligns with data processing skills. These competencies are directly supported by the content and are essential for beginners in machine learning workflows.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Machine Learning (ML)",
@@ -845,7 +845,7 @@
         ],
         "best_e5_score": 0.828448474407196,
         "best_lexical_score": 0.13333333333333333,
-        "retrieval_score": 0.6850789005071267,
+        "retrieval_score": 0.6933333571751913,
         "rank": 1
       },
       {
@@ -860,7 +860,7 @@
         ],
         "best_e5_score": 0.8220977783203125,
         "best_lexical_score": 0.06896551724137931,
-        "retrieval_score": 0.6663572255948494,
+        "retrieval_score": 0.6675862307384097,
         "rank": 2
       },
       {
@@ -875,7 +875,7 @@
         ],
         "best_e5_score": 0.8222169876098633,
         "best_lexical_score": 0.06666666666666667,
-        "retrieval_score": 0.6255965104130492,
+        "retrieval_score": 0.6297105590502421,
         "rank": 3
       },
       {
@@ -904,7 +904,7 @@
         ],
         "best_e5_score": 0.8190791606903076,
         "best_lexical_score": 0.06666666666666667,
-        "retrieval_score": 0.6050464520111851,
+        "retrieval_score": 0.6111015717188517,
         "rank": 5
       },
       {
@@ -939,8 +939,8 @@
       "Natural language Processing (NLP)"
     ],
     "difficulty_level": "Intermediate",
-    "confidence": 0.6541,
-    "notes": "The document evidence clearly covers various aspects of prompt engineering, including chat roles, templates, zero-shot and few-shot prompting, and prompt evaluation. These topics are fundamental to NLP, particularly in the context of designing and evaluating models for natural language tasks. The content also discusses techniques such as balanced sampling and constrained decoding, which are key components of NLP and machine learning.",
+    "confidence": 0.66,
+    "notes": "The document evidence strongly supports the use of Natural Language Processing (NLP) techniques such as prompt engineering, zero-shot and few-shot prompting, and evaluating model outputs. The content extensively covers the design and application of prompts to improve model performance, which aligns closely with NLP skills.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Programming",
@@ -954,7 +954,7 @@
         ],
         "best_e5_score": 0.8146599531173706,
         "best_lexical_score": 0.10344827586206896,
-        "retrieval_score": 0.6677510782151387,
+        "retrieval_score": 0.6813793341866855,
         "rank": 1
       },
       {
@@ -970,8 +970,25 @@
         ],
         "best_e5_score": 0.7975428104400635,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6540875284425143,
+        "retrieval_score": 0.660000023841858,
         "rank": 2
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.6000000238418579,
+        "sum_score": 2.272533595561981,
+        "hits": 4,
+        "chunk_indices": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "best_e5_score": 0.8067797422409058,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 3
       },
       {
         "skill_name_en": "Data collection and analysis",
@@ -988,24 +1005,7 @@
         ],
         "best_e5_score": 0.8065747022628784,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.65160083489669,
-        "rank": 3
-      },
-      {
-        "skill_name_en": "Data sharing",
-        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
-        "max_score": 0.6000000238418579,
-        "sum_score": 2.272533595561981,
-        "hits": 4,
-        "chunk_indices": [
-          2,
-          3,
-          4,
-          6
-        ],
-        "best_e5_score": 0.8067797422409058,
-        "best_lexical_score": 0.0,
-        "retrieval_score": 0.6504400363564491,
+        "retrieval_score": 0.660000023841858,
         "rank": 4
       },
       {
@@ -1020,23 +1020,8 @@
         ],
         "best_e5_score": 0.7997775077819824,
         "best_lexical_score": 0.04,
-        "retrieval_score": 0.6374869988918305,
+        "retrieval_score": 0.643068259716034,
         "rank": 5
-      },
-      {
-        "skill_name_en": "Communication systems and protocols design",
-        "description_en": "Familiarize with communication protocols (e.g., DPD, CFR, DUC, DDC). Utilize AI algorithms for the analysis and management of the RAN",
-        "max_score": 0.5946127698339265,
-        "sum_score": 1.1888591248906892,
-        "hits": 2,
-        "chunk_indices": [
-          1,
-          6
-        ],
-        "best_e5_score": 0.8118991255760193,
-        "best_lexical_score": 0.034482758620689655,
-        "retrieval_score": 0.6345578076173519,
-        "rank": 6
       },
       {
         "skill_name_en": "Pre-sales preparation",
@@ -1050,7 +1035,22 @@
         ],
         "best_e5_score": 0.804386556148529,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.634463336467743,
+        "retrieval_score": 0.640000023841858,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.6000000238418579,
+        "sum_score": 1.157378613948822,
+        "hits": 2,
+        "chunk_indices": [
+          2,
+          6
+        ],
+        "best_e5_score": 0.8014237880706787,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.640000023841858,
         "rank": 7
       },
       {
@@ -1065,22 +1065,22 @@
         ],
         "best_e5_score": 0.8047531843185425,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6338277472320356,
+        "retrieval_score": 0.640000023841858,
         "rank": 8
       },
       {
-        "skill_name_en": "Web pages optimization",
-        "description_en": "Optimizing web pages for maximum speed and scalability",
-        "max_score": 0.6000000238418579,
-        "sum_score": 1.157378613948822,
+        "skill_name_en": "Communication systems and protocols design",
+        "description_en": "Familiarize with communication protocols (e.g., DPD, CFR, DUC, DDC). Utilize AI algorithms for the analysis and management of the RAN",
+        "max_score": 0.5946127698339265,
+        "sum_score": 1.1888591248906892,
         "hits": 2,
         "chunk_indices": [
-          2,
+          1,
           6
         ],
-        "best_e5_score": 0.8014237880706787,
-        "best_lexical_score": 0.0,
-        "retrieval_score": 0.6336068087816239,
+        "best_e5_score": 0.8118991255760193,
+        "best_lexical_score": 0.034482758620689655,
+        "retrieval_score": 0.6346127698339266,
         "rank": 9
       },
       {
@@ -1138,7 +1138,7 @@
         ],
         "best_e5_score": 0.8105429410934448,
         "best_lexical_score": 0.047619047619047616,
-        "retrieval_score": 0.6333524786858331,
+        "retrieval_score": 0.6333524786858332,
         "rank": 2
       },
       {
@@ -1180,7 +1180,7 @@
         ],
         "best_e5_score": 0.804332435131073,
         "best_lexical_score": 0.047619047619047616,
-        "retrieval_score": 0.5968532764343988,
+        "retrieval_score": 0.5968532764343989,
         "rank": 5
       }
     ],
@@ -1202,7 +1202,7 @@
     ],
     "difficulty_level": "Intermediate",
     "confidence": 0.85,
-    "notes": "The document evidence strongly supports the skill of data collection and analysis. It discusses the use of various techniques such as chunking text, embedding for retrieval, and generating answers based on customer reviews. These concepts require gathering and analyzing data from different sources, which aligns closely with the described skill. Additionally, the content focuses on evaluating the performance of the retrieval-augmented generation system, further emphasizing the importance of data collection and analysis.",
+    "notes": "The document evidence strongly supports the skill of data collection and analysis. The content discusses the use of various techniques such as chunking text, embedding for retrieval, and generating answers based on customer reviews. These processes involve gathering and analyzing data from different sources, which aligns closely with the described skill. Additionally, the evaluation of retrieval and generation quality further emphasizes the importance of accurate data handling and analysis.",
     "retrieval_candidates": [
       {
         "skill_name_en": "Knowledge of big data tools and platforms",
@@ -1217,7 +1217,7 @@
         ],
         "best_e5_score": 0.804420530796051,
         "best_lexical_score": 0.1,
-        "retrieval_score": 0.673833690404892,
+        "retrieval_score": 0.6889061093330384,
         "rank": 1
       },
       {
@@ -1237,7 +1237,7 @@
         ],
         "best_e5_score": 0.8062556982040405,
         "best_lexical_score": 0.05,
-        "retrieval_score": 0.665192265885217,
+        "retrieval_score": 0.680000023841858,
         "rank": 2
       },
       {
@@ -1257,7 +1257,7 @@
         ],
         "best_e5_score": 0.7973796725273132,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6519706906591143,
+        "retrieval_score": 0.660000023841858,
         "rank": 3
       },
       {
@@ -1290,7 +1290,7 @@
         ],
         "best_e5_score": 0.8111089468002319,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.6219022771716118,
+        "retrieval_score": 0.6340728974342347,
         "rank": 5
       },
       {
@@ -1319,7 +1319,7 @@
         ],
         "best_e5_score": 0.8033673763275146,
         "best_lexical_score": 0.1,
-        "retrieval_score": 0.5990082151804652,
+        "retrieval_score": 0.6061155962944031,
         "rank": 7
       },
       {
@@ -1334,7 +1334,7 @@
         ],
         "best_e5_score": 0.8008289337158203,
         "best_lexical_score": 0.0,
-        "retrieval_score": 0.574915605187416,
+        "retrieval_score": 0.59667644739151,
         "rank": 8
       },
       {
@@ -1397,7 +1397,7 @@
         ],
         "best_e5_score": 0.8138024806976318,
         "best_lexical_score": 0.07142857142857142,
-        "retrieval_score": 0.662915167684679,
+        "retrieval_score": 0.6685714524132865,
         "rank": 1
       },
       {
@@ -1412,7 +1412,7 @@
         ],
         "best_e5_score": 0.7961385250091553,
         "best_lexical_score": 0.09090909090909091,
-        "retrieval_score": 0.6533482276696664,
+        "retrieval_score": 0.6597389711033215,
         "rank": 2
       },
       {
@@ -1427,7 +1427,7 @@
         ],
         "best_e5_score": 0.7984983325004578,
         "best_lexical_score": 0.045454545454545456,
-        "retrieval_score": 0.6515785540079142,
+        "retrieval_score": 0.6581818420236761,
         "rank": 3
       },
       {
@@ -1513,7 +1513,7 @@
         ],
         "best_e5_score": 0.8167234659194946,
         "best_lexical_score": 0.2631578947368421,
-        "retrieval_score": 0.6812302504087748,
+        "retrieval_score": 0.6812302504087749,
         "rank": 1
       },
       {

@@ -457,16 +457,11 @@ class TaxonomyRetriever:
         for item in candidate_map.values():
 
             # Primary signal:
-            # strongest hybrid match.
+            # strongest hybrid match across chunks.
             #
-            # Supporting signal:
-            # average retrieval quality across chunks.
             # Repeated retrieval receives a small bonus.
             final_score = (
-                0.70 * item["max_score"]
-                + 0.30 * (
-                    item["sum_score"] / item["hits"]
-                )
+                item["max_score"]
                 + 0.02 * min(
                     item["hits"],
                     3,
