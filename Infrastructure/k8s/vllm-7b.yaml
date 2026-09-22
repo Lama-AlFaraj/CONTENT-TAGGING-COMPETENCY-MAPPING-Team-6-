@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beamdata-vllm-7b
+  namespace: shahad
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: beamdata-vllm-7b
+  template:
+    metadata:
+      labels:
+        app: beamdata-vllm-7b
+    spec:
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:latest
+          command: ["vllm", "serve"]
+          args:
+            - "Qwen/Qwen2.5-7B-Instruct-AWQ"
+            - "--host"
+            - "0.0.0.0"
+            - "--port"
+            - "8000"
+            - "--quantization"
+            - "awq"
+            - "--dtype"
+            - "half"
+            - "--max-model-len"
+            - "16384"
+            - "--gpu-memory-utilization"
+            - "0.85"
+            - "--enable-prefix-caching"
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            failureThreshold: 30
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 120
+            periodSeconds: 20
+            failureThreshold: 6
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: beamdata-vllm
+  namespace: shahad
+spec:
+  type: ClusterIP
+  selector:
+    app: beamdata-vllm-7b
+  ports:
+    - port: 8000
+      targetPort: 8000

@@ -1,0 +1,168 @@
+{
+  "timestamp": 1789999318,
+  "base_url": "http://127.0.0.1:18001",
+  "endpoint": "/predict",
+  "data_dir": "Model/evaluation_data",
+  "file_count": 12,
+  "concurrency_levels": [
+    1
+  ],
+  "timeout_s": 300.0,
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests": 12,
+      "success": 12,
+      "errors": 0,
+      "error_rate": 0.0,
+      "wall_time_s": 196.6232,
+      "throughput_req_s": 0.061,
+      "latency_avg_s": 16.3852,
+      "latency_p50_s": 11.7233,
+      "latency_p95_s": 37.0397,
+      "latency_p99_s": 39.2675,
+      "latency_min_s": 6.2101,
+      "latency_max_s": 39.2675,
+      "results": [
+        {
+          "file": "Decision Trees Revised.pptx",
+          "status_code": 200,
+          "latency_s": 11.7233,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 3915
+        },
+        {
+          "file": "HandsOn1_Window_Functions.md",
+          "status_code": 200,
+          "latency_s": 11.1392,
+          "ok": true,
+          "predicted_competencies": [
+            "Data processing",
+            "Data collection and analysis"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 2846
+        },
+        {
+          "file": "Introduction to Pandas_.pptx",
+          "status_code": 200,
+          "latency_s": 11.3706,
+          "ok": true,
+          "predicted_competencies": [
+            "Data processing",
+            "Data collection and analysis"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3460
+        },
+        {
+          "file": "Lecture - Decision Trees.ipynb",
+          "status_code": 200,
+          "latency_s": 17.0259,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 3392
+        },
+        {
+          "file": "Lecture - Pandas Basics.ipynb",
+          "status_code": 200,
+          "latency_s": 13.8123,
+          "ok": true,
+          "predicted_competencies": [
+            "Data cleaning"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3181
+        },
+        {
+          "file": "Lecture_ML_Workflow.ipynb",
+          "status_code": 200,
+          "latency_s": 19.1634,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 3533
+        },
+        {
+          "file": "ML Workflow Introduction.pptx",
+          "status_code": 200,
+          "latency_s": 11.3733,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)",
+            "Data processing"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3802
+        },
+        {
+          "file": "Prompt_Engineering.ipynb",
+          "status_code": 200,
+          "latency_s": 39.2675,
+          "ok": true,
+          "predicted_competencies": [
+            "Natural language Processing (NLP)",
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 4784
+        },
+        {
+          "file": "Retrieval_Augmented_Generation.ipynb",
+          "status_code": 200,
+          "latency_s": 37.0397,
+          "ok": true,
+          "predicted_competencies": [
+            "Natural language Processing (NLP)",
+            "Data collection and analysis"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 4740
+        },
+        {
+          "file": "SQL_Foundations_for_Data_Science.pptx",
+          "status_code": 200,
+          "latency_s": 12.0769,
+          "ok": true,
+          "predicted_competencies": [
+            "Database management and configuration",
+            "Data collection and analysis"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3913
+        },
+        {
+          "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+          "status_code": 200,
+          "latency_s": 6.4197,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 2906
+        },
+        {
+          "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+          "status_code": 200,
+          "latency_s": 6.2101,
+          "ok": true,
+          "predicted_competencies": [
+            "Data processing"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 2611
+        }
+      ]
+    }
+  ]
+}

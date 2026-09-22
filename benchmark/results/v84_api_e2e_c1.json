@@ -1,0 +1,145 @@
+{
+  "timestamp": 1789998099,
+  "base_url": "http://127.0.0.1:18000",
+  "endpoint": "/predict",
+  "data_dir": "Model/evaluation_data",
+  "file_count": 12,
+  "concurrency_levels": [
+    1
+  ],
+  "timeout_s": 300.0,
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests": 12,
+      "success": 7,
+      "errors": 5,
+      "error_rate": 0.4167,
+      "wall_time_s": 146.1724,
+      "throughput_req_s": 0.0821,
+      "latency_avg_s": 12.913,
+      "latency_p50_s": 10.6892,
+      "latency_p95_s": 22.1221,
+      "latency_p99_s": 22.1221,
+      "latency_min_s": 10.0283,
+      "latency_max_s": 22.1221,
+      "results": [
+        {
+          "file": "Decision Trees Revised.pptx",
+          "status_code": 200,
+          "latency_s": 10.4772,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 3915
+        },
+        {
+          "file": "HandsOn1_Window_Functions.md",
+          "status_code": 200,
+          "latency_s": 10.0283,
+          "ok": true,
+          "predicted_competencies": [
+            "Data processing",
+            "Data collection and analysis"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 2846
+        },
+        {
+          "file": "Introduction to Pandas_.pptx",
+          "status_code": 200,
+          "latency_s": 10.7841,
+          "ok": true,
+          "predicted_competencies": [
+            "Data processing",
+            "Data collection and analysis"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3460
+        },
+        {
+          "file": "Lecture - Decision Trees.ipynb",
+          "status_code": 200,
+          "latency_s": 22.1221,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 3392
+        },
+        {
+          "file": "Lecture - Pandas Basics.ipynb",
+          "status_code": 200,
+          "latency_s": 10.6892,
+          "ok": true,
+          "predicted_competencies": [
+            "Data cleaning"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3181
+        },
+        {
+          "file": "Lecture_ML_Workflow.ipynb",
+          "status_code": 200,
+          "latency_s": 15.8829,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)"
+          ],
+          "difficulty_level": "Intermediate",
+          "response_size_bytes": 3533
+        },
+        {
+          "file": "ML Workflow Introduction.pptx",
+          "status_code": 200,
+          "latency_s": 10.4075,
+          "ok": true,
+          "predicted_competencies": [
+            "Machine Learning (ML)",
+            "Data processing"
+          ],
+          "difficulty_level": "Beginner",
+          "response_size_bytes": 3802
+        },
+        {
+          "file": "Prompt_Engineering.ipynb",
+          "status_code": null,
+          "latency_s": 55.7684,
+          "ok": false,
+          "error": "RemoteProtocolError: Server disconnected without sending a response."
+        },
+        {
+          "file": "Retrieval_Augmented_Generation.ipynb",
+          "status_code": null,
+          "latency_s": 0.0083,
+          "ok": false,
+          "error": "RemoteProtocolError: Server disconnected without sending a response."
+        },
+        {
+          "file": "SQL_Foundations_for_Data_Science.pptx",
+          "status_code": null,
+          "latency_s": 0.0013,
+          "ok": false,
+          "error": "ConnectError: All connection attempts failed"
+        },
+        {
+          "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+          "status_code": null,
+          "latency_s": 0.0011,
+          "ok": false,
+          "error": "ConnectError: All connection attempts failed"
+        },
+        {
+          "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+          "status_code": null,
+          "latency_s": 0.001,
+          "ok": false,
+          "error": "ConnectError: All connection attempts failed"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beamdata-v8-api
+  namespace: shahad
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: beamdata-v8-api
+  template:
+    metadata:
+      labels:
+        app: beamdata-v8-api
+    spec:
+      containers:
+        - name: api
+          image: shahad09/beamdata-v8-api:v8.4
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: VLLM_BASE_URL
+              value: "http://beamdata-vllm:8000"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "2Gi"
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            failureThreshold: 6
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: beamdata-v8-api
+  namespace: shahad
+spec:
+  type: ClusterIP
+  selector:
+    app: beamdata-v8-api
+  ports:
+    - port: 8000
+      targetPort: 8000

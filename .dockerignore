@@ -1,0 +1,14 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+Model/evaluation_data
+Model/v8/results
+Model/*.csv
+benchmark
+data
+deema
+lama
+rawan
+shahad
+!Model/saudi_skills_taxonomy_v1_final.csv
