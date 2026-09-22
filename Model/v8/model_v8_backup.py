@@ -1,4 +1,3 @@
-import os
 """
 V8 Hybrid Qwen + E5 competency mapping.
 
@@ -15,12 +14,19 @@ Content
 Ground-truth data is NEVER used during inference.
 """
 
+import gc
 import json
 import re
-import requests
 from pathlib import Path
 
 import pandas as pd
+import torch
+
+from transformers import (
+    AutoTokenizer,
+    AutoModelForCausalLM,
+    BitsAndBytesConfig,
+)
 
 try:
     from .retrieval_v8 import TaxonomyRetriever
@@ -53,30 +59,57 @@ RETRIEVAL_FINAL_K = 10
 MAX_NEW_TOKENS_TAGGER = 350
 MAX_NEW_TOKENS_RERANKER = 350
 
+
 # ============================================================
-# E5 TAXONOMY RETRIEVER
+# MODEL LOADING
 # ============================================================
+
+print("=" * 70)
+print("V8: Loading Qwen2.5-7B-Instruct")
+print("=" * 70)
+
+quant_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_compute_dtype=torch.float16,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_use_double_quant=True,
+)
+
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_NAME
+)
+
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_NAME,
+    quantization_config=quant_config,
+    device_map="auto",
+)
+
+model.eval()
+
+print("Qwen loaded.")
+
+print("=" * 70)
+print("V8: Loading E5 retriever")
+print("=" * 70)
 
 retriever = TaxonomyRetriever(
     taxonomy_path=TAXONOMY_PATH,
     model_name=E5_MODEL,
+    top_k=RETRIEVAL_TOP_K_PER_CHUNK,
 )
 
 
-# ============================================================
-# VLLM MODEL SERVICE
-# ============================================================
+taxonomy = retriever.taxonomy
 
-VLLM_BASE_URL = os.getenv("VLLM_BASE_URL", "http://beamdata-vllm:8000")
-VLLM_CHAT_URL = f"{VLLM_BASE_URL}/v1/chat/completions"
+VALID_COMPETENCIES = set(
+    taxonomy["skill_name_en"].tolist()
+)
 
-VLLM_MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct-AWQ"
-
-print("=" * 70)
-print("V8: Using Qwen through vLLM")
-print("=" * 70)
-print(f"vLLM endpoint: {VLLM_CHAT_URL}")
-print(f"Model: {VLLM_MODEL_NAME}")
+print(
+    "Taxonomy skills:",
+    len(VALID_COMPETENCIES)
+)
 
 
 # ============================================================
@@ -194,51 +227,56 @@ def generate_json(
     user_prompt,
     max_new_tokens,
 ):
-    payload = {
-        "model": VLLM_MODEL_NAME,
-        "messages": [
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": user_prompt,
-            },
-        ],
-        "max_tokens": max_new_tokens,
-        "temperature": 0.0,
-    }
 
-    response = requests.post(
-        VLLM_CHAT_URL,
-        json=payload,
-        timeout=300,
+    messages = [
+        {
+            "role": "system",
+            "content": system_prompt,
+        },
+        {
+            "role": "user",
+            "content": user_prompt,
+        },
+    ]
+
+    prompt = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True,
     )
 
-    response.raise_for_status()
+    inputs = tokenizer(
+        prompt,
+        return_tensors="pt",
+    ).to(model.device)
 
-    data = response.json()
+    with torch.no_grad():
 
-    choices = data.get("choices", [])
-
-    if not choices:
-        raise RuntimeError(
-            f"vLLM returned no choices: {data}"
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            do_sample=False,
         )
 
-    content = (
-        choices[0]
-        .get("message", {})
-        .get("content", "")
+    generated_tokens = outputs[0][
+        inputs["input_ids"].shape[1]:
+    ]
+
+    response = tokenizer.decode(
+        generated_tokens,
+        skip_special_tokens=True,
     )
 
-    if not content:
-        raise RuntimeError(
-            f"vLLM returned empty content: {data}"
-        )
+    del inputs
+    del outputs
+    del generated_tokens
 
-    return clean_qwen_json(content)
+    gc.collect()
+
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
+    return clean_qwen_json(response)
 
 
 # ============================================================
