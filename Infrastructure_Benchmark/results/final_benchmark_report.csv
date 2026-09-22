@@ -1,0 +1,38 @@
+metric,value,unit_notes
+Final Version,V8.4,Final evaluated checkpoint
+Evaluation Files,12,official benchmark files
+Gold Competency Mappings,39,human-reviewed mappings
+Macro Precision,75.0,%
+Macro Recall,27.08,%
+Macro F1,39.17,%
+Micro Precision,76.92,%
+Micro Recall,25.64,%
+Micro F1,38.46,%
+Recall@1,4.86,%
+Recall@3,11.81,%
+Recall@5,16.67,%
+Recall@10,31.25,%
+Hit Rate@10,91.67,%
+True Positives,10,count
+False Positives,3,count
+False Negatives,29,count
+API Requests,48,requests
+API Successful,48,requests
+API Errors,0,requests
+API Error Rate,0,%
+Max GPU Utilization,100,%
+Max GPU VRAM Used,42821,MiB
+Max GPU Power,297.104,W
+Max vLLM Running Requests,2,requests
+Max vLLM Waiting Requests,0,requests
+Max KV Cache Usage,0.4330446369,%
+GPU,NVIDIA RTX A6000,GPU
+LLM,Qwen/Qwen2.5-7B-Instruct-AWQ,model
+Serving,vLLM,serving engine
+API,FastAPI,API framework
+Retrieval,Multilingual E5 + Lexical,hybrid retrieval
+Orchestration,Kubernetes,platform
+Containerization,Docker,container platform
+GPU Monitoring,DCGM Exporter,monitoring
+Metrics,Prometheus,metrics system
+Visualization,Grafana,dashboard

@@ -327,7 +327,7 @@ def main():
 
     parser.add_argument(
         "--out",
-        default="benchmark/results/v84_api_e2e.json",
+        default="Infrastructure_Benchmark/results/v84_api_e2e.json",
     )
 
     args = parser.parse_args()

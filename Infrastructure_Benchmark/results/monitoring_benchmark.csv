@@ -1,0 +1,17 @@
+metric,value,unit
+Monitoring concurrency,4,requests
+Monitoring requests,12,requests
+Successful requests,12,requests
+Errors,0,requests
+Wall time,66.8709,seconds
+Average latency,19.624,seconds
+P50 latency,17.368,seconds
+P95 latency,39.275,seconds
+P99 latency,44.1,seconds
+Throughput,0.1795,req/s
+Max GPU utilization,100,%
+Max GPU VRAM used,42821,MiB
+Max GPU power,297.104,W
+Max vLLM running requests,2,requests
+Max vLLM waiting requests,0,requests
+Max KV cache usage,0.4330446369,%

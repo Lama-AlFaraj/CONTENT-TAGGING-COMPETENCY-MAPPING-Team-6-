@@ -161,7 +161,7 @@ CONTENT-TAGGING-COMPETENCY-MAPPING-Team-6-
 │       ├── vllm-7b.yaml
 │       └── beamdata-v8-api.yaml
 │
-├── benchmark/
+├── Infrastructure_Benchmark/
 │   ├── bench.py
 │   ├── v84_api_e2e.py
 │   ├── Infrastructure_Benchmark_Report.md
@@ -1150,7 +1150,7 @@ The remaining work is primarily finalization rather than another model-developme
 
 1. Finish the Grafana dashboard and verify it loads through the required proxy.
 2. Confirm whether the AI Hub integration has been completed.
-3. Finalize the benchmark/report CSV.
+3. Finalize the Infrastructure_Benchmark/report CSV.
 4. Finalize the README and project documentation.
 5. Prepare the final presentation and demonstration.
 
