@@ -1,0 +1,6 @@
+name,ready,up_to_date,available,created,image
+beamdata-ai-hub,1,1,1,2026-09-22T12:20:49Z,beamdata-ai-hub:1.0
+beamdata-v8-api,1,1,1,2026-09-21T12:13:32Z,shahad09/beamdata-v8-api:v8.4
+beamdata-vllm-7b,1,1,1,2026-09-21T08:50:16Z,vllm/vllm-openai:latest
+team-serving,1,1,1,2026-09-09T10:56:11Z,shahad09/aidc-serving:cpu-v2
+vllm,<none>,<none>,<none>,2026-09-08T14:10:36Z,vllm/vllm-openai:v0.27.1-cu129

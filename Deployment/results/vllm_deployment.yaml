@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"beamdata-vllm-7b","namespace":"shahad"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"beamdata-vllm-7b"}},"strategy":{"type":"Recreate"},"template":{"metadata":{"labels":{"app":"beamdata-vllm-7b"}},"spec":{"containers":[{"args":["Qwen/Qwen2.5-7B-Instruct-AWQ","--host","0.0.0.0","--port","8000","--quantization","awq","--dtype","half","--max-model-len","16384","--gpu-memory-utilization","0.85","--enable-prefix-caching"],"command":["vllm","serve"],"image":"vllm/vllm-openai:latest","livenessProbe":{"failureThreshold":6,"httpGet":{"path":"/health","port":8000},"initialDelaySeconds":120,"periodSeconds":20},"name":"vllm","ports":[{"containerPort":8000}],"readinessProbe":{"failureThreshold":30,"httpGet":{"path":"/health","port":8000},"initialDelaySeconds":60,"periodSeconds":10},"resources":{"limits":{"nvidia.com/gpu":"1"}}}]}}}}
+  creationTimestamp: "2026-09-21T08:50:16Z"
+  generation: 3
+  name: beamdata-vllm-7b
+  namespace: shahad
+  resourceVersion: "736466"
+  uid: 4a10269d-80d9-46b1-8b9a-e77530777207
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: beamdata-vllm-7b
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: beamdata-vllm-7b
+    spec:
+      containers:
+      - args:
+        - Qwen/Qwen2.5-7B-Instruct-AWQ
+        - --host
+        - 0.0.0.0
+        - --port
+        - "8000"
+        - --quantization
+        - awq
+        - --dtype
+        - half
+        - --max-model-len
+        - "16384"
+        - --gpu-memory-utilization
+        - "0.85"
+        - --enable-prefix-caching
+        command:
+        - vllm
+        - serve
+        image: vllm/vllm-openai:latest
+        imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /health
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 120
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: vllm
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 30
+          httpGet:
+            path: /health
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            nvidia.com/gpu: "1"
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2026-09-21T08:50:16Z"
+    lastUpdateTime: "2026-09-21T08:54:18Z"
+    message: ReplicaSet "beamdata-vllm-7b-75945f6c55" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-09-23T11:13:19Z"
+    lastUpdateTime: "2026-09-23T11:13:19Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 3
+  readyReplicas: 1
+  replicas: 1
+  terminatingReplicas: 0
+  updatedReplicas: 1

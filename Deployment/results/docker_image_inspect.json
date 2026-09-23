@@ -1,0 +1,81 @@
+[
+    {
+        "Id": "sha256:5db374ecede7d988b52f383150240c14aa252b6c535568cccc491e66d04a5a31",
+        "RepoTags": [
+            "shahad09/beamdata-v8-api:v8.4"
+        ],
+        "RepoDigests": [
+            "shahad09/beamdata-v8-api@sha256:5832d8f7b14b8358cd1bc123ba447368d2f7559fe8fc9f933907f8f59edf61f1"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-21T15:13:49.381750624Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.16",
+                "PYTHON_SHA256=91bcdebfdde239a003ae93738a7fce0f9230fee5c4bc2b86f6e6e8c6f98aabe8",
+                "VLLM_BASE_URL=http://beamdata-vllm:8000"
+            ],
+            "Cmd": [
+                "uvicorn",
+                "Model.v8.api:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 6348888817,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/0k2t8s7aftt6lw2v4nkxfqn3a/diff:/var/lib/docker/overlay2/2jv4rb8gknmofjqv7dsv1dpe9/diff:/var/lib/docker/overlay2/vxpazx7deizmf20iiflof02zp/diff:/var/lib/docker/overlay2/6ff38fd091a23beeee62154e85521d27b7f87c6d272716297b694466e8167b0a/diff:/var/lib/docker/overlay2/29303d31156445b4832415e0254a6292d7c85ae48356ce2f155ba057d6a99193/diff:/var/lib/docker/overlay2/0d711d79625f1f163fbcf5e00180b00f31039399f3dd47a491f48ba2473ad0d6/diff:/var/lib/docker/overlay2/604f31cb984323f08d604a7fb0d445b9424ef934e66d7f11f46acefe13421c78/diff",
+                "MergedDir": "/var/lib/docker/overlay2/yzl83k8wcf9oe2baiwo45rko6/merged",
+                "UpperDir": "/var/lib/docker/overlay2/yzl83k8wcf9oe2baiwo45rko6/diff",
+                "WorkDir": "/var/lib/docker/overlay2/yzl83k8wcf9oe2baiwo45rko6/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:a6dc765193a52cbaede3c93a9ff48b9540948dd0774bbe7031fcb5847606f9ac",
+                "sha256:a5c84380b3657bb723a1f71fa963f1e3a3f01e2c6bcba12e3b9a0d336158c7a9",
+                "sha256:4a01ba3ac604812ef31dab0006efecd1d572676f7a68afa169a9d57883025006",
+                "sha256:d190d09d7bd91836f809045799a7024a54026b3da5de1ccb811627fcf9878b92",
+                "sha256:443ce59065968e70e63441fdec04b651ecff701a40ddd11560d21593e839d665",
+                "sha256:1d30f4473d00d33ab95ed3bcb01c17ae8374d56b830cca4dab4e5eab27ec0a4a",
+                "sha256:7c5b5883628c7b4afbbfe49e05c3e63d66904022cd4667eeed458351ef669169",
+                "sha256:e4320ceff360cdc5d51d6b8e06af29491a751d3cbc6cfdb97bcc9a8c6dfa65f3"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-21T15:13:49.426679346Z"
+        }
+    }
+]
