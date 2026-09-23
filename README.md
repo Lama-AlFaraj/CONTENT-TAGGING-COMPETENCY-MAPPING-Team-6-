@@ -1211,7 +1211,7 @@ The monitoring stack successfully captured:
 vLLM running/waiting request metrics
 KV cache metrics
 ```
-
+Freezed the Infrastructure_Benchmark/report CSV.
 ---
 
 # 29. Remaining Final Tasks
@@ -1219,9 +1219,8 @@ KV cache metrics
 The remaining work is primarily finalization rather than another model-development cycle:
 
 1. Confirm whether the AI Hub integration has been completed.
-2. Finalize the Infrastructure_Benchmark/report CSV.
-3. Finalize the README and project documentation.
-4. Prepare the final presentation and demonstration.
+2. Finalize the README and project documentation.
+3. Prepare the final presentation and demonstration.
 
 The final evaluated model remains **V8.4**. No additional model version is currently required for the completed benchmark.
 
