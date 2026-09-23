@@ -1,0 +1,1683 @@
+{
+  "Decision Trees Revised.pptx": {
+    "predicted_tags": [
+      "Decision Trees",
+      "Gini Impurity",
+      "Pruning Decision Trees",
+      "Decision Tree Pruning",
+      "Pre-pruning Technique",
+      "Post-pruning Technique"
+    ],
+    "proposed_competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly covers the concepts of decision trees, Gini impurity, and pruning techniques, which are fundamental aspects of machine learning. The content provides a detailed explanation of how decision trees work, the importance of Gini impurity in measuring impurity, and the techniques of pruning to avoid overfitting. This aligns closely with the 'Machine Learning (ML)' competency, which involves developing, implementing, and optimizing algorithms for automated learning and decision-making.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6035714524132865,
+        "sum_score": 1.1639449377019866,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8124985098838806,
+        "best_lexical_score": 0.008928571428571428,
+        "retrieval_score": 0.6435714524132865,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.603361368379673,
+        "sum_score": 1.148139849931252,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8009282350540161,
+        "best_lexical_score": 0.008403361344537815,
+        "retrieval_score": 0.6433613683796731,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5943746568775978,
+        "sum_score": 0.5943746568775978,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7999825477600098,
+        "best_lexical_score": 0.008403361344537815,
+        "retrieval_score": 0.6143746568775978,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.585219144821167,
+        "sum_score": 0.585219144821167,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.8104882836341858,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.605219144821167,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.5769563319302407,
+        "sum_score": 0.5769563319302407,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.798149585723877,
+        "best_lexical_score": 0.008403361344537815,
+        "retrieval_score": 0.5969563319302407,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Data processing",
+        "description_en": "Proficient in utilizing a variety of analytic tools, databases, and techniques to extract valuable insights and enhance decision-making",
+        "max_score": 0.5683013728686741,
+        "sum_score": 0.5683013728686741,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.8067302703857422,
+        "best_lexical_score": 0.026785714285714284,
+        "retrieval_score": 0.5883013728686741,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.564377427301487,
+        "sum_score": 0.564377427301487,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7968258857727051,
+        "best_lexical_score": 0.008403361344537815,
+        "retrieval_score": 0.584377427301487,
+        "rank": 7
+      },
+      {
+        "skill_name_en": "RAN architecture",
+        "description_en": "Understand various RAN architecture and Open RAN standards (Split-0, Split-2, Split-6, Split-7.2). Acquire in-depth knowledge of Open RAN components (O-RU, o-DU, O-CU)",
+        "max_score": 0.5341983812195914,
+        "sum_score": 0.5341983812195914,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.8030636310577393,
+        "best_lexical_score": 0.008928571428571428,
+        "retrieval_score": 0.5541983812195914,
+        "rank": 8
+      }
+    ],
+    "chunk_count": 2
+  },
+  "HandsOn1_Window_Functions.md": {
+    "predicted_tags": [
+      "Window Functions",
+      "Partitioning",
+      "Cumulative Sum",
+      "Moving Average",
+      "LAG() window function",
+      "NTILE() window function",
+      "cumulative sum calculation"
+    ],
+    "proposed_competencies": [
+      "Data processing",
+      "Data preparation"
+    ],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly demonstrates the use of various SQL window functions, including partitioning, cumulative sum, and moving average calculations. These topics fall under the skills of data processing and data preparation, as they involve manipulating and analyzing data to extract valuable insights. The hands-on exercises and examples provided in the document support these competencies.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.6061942670403457,
+        "sum_score": 1.065007789978167,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8013560771942139,
+        "best_lexical_score": 0.024390243902439025,
+        "retrieval_score": 0.6461942670403458,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6048780726223457,
+        "sum_score": 1.1700374027577842,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8139950037002563,
+        "best_lexical_score": 0.012195121951219513,
+        "retrieval_score": 0.6448780726223458,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Data processing",
+        "description_en": "Proficient in utilizing a variety of analytic tools, databases, and techniques to extract valuable insights and enhance decision-making",
+        "max_score": 0.6097561214028335,
+        "sum_score": 0.6097561214028335,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8017634153366089,
+        "best_lexical_score": 0.024390243902439025,
+        "retrieval_score": 0.6297561214028335,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Data warehousing",
+        "description_en": "Installing, configuring, monitoring, maintaining and improving the performance of databases and data stores.",
+        "max_score": 0.5870939586220718,
+        "sum_score": 0.5870939586220718,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7991717457771301,
+        "best_lexical_score": 0.024390243902439025,
+        "retrieval_score": 0.6070939586220718,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.5794325470924377,
+        "sum_score": 0.5794325470924377,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7994112968444824,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.5994325470924378,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Data preparation",
+        "description_en": "Collect and clean data as well as data extraction, transformation, and loading (ETL) and creating comprehensive data warehouses for analytical purposes",
+        "max_score": 0.4828804479866493,
+        "sum_score": 0.4828804479866493,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7918075323104858,
+        "best_lexical_score": 0.012195121951219513,
+        "retrieval_score": 0.5028804479866493,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.450602451330278,
+        "sum_score": 0.450602451330278,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7850500345230103,
+        "best_lexical_score": 0.024390243902439025,
+        "retrieval_score": 0.470602451330278,
+        "rank": 7
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.423688773992585,
+        "sum_score": 0.423688773992585,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7810424566268921,
+        "best_lexical_score": 0.012195121951219513,
+        "retrieval_score": 0.443688773992585,
+        "rank": 8
+      }
+    ],
+    "chunk_count": 2
+  },
+  "Introduction to Pandas_.pptx": {
+    "predicted_tags": [
+      "Pandas Library",
+      "DataFrames",
+      "Series (Pandas)",
+      "duplicate index labels",
+      "concatenating DataFrames",
+      "MultiIndex"
+    ],
+    "proposed_competencies": [
+      "Data processing"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly introduces the basic concepts of the Pandas library, including its primary data structures: Series and DataFrame. It explains how these structures help manage and analyze data more effectively compared to using separate lists or arrays. This content meaningfully teaches and demonstrates the skill of data processing, which involves proficiently using analytic tools and techniques to extract valuable insights and enhance decision-making.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.6130435021027275,
+        "sum_score": 1.188691988716955,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8245061635971069,
+        "best_lexical_score": 0.03260869565217391,
+        "retrieval_score": 0.6530435021027275,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.6000000238418579,
+        "sum_score": 1.1426012666329095,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.7981269359588623,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.640000023841858,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5825105907870274,
+        "sum_score": 1.1421616924591584,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.7951349020004272,
+        "best_lexical_score": 0.00980392156862745,
+        "retrieval_score": 0.6225105907870274,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.5726866722106934,
+        "sum_score": 0.5726866722106934,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7943100929260254,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.5926866722106934,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.5676902532577515,
+        "sum_score": 0.5676902532577515,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7936118841171265,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.5876902532577515,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.5238648554553156,
+        "sum_score": 0.5238648554553156,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8137933611869812,
+        "best_lexical_score": 0.021739130434782608,
+        "retrieval_score": 0.5438648554553156,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Data processing",
+        "description_en": "Proficient in utilizing a variety of analytic tools, databases, and techniques to extract valuable insights and enhance decision-making",
+        "max_score": 0.5148118387097897,
+        "sum_score": 0.5148118387097897,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8131991624832153,
+        "best_lexical_score": 0.010869565217391304,
+        "retrieval_score": 0.5348118387097898,
+        "rank": 7
+      }
+    ],
+    "chunk_count": 2
+  },
+  "Lecture - Decision Trees.ipynb": {
+    "predicted_tags": [
+      "Decision Tree",
+      "Random Forest",
+      "Gradient Boosting",
+      "Ensemble Learning",
+      "tree diagram interpretation",
+      "random forest algorithm",
+      "Out-of-bag scoring",
+      "Feature importance in regression"
+    ],
+    "proposed_competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly covers various machine learning concepts including decision trees, random forests, and gradient boosting. It provides detailed explanations and code examples, making it suitable for intermediate learners. The content meaningfully teaches and demonstrates machine learning algorithms and their implementation using scikit-learn, thus supporting the 'Machine Learning (ML)' competency.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.6065040888825083,
+        "sum_score": 1.78454749162566,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.8105112910270691,
+        "best_lexical_score": 0.016260162601626018,
+        "retrieval_score": 0.6665040888825082,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.6030075426388504,
+        "sum_score": 1.668126134259139,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.8063072562217712,
+        "best_lexical_score": 0.007518796992481203,
+        "retrieval_score": 0.6630075426388504,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.5683563947677612,
+        "sum_score": 1.0755741968868286,
+        "hits": 2,
+        "chunk_indices": [
+          2,
+          3
+        ],
+        "best_e5_score": 0.8021001815795898,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.6083563947677613,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "3D modelling",
+        "description_en": "Generate 3D models using a variety of modelling software to represent characteristics of a real-world system",
+        "max_score": 0.5414823889732361,
+        "sum_score": 1.5713464083710336,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.7985272407531738,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.6014823889732361,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.5330194384094298,
+        "sum_score": 1.5499295803581918,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.7846730947494507,
+        "best_lexical_score": 0.015748031496062992,
+        "retrieval_score": 0.5930194384094298,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.5142201247254038,
+        "sum_score": 0.5142201247254038,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7954305410385132,
+        "best_lexical_score": 0.016260162601626018,
+        "retrieval_score": 0.5342201247254038,
+        "rank": 6
+      }
+    ],
+    "chunk_count": 3
+  },
+  "Lecture - Pandas Basics.ipynb": {
+    "predicted_tags": [
+      "Pandas DataFrame",
+      "Pandas Series",
+      "Boolean Masking",
+      "Handling Missing Data",
+      "Data Cleaning Techniques",
+      "DataFrame Operations",
+      "GroupBy Aggregation"
+    ],
+    "proposed_competencies": [
+      "Data preparation"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly demonstrates the use of data preparation techniques such as handling missing data, using `dropna` and `fillna` methods, and performing groupby operations. The content explicitly covers these skills under the context of preparing and cleaning data, which aligns closely with the 'Data preparation' competency.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6000000238418579,
+        "sum_score": 1.2000000476837158,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8192588090896606,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.640000023841858,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.5660181794847761,
+        "sum_score": 1.051991142524316,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8133336901664734,
+        "best_lexical_score": 0.017857142857142856,
+        "retrieval_score": 0.6060181794847761,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.5629419241632734,
+        "sum_score": 1.118454694705702,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8128904700279236,
+        "best_lexical_score": 0.017857142857142856,
+        "retrieval_score": 0.6029419241632734,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5571331535066877,
+        "sum_score": 1.0586982147823116,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8120535612106323,
+        "best_lexical_score": 0.017857142857142856,
+        "retrieval_score": 0.5971331535066877,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data warehousing",
+        "description_en": "Installing, configuring, monitoring, maintaining and improving the performance of databases and data stores.",
+        "max_score": 0.5218830483300345,
+        "sum_score": 0.5218830483300345,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8074893951416016,
+        "best_lexical_score": 0.008928571428571428,
+        "retrieval_score": 0.5418830483300345,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Data preparation",
+        "description_en": "Collect and clean data as well as data extraction, transformation, and loading (ETL) and creating comprehensive data warehouses for analytical purposes",
+        "max_score": 0.5026732308312881,
+        "sum_score": 0.5026732308312881,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7929346561431885,
+        "best_lexical_score": 0.008264462809917356,
+        "retrieval_score": 0.5226732308312881,
+        "rank": 6
+      }
+    ],
+    "chunk_count": 2
+  },
+  "Lecture_ML_Workflow.ipynb": {
+    "predicted_tags": [
+      "linear regression",
+      "train-test split",
+      "evaluation metrics (MAE, RMSE, R-squared)",
+      "Mean Absolute Error (MAE)",
+      "Root Mean Squared Error (RMSE)",
+      "R-squared (R²)",
+      "Feature Importance",
+      "Model Evaluation"
+    ],
+    "proposed_competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly supports the 'Machine Learning (ML)' competency. It covers fundamental concepts such as the machine learning workflow, train-test split, fitting, predicting, and evaluating regression models, as well as saving and loading models. The content provides practical examples and explanations of key ML concepts and techniques, making it suitable for beginners.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6035087957716825,
+        "sum_score": 1.774105633769119,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.8227462768554688,
+        "best_lexical_score": 0.008771929824561403,
+        "retrieval_score": 0.6635087957716825,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.6034782847114232,
+        "sum_score": 1.794885209776746,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.7980663776397705,
+        "best_lexical_score": 0.008695652173913044,
+        "retrieval_score": 0.6634782847114231,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "3D modelling",
+        "description_en": "Generate 3D models using a variety of modelling software to represent characteristics of a real-world system",
+        "max_score": 0.5889184505958868,
+        "sum_score": 1.6930379808637697,
+        "hits": 3,
+        "chunk_indices": [
+          1,
+          2,
+          3
+        ],
+        "best_e5_score": 0.8024836778640747,
+        "best_lexical_score": 0.008130081300813009,
+        "retrieval_score": 0.6489184505958867,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.6058223410656578,
+        "sum_score": 1.1495235191434174,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8221127390861511,
+        "best_lexical_score": 0.02631578947368421,
+        "retrieval_score": 0.6458223410656578,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.6016249101058296,
+        "sum_score": 1.135310227689081,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          3
+        ],
+        "best_e5_score": 0.7973464727401733,
+        "best_lexical_score": 0.017391304347826087,
+        "retrieval_score": 0.6416249101058297,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.5762422680854797,
+        "sum_score": 1.135230724085932,
+        "hits": 2,
+        "chunk_indices": [
+          2,
+          3
+        ],
+        "best_e5_score": 0.8011839985847473,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.6162422680854798,
+        "rank": 6
+      }
+    ],
+    "chunk_count": 3
+  },
+  "ML Workflow Introduction.pptx": {
+    "predicted_tags": [
+      "machine learning workflow",
+      "data loading",
+      "data labeling",
+      "data exploration",
+      "train/test split",
+      "model training",
+      "prediction",
+      "model evaluation"
+    ],
+    "proposed_competencies": [
+      "Data collection and analysis"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly covers fundamental steps in a machine learning workflow, including data loading, data labeling, data exploration, train/test split, model training, prediction, and model evaluation. This aligns closely with the 'Data collection and analysis' competency, which involves gathering, analyzing, testing, and verifying data from different source inputs. The content provides a comprehensive overview of these essential steps, making this competency the most appropriate choice.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.6220183724657111,
+        "sum_score": 1.2430710278865162,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8126255869865417,
+        "best_lexical_score": 0.05504587155963303,
+        "retrieval_score": 0.6620183724657112,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.5977607229434022,
+        "sum_score": 1.095333830424405,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.811767578125,
+        "best_lexical_score": 0.009174311926605505,
+        "retrieval_score": 0.6377607229434022,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5938597737697133,
+        "sum_score": 1.1808652557959096,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8191124200820923,
+        "best_lexical_score": 0.03508771929824561,
+        "retrieval_score": 0.6338597737697134,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.5790788111336734,
+        "sum_score": 1.1062721606289423,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8079891800880432,
+        "best_lexical_score": 0.027522935779816515,
+        "retrieval_score": 0.6190788111336735,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.5352167943202027,
+        "sum_score": 0.5352167943202027,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.8026859760284424,
+        "best_lexical_score": 0.009174311926605505,
+        "retrieval_score": 0.5552167943202028,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Artificial intelligence, machine learning and deep learning application",
+        "description_en": "Identify opportunities where artificial intelligence (AI), machine learning (ML) and deep learning (DL) can be applied to support the automation of work tasks and improve organizational productivity and use machine learning (ML) principles and techniques to support the automation of procedural tasks and improve organizational productivity and evaluate these ML models",
+        "max_score": 0.5091365722187778,
+        "sum_score": 0.5091365722187778,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8002675771713257,
+        "best_lexical_score": 0.08771929824561403,
+        "retrieval_score": 0.5291365722187779,
+        "rank": 6
+      }
+    ],
+    "chunk_count": 2
+  },
+  "Prompt_Engineering.ipynb": {
+    "predicted_tags": [
+      "prompt engineering",
+      "chat roles and templates",
+      "zero-shot prompting",
+      "few-shot prompting",
+      "chain-of-thought prompting",
+      "prompt evaluation",
+      "structured outputs",
+      "constrained decoding"
+    ],
+    "proposed_competencies": [
+      "Natural language Processing (NLP)"
+    ],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.66,
+    "notes": "The document evidence extensively covers various aspects of prompt engineering, including chat roles, templates, zero-shot and few-shot prompting, and prompt evaluation. These topics are fundamental to NLP, particularly in the context of designing algorithms that enable computers to understand, interpret, and generate human language. The content also involves the use of machine learning models and techniques, further supporting the selection of NLP as a genuinely supported competency.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Programming",
+        "description_en": "Designing and coding automated software bots to perform repetitive, rule-based tasks typically done by humans. This includes tasks like data entry, processing transactions, or managing emails",
+        "max_score": 0.6095238333656674,
+        "sum_score": 2.865797594471792,
+        "hits": 5,
+        "chunk_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_e5_score": 0.8077720403671265,
+        "best_lexical_score": 0.023809523809523808,
+        "retrieval_score": 0.6695238333656675,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Natural language Processing (NLP)",
+        "description_en": "Design algorithms that enable computers to understand, interpret, and generate human language, utilizing linguistic analysis",
+        "max_score": 0.6000000238418579,
+        "sum_score": 2.8815541988851385,
+        "hits": 5,
+        "chunk_indices": [
+          1,
+          3,
+          4,
+          5,
+          7
+        ],
+        "best_e5_score": 0.7945461273193359,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.6000000238418579,
+        "sum_score": 3.3314920193051534,
+        "hits": 6,
+        "chunk_indices": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_e5_score": 0.7974817156791687,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6000000238418579,
+        "sum_score": 2.297618865966797,
+        "hits": 4,
+        "chunk_indices": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "best_e5_score": 0.798264741897583,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.6000000238418579,
+        "sum_score": 2.264124572277069,
+        "hits": 4,
+        "chunk_indices": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "best_e5_score": 0.7761175632476807,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "3D modelling",
+        "description_en": "Generate 3D models using a variety of modelling software to represent characteristics of a real-world system",
+        "max_score": 0.6076923315341656,
+        "sum_score": 1.1478584715443798,
+        "hits": 2,
+        "chunk_indices": [
+          3,
+          5
+        ],
+        "best_e5_score": 0.7999716401100159,
+        "best_lexical_score": 0.019230769230769232,
+        "retrieval_score": 0.6476923315341656,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Communication systems and protocols design",
+        "description_en": "Familiarize with communication protocols (e.g., DPD, CFR, DUC, DDC). Utilize AI algorithms for the analysis and management of the RAN",
+        "max_score": 0.565009727584782,
+        "sum_score": 1.106007888802305,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          6
+        ],
+        "best_e5_score": 0.7923029661178589,
+        "best_lexical_score": 0.007462686567164179,
+        "retrieval_score": 0.605009727584782,
+        "rank": 7
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.53528892993927,
+        "sum_score": 1.57125723361969,
+        "hits": 3,
+        "chunk_indices": [
+          2,
+          3,
+          7
+        ],
+        "best_e5_score": 0.7916190028190613,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.5952889299392701,
+        "rank": 8
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.5454984907119993,
+        "sum_score": 1.0716167935645489,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          7
+        ],
+        "best_e5_score": 0.7998641133308411,
+        "best_lexical_score": 0.015873015873015872,
+        "retrieval_score": 0.5854984907119993,
+        "rank": 9
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.5595492643758285,
+        "sum_score": 0.5595492643758285,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7922474145889282,
+        "best_lexical_score": 0.008264462809917356,
+        "retrieval_score": 0.5795492643758285,
+        "rank": 10
+      }
+    ],
+    "chunk_count": 7
+  },
+  "README_STUDENTS.md": {
+    "predicted_tags": [
+      "content tagging model",
+      "machine learning model evaluation",
+      "structured data output"
+    ],
+    "proposed_competencies": [
+      "Data collection and analysis"
+    ],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.8,
+    "notes": "The document evidence clearly focuses on building and evaluating a content tagging model, which involves collecting and analyzing learning content to generate structured tags. The required output per content item includes detailed analysis such as identifying key topics, difficulty levels, and confidence scores, which aligns closely with the 'Data collection and analysis' competency. While other candidates touch on related concepts, they do not directly address the core activities described in the document.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.6118812119606698,
+        "sum_score": 0.6118812119606698,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8037940263748169,
+        "best_lexical_score": 0.0297029702970297,
+        "retrieval_score": 0.6318812119606698,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.6024214529755092,
+        "sum_score": 0.6024214529755092,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8029836416244507,
+        "best_lexical_score": 0.019801980198019802,
+        "retrieval_score": 0.6224214529755092,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.6023167526367867,
+        "sum_score": 0.6023167526367867,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.802384614944458,
+        "best_lexical_score": 0.0297029702970297,
+        "retrieval_score": 0.6223167526367868,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Database modelling",
+        "description_en": "Proficient in developing data models to structure and represent information, facilitating effective analysis and decision-making in the digital sector",
+        "max_score": 0.5664719151978446,
+        "sum_score": 0.5664719151978446,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7965189218521118,
+        "best_lexical_score": 0.039603960396039604,
+        "retrieval_score": 0.5864719151978446,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.5500148188949812,
+        "sum_score": 0.5500148188949812,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7958446145057678,
+        "best_lexical_score": 0.009900990099009901,
+        "retrieval_score": 0.5700148188949812,
+        "rank": 5
+      }
+    ],
+    "chunk_count": 1
+  },
+  "Retrieval_Augmented_Generation.ipynb": {
+    "predicted_tags": [
+      "Retrieval-Augmented Generation",
+      "Context Embedding",
+      "Prompt Engineering",
+      "Retrieval-Augmented Generation (RAG)",
+      "Grounding Instruction",
+      "Contextual Answering",
+      "context retrieval",
+      "citation verification"
+    ],
+    "proposed_competencies": [
+      "Natural language Processing (NLP)"
+    ],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.85,
+    "notes": "The document evidence strongly supports the Natural Language Processing (NLP) competency. The content extensively discusses Retrieval-Augmented Generation (RAG), which is a key NLP technique that involves using context embeddings to improve generative models. The document also covers the importance of proper prompt engineering and the use of chunking text into manageable pieces for context embedding, which are core NLP concepts. Additionally, the content includes code examples and explanations of how these techniques are applied in practice, clearly demonstrating the application of NLP skills.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.611320778558839,
+        "sum_score": 3.468072809145472,
+        "hits": 6,
+        "chunk_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_e5_score": 0.8022992610931396,
+        "best_lexical_score": 0.02830188679245283,
+        "retrieval_score": 0.6713207785588391,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.6033099736063934,
+        "sum_score": 3.415328540192639,
+        "hits": 6,
+        "chunk_indices": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "best_e5_score": 0.8022993206977844,
+        "best_lexical_score": 0.01652892561983471,
+        "retrieval_score": 0.6633099736063934,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.6000000238418579,
+        "sum_score": 1.7353745102882385,
+        "hits": 3,
+        "chunk_indices": [
+          2,
+          5,
+          7
+        ],
+        "best_e5_score": 0.8043915629386902,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6000000238418579,
+        "sum_score": 2.297175943851471,
+        "hits": 4,
+        "chunk_indices": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "best_e5_score": 0.7926070094108582,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.660000023841858,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.5988778024349573,
+        "sum_score": 2.8884010463390712,
+        "hits": 5,
+        "chunk_indices": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_e5_score": 0.8016065359115601,
+        "best_lexical_score": 0.009433962264150943,
+        "retrieval_score": 0.6588778024349573,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Communication systems and protocols design",
+        "description_en": "Familiarize with communication protocols (e.g., DPD, CFR, DUC, DDC). Utilize AI algorithms for the analysis and management of the RAN",
+        "max_score": 0.5968998447177917,
+        "sum_score": 1.72359035517567,
+        "hits": 3,
+        "chunk_indices": [
+          5,
+          6,
+          7
+        ],
+        "best_e5_score": 0.807047426700592,
+        "best_lexical_score": 0.007874015748031496,
+        "retrieval_score": 0.6568998447177916,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Natural language Processing (NLP)",
+        "description_en": "Design algorithms that enable computers to understand, interpret, and generate human language, utilizing linguistic analysis",
+        "max_score": 0.6033058089658249,
+        "sum_score": 1.1532871134002445,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          7
+        ],
+        "best_e5_score": 0.8027204871177673,
+        "best_lexical_score": 0.008264462809917356,
+        "retrieval_score": 0.6433058089658249,
+        "rank": 7
+      },
+      {
+        "skill_name_en": "RAN architecture",
+        "description_en": "Understand various RAN architecture and Open RAN standards (Split-0, Split-2, Split-6, Split-7.2). Acquire in-depth knowledge of Open RAN components (O-RU, o-DU, O-CU)",
+        "max_score": 0.6031496301410705,
+        "sum_score": 1.1818520883116046,
+        "hits": 2,
+        "chunk_indices": [
+          5,
+          7
+        ],
+        "best_e5_score": 0.8078206777572632,
+        "best_lexical_score": 0.007874015748031496,
+        "retrieval_score": 0.6431496301410705,
+        "rank": 8
+      },
+      {
+        "skill_name_en": "3D modelling",
+        "description_en": "Generate 3D models using a variety of modelling software to represent characteristics of a real-world system",
+        "max_score": 0.578455731104005,
+        "sum_score": 1.1432524773486226,
+        "hits": 2,
+        "chunk_indices": [
+          3,
+          4
+        ],
+        "best_e5_score": 0.7976490259170532,
+        "best_lexical_score": 0.02830188679245283,
+        "retrieval_score": 0.6184557311040051,
+        "rank": 9
+      },
+      {
+        "skill_name_en": "Artificial intelligence application in product development",
+        "description_en": "Utilizing AI algorithms and techniques to enhance and streamline the process of creating and improving digital products and services",
+        "max_score": 0.5628818639053786,
+        "sum_score": 0.5628818639053786,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.7967204451560974,
+        "best_lexical_score": 0.024793388429752067,
+        "retrieval_score": 0.5828818639053787,
+        "rank": 10
+      }
+    ],
+    "chunk_count": 7
+  },
+  "SQL_Foundations_for_Data_Science.pptx": {
+    "predicted_tags": [
+      "SQL",
+      "JOIN types",
+      "Data Manipulation Language (DML)",
+      "SQL WHERE clause",
+      "SQL ORDER BY clause",
+      "SQL LIMIT clause",
+      "SQL DISTINCT keyword"
+    ],
+    "proposed_competencies": [
+      "Database management and configuration",
+      "Data collection and analysis"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.85,
+    "notes": "The document evidence clearly supports the competencies of database management and configuration, as well as data collection and analysis. The content covers fundamental SQL commands, join types, and basic querying and filtering, which are essential for managing and analyzing data in a database context. The slides provide clear examples and explanations of basic SQL syntax and operations, making it suitable for beginners in data science and database management. Additionally, the content discusses the importance of filtering and sorting data, which aligns with data collection and analysis skills.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Pre-sales preparation",
+        "description_en": "Preparation to achieve monthly/weekly/daily sales objective",
+        "max_score": 0.6032520563621832,
+        "sum_score": 1.206452080204041,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.8244302272796631,
+        "best_lexical_score": 0.008130081300813009,
+        "retrieval_score": 0.6432520563621832,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5629899556159973,
+        "sum_score": 1.0828349706688547,
+        "hits": 2,
+        "chunk_indices": [
+          1,
+          2
+        ],
+        "best_e5_score": 0.7933564186096191,
+        "best_lexical_score": 0.008,
+        "retrieval_score": 0.6029899556159973,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.5781706084251403,
+        "sum_score": 0.5781706084251403,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7948135733604431,
+        "best_lexical_score": 0.016,
+        "retrieval_score": 0.5981706084251404,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.577672004699707,
+        "sum_score": 0.577672004699707,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7955313324928284,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.597672004699707,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Database modelling",
+        "description_en": "Proficient in developing data models to structure and represent information, facilitating effective analysis and decision-making in the digital sector",
+        "max_score": 0.5656336042939163,
+        "sum_score": 0.5656336042939163,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8171437978744507,
+        "best_lexical_score": 0.024390243902439025,
+        "retrieval_score": 0.5856336042939163,
+        "rank": 5
+      },
+      {
+        "skill_name_en": "Database management and configuration",
+        "description_en": "Manage databases that store customer, product, and transaction data. This includes knowledge of database management systems like MySQL, PostgreSQL, or MongoDB",
+        "max_score": 0.5416063132324839,
+        "sum_score": 0.5416063132324839,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8137129545211792,
+        "best_lexical_score": 0.016260162601626018,
+        "retrieval_score": 0.5616063132324839,
+        "rank": 6
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.5260064656257629,
+        "sum_score": 0.5260064656257629,
+        "hits": 1,
+        "chunk_indices": [
+          2
+        ],
+        "best_e5_score": 0.7888582944869995,
+        "best_lexical_score": 0.008,
+        "retrieval_score": 0.5460064656257629,
+        "rank": 7
+      },
+      {
+        "skill_name_en": "Data warehousing",
+        "description_en": "Installing, configuring, monitoring, maintaining and improving the performance of databases and data stores.",
+        "max_score": 0.5204058320541692,
+        "sum_score": 0.5204058320541692,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8107489347457886,
+        "best_lexical_score": 0.008130081300813009,
+        "retrieval_score": 0.5404058320541693,
+        "rank": 8
+      }
+    ],
+    "chunk_count": 2
+  },
+  "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx": {
+    "predicted_tags": [
+      "CRISP-DM",
+      "data science skill areas",
+      "supervised vs unsupervised learning"
+    ],
+    "proposed_competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.8,
+    "notes": "The document evidence directly supports the concept of machine learning, including discussions on supervised and unsupervised learning, and the differences between traditional programming and machine learning. The content aligns well with the description of the 'Machine Learning (ML)' competency, which involves developing, implementing, and optimizing algorithms for automated learning and decision-making using various learning methods.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.6266666905085245,
+        "sum_score": 0.6266666905085245,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8304598331451416,
+        "best_lexical_score": 0.06666666666666667,
+        "retrieval_score": 0.6466666905085245,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Database modelling",
+        "description_en": "Proficient in developing data models to structure and represent information, facilitating effective analysis and decision-making in the digital sector",
+        "max_score": 0.6061150078546433,
+        "sum_score": 0.6061150078546433,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8301953077316284,
+        "best_lexical_score": 0.01904761904761905,
+        "retrieval_score": 0.6261150078546434,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5817320236705599,
+        "sum_score": 0.5817320236705599,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8245670795440674,
+        "best_lexical_score": 0.0380952380952381,
+        "retrieval_score": 0.6017320236705599,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Data processing",
+        "description_en": "Proficient in utilizing a variety of analytic tools, databases, and techniques to extract valuable insights and enhance decision-making",
+        "max_score": 0.568152571178618,
+        "sum_score": 0.568152571178618,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8235188126564026,
+        "best_lexical_score": 0.01904761904761905,
+        "retrieval_score": 0.588152571178618,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "3D modelling",
+        "description_en": "Generate 3D models using a variety of modelling software to represent characteristics of a real-world system",
+        "max_score": 0.5478088977223351,
+        "sum_score": 0.5478088977223351,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8206109404563904,
+        "best_lexical_score": 0.009523809523809525,
+        "retrieval_score": 0.5678088977223351,
+        "rank": 5
+      }
+    ],
+    "chunk_count": 1
+  },
+  "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx": {
+    "predicted_tags": [
+      "interpretability",
+      "ensemble methods",
+      "overfitting",
+      "CatBoost"
+    ],
+    "proposed_competencies": [],
+    "difficulty_level": "Intermediate",
+    "confidence": 0.9,
+    "notes": "The document evidence directly discusses interpretability in the context of machine learning models, specifically mentioning how a single decision tree is preferred over a gradient boosting ensemble due to its interpretability in a regulated setting. This supports the selection of the 'Interpretability' competency.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.6034782847114232,
+        "sum_score": 0.6034782847114232,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8044810891151428,
+        "best_lexical_score": 0.008695652173913044,
+        "retrieval_score": 0.6234782847114232,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Database modelling",
+        "description_en": "Proficient in developing data models to structure and represent information, facilitating effective analysis and decision-making in the digital sector",
+        "max_score": 0.5904596488372139,
+        "sum_score": 0.5904596488372139,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8024873733520508,
+        "best_lexical_score": 0.017391304347826087,
+        "retrieval_score": 0.6104596488372139,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.5881907066054967,
+        "sum_score": 0.5881907066054967,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.80263352394104,
+        "best_lexical_score": 0.008695652173913044,
+        "retrieval_score": 0.6081907066054967,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Web pages optimization",
+        "description_en": "Optimizing web pages for maximum speed and scalability",
+        "max_score": 0.5812650322914124,
+        "sum_score": 0.5812650322914124,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8022168874740601,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.6012650322914124,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "3D modelling",
+        "description_en": "Generate 3D models using a variety of modelling software to represent characteristics of a real-world system",
+        "max_score": 0.5673589110374451,
+        "sum_score": 0.5673589110374451,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8005362749099731,
+        "best_lexical_score": 0.0,
+        "retrieval_score": 0.5873589110374451,
+        "rank": 5
+      }
+    ],
+    "chunk_count": 1
+  },
+  "model_output_template.csv": {
+    "predicted_tags": [
+      "Decision Trees",
+      "Pandas Basics",
+      "Machine Learning Workflow"
+    ],
+    "proposed_competencies": [
+      "Machine Learning (ML)"
+    ],
+    "difficulty_level": "Beginner",
+    "confidence": 0.5886,
+    "notes": "The document evidence includes multiple files related to Machine Learning Workflow, Decision Trees, and Pandas Basics, indicating that the content is focused on teaching fundamental concepts in machine learning. This aligns with the description of 'Machine Learning (ML)' which involves developing, implementing, and optimizing algorithms for automated learning and decision-making using various machine learning techniques.",
+    "retrieval_candidates": [
+      {
+        "skill_name_en": "Knowledge of big data tools and platforms",
+        "description_en": "Knowledge of big data tools and platforms to access data and run models",
+        "max_score": 0.6068965755659959,
+        "sum_score": 0.6068965755659959,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8216412663459778,
+        "best_lexical_score": 0.017241379310344827,
+        "retrieval_score": 0.6268965755659959,
+        "rank": 1
+      },
+      {
+        "skill_name_en": "Machine Learning (ML)",
+        "description_en": "Develop, implement, and optimize algorithms for automated learning and decision-making utilizing tools such as deep learning (DL), supervised and unsupervised learning, and reinforcement learning",
+        "max_score": 0.5685791821315371,
+        "sum_score": 0.5685791821315371,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8132258653640747,
+        "best_lexical_score": 0.06896551724137931,
+        "retrieval_score": 0.5885791821315371,
+        "rank": 2
+      },
+      {
+        "skill_name_en": "Data sharing",
+        "description_en": "Assess the value of data to achieve a competitive advantage and business objectives",
+        "max_score": 0.503362741347017,
+        "sum_score": 0.503362741347017,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8068755865097046,
+        "best_lexical_score": 0.017241379310344827,
+        "retrieval_score": 0.523362741347017,
+        "rank": 3
+      },
+      {
+        "skill_name_en": "Artificial intelligence, machine learning and deep learning application",
+        "description_en": "Identify opportunities where artificial intelligence (AI), machine learning (ML) and deep learning (DL) can be applied to support the automation of work tasks and improve organizational productivity and use machine learning (ML) principles and techniques to support the automation of procedural tasks and improve organizational productivity and evaluate these ML models",
+        "max_score": 0.49556361519057174,
+        "sum_score": 0.49556361519057174,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8037961721420288,
+        "best_lexical_score": 0.05172413793103448,
+        "retrieval_score": 0.5155636151905717,
+        "rank": 4
+      },
+      {
+        "skill_name_en": "Data collection and analysis",
+        "description_en": "To gather, analyze, test and verify data from different source inputs.",
+        "max_score": 0.48768427598065345,
+        "sum_score": 0.48768427598065345,
+        "hits": 1,
+        "chunk_indices": [
+          1
+        ],
+        "best_e5_score": 0.8046395778656006,
+        "best_lexical_score": 0.017241379310344827,
+        "retrieval_score": 0.5076842759806535,
+        "rank": 5
+      }
+    ],
+    "chunk_count": 1
+  }
+}
