@@ -1,0 +1,332 @@
+{
+  "comparison_type": "model_to_model_agreement",
+  "note": "This comparison measures agreement and differences between OpenAI and V8.4. It is not an accuracy benchmark because no gold labels were provided.",
+  "files_compared": 12,
+  "competency_exact_match_count": 3,
+  "competency_exact_match_rate": 0.25,
+  "difficulty_match_count": 10,
+  "difficulty_match_rate": 0.8333,
+  "average_competency_jaccard": 0.4653,
+  "openai_average_latency_s": 19.2412,
+  "v84_average_latency_s": 16.3852,
+  "latency_difference_openai_minus_v84_s": 2.856,
+  "comparisons": [
+    {
+      "file": "Decision Trees Revised.pptx",
+      "openai_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "v84_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "shared_competencies": [
+        "machine learning (ml)"
+      ],
+      "openai_only": [],
+      "v84_only": [],
+      "competency_exact_match": true,
+      "competency_jaccard": 1.0,
+      "openai_difficulty": "Intermediate",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": true,
+      "openai_confidence": 0.99,
+      "openai_latency_s": 12.73664331692271,
+      "v84_latency_s": 11.7233,
+      "latency_difference_s": 1.0133
+    },
+    {
+      "file": "HandsOn1_Window_Functions.md",
+      "openai_competencies": [
+        "Data processing"
+      ],
+      "v84_competencies": [
+        "Data processing",
+        "Data collection and analysis"
+      ],
+      "shared_competencies": [
+        "data processing"
+      ],
+      "openai_only": [],
+      "v84_only": [
+        "data collection and analysis"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.5,
+      "openai_difficulty": "Intermediate",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": true,
+      "openai_confidence": 0.97,
+      "openai_latency_s": 14.219301604898646,
+      "v84_latency_s": 11.1392,
+      "latency_difference_s": 3.0801
+    },
+    {
+      "file": "Introduction to Pandas_.pptx",
+      "openai_competencies": [
+        "Data processing"
+      ],
+      "v84_competencies": [
+        "Data processing",
+        "Data collection and analysis"
+      ],
+      "shared_competencies": [
+        "data processing"
+      ],
+      "openai_only": [],
+      "v84_only": [
+        "data collection and analysis"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.5,
+      "openai_difficulty": "Beginner",
+      "v84_difficulty": "Beginner",
+      "difficulty_match": true,
+      "openai_confidence": 0.78,
+      "openai_latency_s": 18.876248477958143,
+      "v84_latency_s": 11.3706,
+      "latency_difference_s": 7.5056
+    },
+    {
+      "file": "Lecture - Decision Trees.ipynb",
+      "openai_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "v84_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "shared_competencies": [
+        "machine learning (ml)"
+      ],
+      "openai_only": [],
+      "v84_only": [],
+      "competency_exact_match": true,
+      "competency_jaccard": 1.0,
+      "openai_difficulty": "Intermediate",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": true,
+      "openai_confidence": 0.98,
+      "openai_latency_s": 20.39646254084073,
+      "v84_latency_s": 17.0259,
+      "latency_difference_s": 3.3706
+    },
+    {
+      "file": "Lecture - Pandas Basics.ipynb",
+      "openai_competencies": [
+        "Data collection and analysis",
+        "Data preparation"
+      ],
+      "v84_competencies": [
+        "Data cleaning"
+      ],
+      "shared_competencies": [],
+      "openai_only": [
+        "data collection and analysis",
+        "data preparation"
+      ],
+      "v84_only": [
+        "data cleaning"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.0,
+      "openai_difficulty": "Beginner",
+      "v84_difficulty": "Beginner",
+      "difficulty_match": true,
+      "openai_confidence": 0.95,
+      "openai_latency_s": 13.751154048135504,
+      "v84_latency_s": 13.8123,
+      "latency_difference_s": -0.0611
+    },
+    {
+      "file": "Lecture_ML_Workflow.ipynb",
+      "openai_competencies": [
+        "Machine Learning (ML)",
+        "Data collection and analysis"
+      ],
+      "v84_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "shared_competencies": [
+        "machine learning (ml)"
+      ],
+      "openai_only": [
+        "data collection and analysis"
+      ],
+      "v84_only": [],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.5,
+      "openai_difficulty": "Beginner",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": false,
+      "openai_confidence": 0.96,
+      "openai_latency_s": 19.102165295975283,
+      "v84_latency_s": 19.1634,
+      "latency_difference_s": -0.0612
+    },
+    {
+      "file": "ML Workflow Introduction.pptx",
+      "openai_competencies": [
+        "Machine Learning (ML)",
+        "Data preparation",
+        "Data collection and analysis"
+      ],
+      "v84_competencies": [
+        "Machine Learning (ML)",
+        "Data processing"
+      ],
+      "shared_competencies": [
+        "machine learning (ml)"
+      ],
+      "openai_only": [
+        "data collection and analysis",
+        "data preparation"
+      ],
+      "v84_only": [
+        "data processing"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.25,
+      "openai_difficulty": "Beginner",
+      "v84_difficulty": "Beginner",
+      "difficulty_match": true,
+      "openai_confidence": 0.94,
+      "openai_latency_s": 17.357444101944566,
+      "v84_latency_s": 11.3733,
+      "latency_difference_s": 5.9841
+    },
+    {
+      "file": "Prompt_Engineering.ipynb",
+      "openai_competencies": [
+        "Natural language Processing (NLP)",
+        "Machine Learning (ML)"
+      ],
+      "v84_competencies": [
+        "Natural language Processing (NLP)",
+        "Machine Learning (ML)"
+      ],
+      "shared_competencies": [
+        "machine learning (ml)",
+        "natural language processing (nlp)"
+      ],
+      "openai_only": [],
+      "v84_only": [],
+      "competency_exact_match": true,
+      "competency_jaccard": 1.0,
+      "openai_difficulty": "Intermediate",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": true,
+      "openai_confidence": 0.96,
+      "openai_latency_s": 38.92240426992066,
+      "v84_latency_s": 39.2675,
+      "latency_difference_s": -0.3451
+    },
+    {
+      "file": "Retrieval_Augmented_Generation.ipynb",
+      "openai_competencies": [
+        "Natural language Processing (NLP)",
+        "Machine Learning (ML)"
+      ],
+      "v84_competencies": [
+        "Natural language Processing (NLP)",
+        "Data collection and analysis"
+      ],
+      "shared_competencies": [
+        "natural language processing (nlp)"
+      ],
+      "openai_only": [
+        "machine learning (ml)"
+      ],
+      "v84_only": [
+        "data collection and analysis"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.3333,
+      "openai_difficulty": "Intermediate",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": true,
+      "openai_confidence": 0.96,
+      "openai_latency_s": 40.5589532519225,
+      "v84_latency_s": 37.0397,
+      "latency_difference_s": 3.5193
+    },
+    {
+      "file": "SQL_Foundations_for_Data_Science.pptx",
+      "openai_competencies": [
+        "Data preparation",
+        "Database modelling"
+      ],
+      "v84_competencies": [
+        "Database management and configuration",
+        "Data collection and analysis"
+      ],
+      "shared_competencies": [],
+      "openai_only": [
+        "data preparation",
+        "database modelling"
+      ],
+      "v84_only": [
+        "data collection and analysis",
+        "database management and configuration"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.0,
+      "openai_difficulty": "Beginner",
+      "v84_difficulty": "Beginner",
+      "difficulty_match": true,
+      "openai_confidence": 0.87,
+      "openai_latency_s": 17.504097976954654,
+      "v84_latency_s": 12.0769,
+      "latency_difference_s": 5.4272
+    },
+    {
+      "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+      "openai_competencies": [
+        "Machine Learning (ML)",
+        "Data processing"
+      ],
+      "v84_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "shared_competencies": [
+        "machine learning (ml)"
+      ],
+      "openai_only": [
+        "data processing"
+      ],
+      "v84_only": [],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.5,
+      "openai_difficulty": "Beginner",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": false,
+      "openai_confidence": 0.95,
+      "openai_latency_s": 9.544357762904838,
+      "v84_latency_s": 6.4197,
+      "latency_difference_s": 3.1247
+    },
+    {
+      "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+      "openai_competencies": [
+        "Machine Learning (ML)"
+      ],
+      "v84_competencies": [
+        "Data processing"
+      ],
+      "shared_competencies": [],
+      "openai_only": [
+        "machine learning (ml)"
+      ],
+      "v84_only": [
+        "data processing"
+      ],
+      "competency_exact_match": false,
+      "competency_jaccard": 0.0,
+      "openai_difficulty": "Intermediate",
+      "v84_difficulty": "Intermediate",
+      "difficulty_match": true,
+      "openai_confidence": 0.98,
+      "openai_latency_s": 7.9247746269684285,
+      "v84_latency_s": 6.2101,
+      "latency_difference_s": 1.7147
+    }
+  ]
+}
