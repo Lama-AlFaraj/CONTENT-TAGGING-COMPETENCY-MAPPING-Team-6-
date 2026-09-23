@@ -1,0 +1,99 @@
+# RAG / Knowledge Retrieval
+
+## Overview
+
+The competency-mapping pipeline uses retrieval to ground competency selection in the supplied **Saudi Skills Taxonomy** rather than relying solely on the language model's generated knowledge.
+
+The retrieval stage connects extracted learning-content concepts to relevant skills from the 134-entry Saudi Skills Taxonomy.
+
+## Retrieval Pipeline
+
+```text
+Learning Content
+      │
+      ▼
+Content Extraction
+      │
+      ▼
+Topic / Concept Tagging
+      │
+      ▼
+Semantic Query Expansion
+      │
+      ├───────────────┐
+      ▼               ▼
+E5 Semantic       Lexical
+Retrieval         Retrieval
+      │               │
+      └───────┬───────┘
+              ▼
+       Hybrid Retrieval
+              │
+              ▼
+     Cross-Chunk Aggregation
+              │
+              ▼
+        Qwen Reranking
+              │
+              ▼
+   Saudi Skills Taxonomy
+              │
+              ▼
+   Final Competency Mapping
+```
+
+## Knowledge Source
+
+The retrieval knowledge source is:
+
+**Saudi Skills Taxonomy v1**
+
+* 134 taxonomy entries
+* Skill name
+* Skill description
+* Subsector
+* Related job families
+* Review flag
+
+The taxonomy provides the controlled vocabulary used for competency mapping.
+
+## Retrieval Approach
+
+The system combines:
+
+* **Multilingual E5 embeddings** for semantic similarity
+* **Lexical matching** for exact or closely related terminology
+* **Hybrid scoring** to combine semantic and lexical evidence
+* **Cross-chunk aggregation** to combine evidence from different sections of the same learning-content file
+* **Qwen reranking** to improve the ordering of retrieved competency candidates
+
+The final candidates are restricted to skills available in the supplied Saudi Skills Taxonomy.
+
+## RAG / Grounding Role
+
+Rather than asking the LLM to invent competency names, the retrieval stage provides candidate skills from the controlled taxonomy.
+
+This reduces unsupported competency generation and keeps the final mapping aligned with the supplied taxonomy.
+
+The implemented system should therefore be described as **taxonomy-grounded retrieval for competency mapping** rather than as a general-purpose conversational RAG chatbot.
+
+## Evaluation
+
+Retrieval quality was evaluated using:
+
+* Top-1 accuracy
+* Top-3 accuracy
+* Top-5 accuracy
+* Recall@10
+* Mean Reciprocal Rank (MRR)
+* Precision
+* Recall
+* F1-score
+
+The retrieval experiments compared semantic and hybrid retrieval approaches before the final V8.4 pipeline was selected.
+
+## Scope and Limitation
+
+The current implementation grounds **competency mapping** against the Saudi Skills Taxonomy. It does not implement a separate user-facing question-answering knowledge base that generates cited answers from retrieved documents.
+
+This distinction is important when comparing the implementation with the broader RAG definition in the BeamData capstone brief.
