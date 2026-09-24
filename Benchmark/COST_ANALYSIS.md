@@ -45,6 +45,6 @@ The V8.4 deployment provides a self-hosted inference path where cost is determin
 
 The measured token usage is recorded in:
 
-`Infrastructure_Benchmark/results/openai_cost_evaluation.json`
+`Benchmark/openai_cost_evaluation.json`
 
 The existing OpenAI model comparison is documented separately in the benchmark comparison artifacts.
