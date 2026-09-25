@@ -1,0 +1,35 @@
+file_name,gold_competency,rank_found,reciprocal_rank
+Decision Trees Revised.pptx,Machine Learning (ML),2,0.5
+Decision Trees Revised.pptx,"Artificial intelligence, machine learning and deep learning application",1,1.0
+HandsOn1_Window_Functions.md,Data analytics,,0.0
+HandsOn1_Window_Functions.md,Data processing,1,1.0
+Introduction to Pandas_.pptx,Data analytics,2,0.5
+Introduction to Pandas_.pptx,Data processing,1,1.0
+Introduction to Pandas_.pptx,Data preparation,3,0.3333333333333333
+Lecture - Decision Trees.ipynb,Machine Learning (ML),2,0.5
+Lecture - Decision Trees.ipynb,"Artificial intelligence, machine learning and deep learning application",1,1.0
+Lecture - Decision Trees.ipynb,Data analytics,,0.0
+Lecture - Pandas Basics.ipynb,Data analytics,4,0.25
+Lecture - Pandas Basics.ipynb,Data cleaning,,0.0
+Lecture - Pandas Basics.ipynb,Data preparation,3,0.3333333333333333
+Lecture - Pandas Basics.ipynb,Data processing,2,0.5
+Lecture_ML_Workflow.ipynb,Machine Learning (ML),1,1.0
+Lecture_ML_Workflow.ipynb,"Artificial intelligence, machine learning and deep learning application",2,0.5
+Lecture_ML_Workflow.ipynb,Data analytics,,0.0
+Lecture_ML_Workflow.ipynb,Data preparation,,0.0
+ML Workflow Introduction.pptx,Machine Learning (ML),2,0.5
+ML Workflow Introduction.pptx,"Artificial intelligence, machine learning and deep learning application",1,1.0
+ML Workflow Introduction.pptx,Data analytics,5,0.2
+ML Workflow Introduction.pptx,Data preparation,3,0.3333333333333333
+Prompt_Engineering.ipynb,Natural language Processing (NLP),1,1.0
+Prompt_Engineering.ipynb,"Artificial intelligence, machine learning and deep learning application",4,0.25
+Retrieval_Augmented_Generation.ipynb,Natural language Processing (NLP),5,0.2
+Retrieval_Augmented_Generation.ipynb,Knowledge management systems,,0.0
+Retrieval_Augmented_Generation.ipynb,"Artificial intelligence, machine learning and deep learning application",3,0.3333333333333333
+SQL_Foundations_for_Data_Science.pptx,Data analytics,,0.0
+SQL_Foundations_for_Data_Science.pptx,Data processing,1,1.0
+SQL_Foundations_for_Data_Science.pptx,Data preparation,3,0.3333333333333333
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,Machine Learning (ML),1,1.0
+WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx,"Artificial intelligence, machine learning and deep learning application",2,0.5
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,Machine Learning (ML),1,1.0
+WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx,"Artificial intelligence, machine learning and deep learning application",2,0.5

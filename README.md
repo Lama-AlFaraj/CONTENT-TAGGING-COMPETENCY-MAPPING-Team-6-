@@ -572,6 +572,51 @@ This allows concurrent API requests without blocking the FastAPI event loop.
 
 The final API image was rebuilt and redeployed after this fix.
 
+## 11.1 External API Access
+
+The FastAPI service is exposed through a Kubernetes NodePort:
+
+```text
+Service: beamdata-v8-api-public
+Type: NodePort
+Port: 8000
+NodePort: 31542
+Node IP: 10.0.0.222
+```
+
+The API was verified internally through:
+
+```text
+http://10.0.0.222:31542/health
+```
+
+For temporary external demonstration access, a Cloudflare Quick Tunnel was created:
+
+```text
+https://reconstruction-diversity-trading-booking.trycloudflare.com
+```
+
+Endpoints:
+
+```text
+GET  /health
+POST /predict
+```
+
+The public endpoint is:
+
+```text
+https://reconstruction-diversity-trading-booking.trycloudflare.com/health
+```
+
+The health response was verified as:
+
+```json
+{"status":"ok","service":"beamdata-v8-api","version":"8.4"}
+```
+
+The Cloudflare Quick Tunnel is temporary and remains available only while the `cloudflared` process is running.
+
 ---
 
 # 12. Kubernetes Deployment
@@ -688,23 +733,23 @@ The API was benchmarked using the 12-file evaluation set at multiple concurrency
 
 | Concurrency | Requests | Success | Avg Latency |     P50 |     P95 |     P99 |   Throughput |
 | ----------: | -------: | ------: | ----------: | ------: | ------: | ------: | -----------: |
-|           1 |       12 |      12 |     10.014s |  7.259s | 22.930s | 25.349s | 0.0999 req/s |
-|           2 |       12 |      12 |     13.789s | 10.726s | 34.401s | 35.799s | 0.1420 req/s |
-|           4 |       12 |      12 |     21.048s | 18.046s | 42.470s | 46.983s | 0.1654 req/s |
-|           8 |       12 |      12 |     33.361s | 31.002s | 43.654s | 66.892s | 0.1681 req/s |
+|           1 |       12 |      12 |     16.3852s | 11.7233s | 37.0397s | 39.2675s | 0.0610 req/s |
+|           2 |       12 |       7 |     25.6102s | 21.8278s | 50.9775s | 50.9775s | 0.1024 req/s |
+|           4 |       12 |      12 |     20.4990s | 17.8900s | 40.3760s | 45.3010s | 0.1700 req/s |
+|           8 |       12 |      12 |     30.7950s | 30.1906s | 38.8238s | 61.3319s | 0.1783 req/s |
 
 Overall:
 
 ```text
 Total requests: 48
-Successful: 48
-Errors: 0
-Error rate: 0%
+Successful: 43
+Errors: 5
+Error rate: 10.42%
 ```
 
-The API remained stable through concurrency 8.
+The API successfully completed all requests at concurrency 1, 4, and 8. Concurrency 2 recorded 5 errors in the authoritative benchmark run.
 
-Throughput increased as concurrency increased, while latency also increased. Throughput began to plateau between concurrency 4 and 8.
+Throughput increased with concurrency and reached 0.1783 req/s at concurrency 8, while latency also increased.
 
 ---
 
@@ -716,20 +761,34 @@ A dedicated monitoring run was executed at concurrency 4:
 Requests: 12
 Successful: 12
 Errors: 0
-Wall time: 66.8709s
+Wall time: 70.7993s
 ```
 
 Results:
 
 ```text
-Average latency: 19.624s
-P50:             17.368s
-P95:             39.275s
-P99:             44.100s
-Throughput:      0.1795 req/s
+Average latency: 20.499s
+P50:             17.890s
+P95:             40.376s
+P99:             45.301s
+Throughput:      0.1700 req/s
 ```
 
 This run was used to observe GPU and vLLM behavior through Prometheus.
+
+### LLM serving metrics
+
+The benchmark also recorded:
+
+```text
+Generation tokens:             5924
+Generation throughput:         83.6732 tokens/s
+Tokens per request:            75.9487
+Average TTFT:                  29.191 ms
+Average inter-token latency:    8.11 ms
+```
+
+The vLLM metric-delta `generation_requests` value was 78. This is a serving-metric count and should not be interpreted as the number of API benchmark requests.
 
 ---
 
@@ -834,7 +893,7 @@ During the controlled monitoring benchmark, Prometheus recorded:
 | GPU Power             |    **297.104 W** |
 | vLLM Running Requests |            **2** |
 | vLLM Waiting Requests |            **0** |
-| KV Cache Usage        |       **0.433%** |
+| KV Cache Usage        |      **43.30%** |
 
 These measurements demonstrate that GPU-level monitoring is working and that the benchmark traffic reached the deployed GPU model.
 
@@ -886,24 +945,34 @@ The required dashboard is intended to display:
 
 ### Current Grafana Status
 
-The **Grafana application/dashboard configuration is not yet finalized**.
+Grafana Cloud monitoring is configured and the BeamData dashboard has been built using the Prometheus data source connected through Grafana Private Datasource Connect (PDC).
 
-The Kubernetes Grafana deployment and Prometheus data sources are healthy, but accessing Grafana through the existing code-server `/proxy/3000/` route is currently producing:
+The dashboard includes:
+
+### GPU
+
+* GPU utilization
+* GPU VRAM
+* GPU power
+* GPU temperature
+
+### vLLM
+
+* Running requests
+* Waiting requests
+* KV cache usage
+* Generation throughput
+
+The Grafana Cloud Prometheus datasource successfully queried the Kubernetes Prometheus API through the PDC network.
+
+Current monitoring status:
 
 ```text
-Grafana has failed to load its application files
-```
-
-Therefore:
-
-```text
-Grafana deployment: COMPLETE
+Grafana dashboard: COMPLETE
 Prometheus monitoring: COMPLETE
 DCGM monitoring: COMPLETE
-Grafana dashboard: IN PROGRESS
+Grafana Cloud / PDC connection: COMPLETE
 ```
-
-No additional Grafana networking changes should be considered part of the completed project until the dashboard loads correctly through the required proxy.
 
 ---
 
@@ -1019,7 +1088,7 @@ shahad09/beamdata-v8-api:v8.4
 | DCGM Exporter          | Complete             |
 | Prometheus             | Complete             |
 | Grafana deployment     | Complete             |
-| Grafana dashboard      | **In progress**      |
+| Grafana dashboard      | Complete             |
 | AI Hub integration     | **Not yet verified** |
 | Final documentation    | In progress          |
 | Final presentation     | In progress          |
@@ -1127,9 +1196,10 @@ Hit Rate@10:    91.67%
 The deployed API achieved:
 
 ```text
-48 / 48 successful benchmark requests
-0% error rate
-Stable operation through concurrency 8
+43 / 48 successful benchmark requests
+5 errors
+10.42% overall error rate
+Successful runs at concurrency 1, 4, and 8
 ```
 
 The monitoring stack successfully captured:
@@ -1141,18 +1211,16 @@ The monitoring stack successfully captured:
 vLLM running/waiting request metrics
 KV cache metrics
 ```
-
+Freezed the Infrastructure_Benchmark/report CSV.
 ---
 
 # 29. Remaining Final Tasks
 
 The remaining work is primarily finalization rather than another model-development cycle:
 
-1. Finish the Grafana dashboard and verify it loads through the required proxy.
-2. Confirm whether the AI Hub integration has been completed.
-3. Finalize the Infrastructure_Benchmark/report CSV.
-4. Finalize the README and project documentation.
-5. Prepare the final presentation and demonstration.
+1. Confirm whether the AI Hub integration has been completed.
+2. Finalize the README and project documentation.
+3. Prepare the final presentation and demonstration.
 
 The final evaluated model remains **V8.4**. No additional model version is currently required for the completed benchmark.
 
@@ -1197,7 +1265,10 @@ PROMETHEUS:
 Complete
 
 GRAFANA:
-Dashboard in progress
+Dashboard complete
+
+GRAFANA CLOUD / PDC:
+Complete
 
 AI HUB:
 Not yet verified

@@ -1,64 +1,78 @@
-category,metric,value,unit
-API,Concurrency 1 - Avg Latency,16.3852,seconds
-API,Concurrency 1 - P50 Latency,11.7233,seconds
-API,Concurrency 1 - P95 Latency,37.0397,seconds
-API,Concurrency 1 - P99 Latency,39.2675,seconds
-API,Concurrency 1 - Throughput,0.061,requests/sec
-API,Concurrency 1 - Error Rate,0.0,ratio
-API,Concurrency 2 - Avg Latency,25.6102,seconds
-API,Concurrency 2 - P50 Latency,21.8278,seconds
-API,Concurrency 2 - P95 Latency,50.9775,seconds
-API,Concurrency 2 - P99 Latency,50.9775,seconds
-API,Concurrency 2 - Throughput,0.1024,requests/sec
-API,Concurrency 2 - Error Rate,0.4167,ratio
-API,Concurrency 4 - Avg Latency,20.499,seconds
-API,Concurrency 4 - P50 Latency,17.890,seconds
-API,Concurrency 4 - P95 Latency,40.376,seconds
-API,Concurrency 4 - P99 Latency,45.301,seconds
-API,Concurrency 4 - Throughput,0.1700,requests/sec
-API,Concurrency 4 - Error Rate,0.0,ratio
-API,Concurrency 8 - Avg Latency,30.795,seconds
-API,Concurrency 8 - P50 Latency,30.1906,seconds
-API,Concurrency 8 - P95 Latency,38.8238,seconds
-API,Concurrency 8 - P99 Latency,61.3319,seconds
-API,Concurrency 8 - Throughput,0.1783,requests/sec
-API,Concurrency 8 - Error Rate,0.0,ratio
-LLM,Benchmark Duration,70.7993,seconds
-LLM,Generated Tokens,5924.0,tokens
-LLM,Generation Throughput,83.6732,tokens/sec
-LLM,Generated Tokens per Request,75.9487,tokens/request
-LLM,Average TTFT,29.191,ms
-LLM,Average Inter-token Latency,8.11,ms
-GPU,Max GPU Utilization,100,%
-GPU,Max GPU VRAM Used,42821,MiB
-GPU,Max GPU Power,297.104,W
-GPU,Max vLLM Running Requests,2,requests
-GPU,Max vLLM Waiting Requests,0,requests
-GPU,Max KV Cache Usage,0.4330446369,%
-System,Model,Qwen/Qwen2.5-7B-Instruct-AWQ,
-System,Serving Engine,vLLM,
-System,API,FastAPI,
-System,GPU,NVIDIA RTX A6000,
-System,Deployment,Kubernetes,
-Evaluation,Evaluation Files,12,files
-Evaluation,Gold Competency Mappings,39,mappings
-Evaluation,Macro Precision,75.00,%
-Evaluation,Macro Recall,27.08,%
-Evaluation,Macro F1,39.17,%
-Evaluation,Micro Precision,76.92,%
-Evaluation,Micro Recall,25.64,%
-Evaluation,Micro F1,38.46,%
-Evaluation,Recall@1,4.86,%
-Evaluation,Recall@3,11.81,%
-Evaluation,Recall@5,16.67,%
-Evaluation,Recall@10,31.25,%
-Evaluation,Hit Rate@10,91.67,%
-Evaluation,True Positives,10,count
-Evaluation,False Positives,3,count
-Evaluation,False Negatives,29,count
-System,Retrieval,Multilingual E5 + Lexical,
-System,Containerization,Docker,
-System,GPU Monitoring,DCGM Exporter,
-System,Metrics,Prometheus,
-System,Visualization,Grafana,
-System,Final Version,V8.4,
+category,configuration,metric,value,unit
+API,C1,requests,12,requests
+API,C1,successful,12,requests
+API,C1,errors,0,requests
+API,C1,error_rate,0.00,%
+API,C1,avg_latency,16.3852,s
+API,C1,p50_latency,11.7233,s
+API,C1,p95_latency,37.0397,s
+API,C1,p99_latency,39.2675,s
+API,C1,throughput,0.0610,requests/s
+API,C2,requests,12,requests
+API,C2,successful,7,requests
+API,C2,errors,5,requests
+API,C2,error_rate,41.67,%
+API,C2,avg_latency,25.6102,s
+API,C2,p50_latency,21.8278,s
+API,C2,p95_latency,50.9775,s
+API,C2,p99_latency,50.9775,s
+API,C2,throughput,0.1024,requests/s
+API,C4,requests,12,requests
+API,C4,successful,12,requests
+API,C4,errors,0,requests
+API,C4,error_rate,0.00,%
+API,C4,avg_latency,20.4990,s
+API,C4,p50_latency,17.8900,s
+API,C4,p95_latency,40.3760,s
+API,C4,p99_latency,45.3010,s
+API,C4,throughput,0.1700,requests/s
+API,C8,requests,12,requests
+API,C8,successful,12,requests
+API,C8,errors,0,requests
+API,C8,error_rate,0.00,%
+API,C8,avg_latency,30.7950,s
+API,C8,p50_latency,30.1906,s
+API,C8,p95_latency,38.8238,s
+API,C8,p99_latency,61.3319,s
+API,C8,throughput,0.1783,requests/s
+API,Overall,total_requests,48,requests
+API,Overall,total_successful,43,requests
+API,Overall,total_errors,5,requests
+API,Overall,overall_error_rate,10.42,%
+LLM,C4,benchmark_duration,70.7993,s
+LLM,C4,generation_tokens,5924,tokens
+LLM,C4,generation_requests,78,metric_delta
+LLM,C4,generation_throughput,83.6732,tokens/s
+LLM,C4,tokens_per_request,75.9487,tokens/request
+LLM,C4,avg_ttft,29.191,ms
+LLM,C4,avg_inter_token_latency,8.11,ms
+GPU,5-minute_max_observed,gpu_utilization,100,%
+GPU,5-minute_max_observed,vram_used,42821,MiB
+GPU,5-minute_max_observed,power,297.104,W
+GPU,5-minute_max_observed,vllm_running_requests,2,requests
+GPU,5-minute_max_observed,vllm_waiting_requests,0,requests
+GPU,5-minute_max_observed,kv_cache_usage,0.4330446369,fraction
+Model_Evaluation,V8.4,evaluation_files,12,files
+Model_Evaluation,V8.4,gold_mappings,39,mappings
+Model_Evaluation,V8.4,macro_precision,75.00,%
+Model_Evaluation,V8.4,macro_recall,27.08,%
+Model_Evaluation,V8.4,macro_f1,39.17,%
+Model_Evaluation,V8.4,micro_precision,76.92,%
+Model_Evaluation,V8.4,micro_recall,25.64,%
+Model_Evaluation,V8.4,micro_f1,38.46,%
+Model_Evaluation,V8.4,recall_at_1,4.86,%
+Model_Evaluation,V8.4,recall_at_3,11.81,%
+Model_Evaluation,V8.4,recall_at_5,16.67,%
+Model_Evaluation,V8.4,recall_at_10,31.25,%
+Model_Evaluation,V8.4,hit_rate_at_10,91.67,%
+Model_Evaluation,V8.4,true_positives,10,mappings
+Model_Evaluation,V8.4,false_positives,3,mappings
+Model_Evaluation,V8.4,false_negatives,29,mappings
+System,V8.4,model,Qwen/Qwen2.5-7B-Instruct-AWQ,model
+System,V8.4,inference_engine,vLLM,software
+System,V8.4,api_framework,FastAPI,software
+System,V8.4,gpu,NVIDIA RTX A6000 48GB,hardware
+System,V8.4,orchestration,Kubernetes,platform
+System,V8.4,retrieval,E5 + Lexical,retrieval
+System,V8.4,containerization,Docker,platform
+System,V8.4,monitoring,DCGM Exporter + Prometheus + Grafana,monitoring
