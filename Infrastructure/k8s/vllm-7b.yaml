@@ -33,7 +33,7 @@ spec:
             - "16384"
             - "--gpu-memory-utilization"
             - "0.85"
-            - "--enable-prefix-caching"
+            - "--no-enable-prefix-caching"
           ports:
             - containerPort: 8000
           resources:

@@ -1,0 +1,58 @@
+nohup: ignoring input
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+File -> estimated input tokens -> bucket
+  Decision Trees Revised.pptx                             ~  1756 tok  [short (<2k tokens)]
+  HandsOn1_Window_Functions.md                            ~  2370 tok  [medium (2k-6k tokens)]
+  Introduction to Pandas_.pptx                            ~  1958 tok  [short (<2k tokens)]
+  Lecture - Decision Trees.ipynb                          ~  3788 tok  [medium (2k-6k tokens)]
+  Lecture - Pandas Basics.ipynb                           ~  2156 tok  [medium (2k-6k tokens)]
+  Lecture_ML_Workflow.ipynb                               ~  3680 tok  [medium (2k-6k tokens)]
+  ML Workflow Introduction.pptx                           ~  3046 tok  [medium (2k-6k tokens)]
+  Prompt_Engineering.ipynb                                ~  8972 tok  [long (6k-12k tokens)]
+  Retrieval_Augmented_Generation.ipynb                    ~  8380 tok  [long (6k-12k tokens)]
+  SQL_Foundations_for_Data_Science.pptx                   ~  2757 tok  [medium (2k-6k tokens)]
+  WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx             ~   986 tok  [short (<2k tokens)]
+  WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx   ~   872 tok  [short (<2k tokens)]
+    -> Decision Trees Revised.pptx (run 1/3): OK in 7.7313s
+    -> Decision Trees Revised.pptx (run 2/3): OK in 7.6147s
+    -> Decision Trees Revised.pptx (run 3/3): OK in 7.6944s
+    -> HandsOn1_Window_Functions.md (run 1/3): OK in 8.0103s
+    -> HandsOn1_Window_Functions.md (run 2/3): OK in 8.1191s
+    -> HandsOn1_Window_Functions.md (run 3/3): OK in 8.0931s
+    -> Introduction to Pandas_.pptx (run 1/3): OK in 8.1374s
+    -> Introduction to Pandas_.pptx (run 2/3): OK in 7.9146s
+    -> Introduction to Pandas_.pptx (run 3/3): OK in 7.8968s
+    -> Lecture - Decision Trees.ipynb (run 1/3): OK in 11.1372s
+    -> Lecture - Decision Trees.ipynb (run 2/3): OK in 11.2963s
+    -> Lecture - Decision Trees.ipynb (run 3/3): OK in 11.2694s
+    -> Lecture - Pandas Basics.ipynb (run 1/3): OK in 7.971s
+    -> Lecture - Pandas Basics.ipynb (run 2/3): OK in 8.1018s
+    -> Lecture - Pandas Basics.ipynb (run 3/3): OK in 8.1959s
+    -> Lecture_ML_Workflow.ipynb (run 1/3): OK in 11.7405s
+    -> Lecture_ML_Workflow.ipynb (run 2/3): OK in 11.8006s
+    -> Lecture_ML_Workflow.ipynb (run 3/3): OK in 11.5963s
+    -> ML Workflow Introduction.pptx (run 1/3): OK in 7.9507s
+    -> ML Workflow Introduction.pptx (run 2/3): OK in 8.0123s
+    -> ML Workflow Introduction.pptx (run 3/3): OK in 8.2913s
+    -> Prompt_Engineering.ipynb (run 1/3): OK in 25.6658s
+    -> Prompt_Engineering.ipynb (run 2/3): OK in 25.295s
+    -> Prompt_Engineering.ipynb (run 3/3): OK in 25.6033s
+    -> Retrieval_Augmented_Generation.ipynb (run 1/3): OK in 24.7204s
+    -> Retrieval_Augmented_Generation.ipynb (run 2/3): OK in 25.621s
+    -> Retrieval_Augmented_Generation.ipynb (run 3/3): OK in 25.7017s
+    -> SQL_Foundations_for_Data_Science.pptx (run 1/3): OK in 8.3292s
+    -> SQL_Foundations_for_Data_Science.pptx (run 2/3): OK in 8.2005s
+    -> SQL_Foundations_for_Data_Science.pptx (run 3/3): OK in 8.4642s
+    -> WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx (run 1/3): OK in 4.3525s
+    -> WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx (run 2/3): OK in 4.4998s
+    -> WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx (run 3/3): OK in 4.4953s
+    -> WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx (run 1/3): OK in 4.1449s
+    -> WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx (run 2/3): OK in 4.1101s
+    -> WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx (run 3/3): OK in 3.9888s
+
+Wrote Infrastructure_Benchmark/results/context_len_cache_off.json
+
+Summary by input-length bucket:
+  short (<2k tokens): n=4, errors=0, reqs=12, avg=6.0484s, p95=7.9146s
+  medium (2k-6k tokens): n=6, errors=0, reqs=18, avg=9.2544s, p95=11.7405s
+  long (6k-12k tokens): n=2, errors=0, reqs=6, avg=25.4345s, p95=25.7017s

@@ -1,0 +1,162 @@
+{
+  "timestamp": 1790269796,
+  "base_url": "http://127.0.0.1:8001",
+  "data_dir": "Model/evaluation_data",
+  "tokenizer_used": "Qwen/Qwen2.5-7B-Instruct",
+  "per_file": [
+    {
+      "file": "Decision Trees Revised.pptx",
+      "status_code": 200,
+      "latency_s": 7.2571,
+      "ok": true,
+      "estimated_tokens": 2024438,
+      "bucket": "very_long (>=12k tokens)"
+    },
+    {
+      "file": "HandsOn1_Window_Functions.md",
+      "status_code": 200,
+      "latency_s": 7.0391,
+      "ok": true,
+      "estimated_tokens": 2370,
+      "bucket": "medium (2k-6k tokens)"
+    },
+    {
+      "file": "Introduction to Pandas_.pptx",
+      "status_code": 200,
+      "latency_s": 7.1338,
+      "ok": true,
+      "estimated_tokens": 640996,
+      "bucket": "very_long (>=12k tokens)"
+    },
+    {
+      "file": "Lecture - Decision Trees.ipynb",
+      "status_code": 200,
+      "latency_s": 9.2708,
+      "ok": true,
+      "estimated_tokens": 3788,
+      "bucket": "medium (2k-6k tokens)"
+    },
+    {
+      "file": "Lecture - Pandas Basics.ipynb",
+      "status_code": 200,
+      "latency_s": 7.2375,
+      "ok": true,
+      "estimated_tokens": 2156,
+      "bucket": "medium (2k-6k tokens)"
+    },
+    {
+      "file": "Lecture_ML_Workflow.ipynb",
+      "status_code": 200,
+      "latency_s": 10.8165,
+      "ok": true,
+      "estimated_tokens": 3680,
+      "bucket": "medium (2k-6k tokens)"
+    },
+    {
+      "file": "ML Workflow Introduction.pptx",
+      "status_code": 200,
+      "latency_s": 7.1163,
+      "ok": true,
+      "estimated_tokens": 2094904,
+      "bucket": "very_long (>=12k tokens)"
+    },
+    {
+      "file": "Prompt_Engineering.ipynb",
+      "status_code": 200,
+      "latency_s": 22.8461,
+      "ok": true,
+      "estimated_tokens": 8972,
+      "bucket": "long (6k-12k tokens)"
+    },
+    {
+      "file": "README_STUDENTS.md",
+      "status_code": 200,
+      "latency_s": 3.2769,
+      "ok": true,
+      "estimated_tokens": 279,
+      "bucket": "short (<2k tokens)"
+    },
+    {
+      "file": "Retrieval_Augmented_Generation.ipynb",
+      "status_code": 200,
+      "latency_s": 23.3097,
+      "ok": true,
+      "estimated_tokens": 8380,
+      "bucket": "long (6k-12k tokens)"
+    },
+    {
+      "file": "SQL_Foundations_for_Data_Science.pptx",
+      "status_code": 200,
+      "latency_s": 7.0613,
+      "ok": true,
+      "estimated_tokens": 309653,
+      "bucket": "very_long (>=12k tokens)"
+    },
+    {
+      "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+      "status_code": 200,
+      "latency_s": 4.0691,
+      "ok": true,
+      "estimated_tokens": 2299,
+      "bucket": "medium (2k-6k tokens)"
+    },
+    {
+      "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+      "status_code": 200,
+      "latency_s": 3.7335,
+      "ok": true,
+      "estimated_tokens": 2276,
+      "bucket": "medium (2k-6k tokens)"
+    },
+    {
+      "file": "model_output_template.csv",
+      "status_code": 200,
+      "latency_s": 3.4235,
+      "ok": true,
+      "estimated_tokens": 198,
+      "bucket": "short (<2k tokens)"
+    }
+  ],
+  "by_bucket": {
+    "very_long (>=12k tokens)": {
+      "n_files": 4,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 7.1421,
+      "p50_latency_s": 7.1163,
+      "p95_latency_s": 7.2571,
+      "min_tokens": 309653,
+      "max_tokens": 2094904
+    },
+    "medium (2k-6k tokens)": {
+      "n_files": 6,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 7.0278,
+      "p50_latency_s": 7.0391,
+      "p95_latency_s": 10.8165,
+      "min_tokens": 2156,
+      "max_tokens": 3788
+    },
+    "long (6k-12k tokens)": {
+      "n_files": 2,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 23.0779,
+      "p50_latency_s": 22.8461,
+      "p95_latency_s": 23.3097,
+      "min_tokens": 8380,
+      "max_tokens": 8972
+    },
+    "short (<2k tokens)": {
+      "n_files": 2,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 3.3502,
+      "p50_latency_s": 3.2769,
+      "p95_latency_s": 3.4235,
+      "min_tokens": 198,
+      "max_tokens": 279
+    }
+  }
+}

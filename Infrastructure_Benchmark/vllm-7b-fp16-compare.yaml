@@ -1,0 +1,143 @@
+# ---------------------------------------------------------------------------
+# Backend B for the quantization comparison (docs/QUANTIZATION_COMPARISON.md, §4).
+# Same pattern as vllm-7b.yaml / beamdata-v8-api.yaml, but:
+#   - no --quantization flag (unquantized / fp16 weights)
+#   - separate Deployment + Service names. NOTE: each vLLM pod requests 1 GPU, so it can only
+#     run alongside the AWQ backend if the cluster has a second free GPU; on a single A6000,
+#     scale beamdata-vllm-7b to 0 first (kubectl -n shahad scale deploy beamdata-vllm-7b --replicas=0)
+#   - needs more VRAM headroom than AWQ (7B fp16 weights ~15GB before KV cache),
+#     so this MUST be scheduled on the A6000 node, not the T4 used for the
+#     original infra benchmark.
+# ---------------------------------------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beamdata-vllm-7b-fp16
+  namespace: shahad
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: beamdata-vllm-7b-fp16
+  template:
+    metadata:
+      labels:
+        app: beamdata-vllm-7b-fp16
+    spec:
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:latest
+          command: ["vllm", "serve"]
+          args:
+            - "Qwen/Qwen2.5-7B-Instruct"      # unquantized, no -AWQ suffix
+            - "--host"
+            - "0.0.0.0"
+            - "--port"
+            - "8000"
+            - "--served-model-name"
+            - "Qwen/Qwen2.5-7B-Instruct-AWQ"   # REQUIRED: model_v8.py hardcodes this id (line 73);
+                                               # without it every request returns model-not-found.
+                                               # It is only an API alias -- the weights served are FP16.
+            - "--dtype"
+            - "bfloat16"                       # A6000 supports bf16, unlike the T4
+            - "--max-model-len"
+            - "16384"                          # keep identical to prod for a fair comparison
+            - "--gpu-memory-utilization"
+            - "0.85"
+            - "--enable-prefix-caching"
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            failureThreshold: 30
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 120
+            periodSeconds: 20
+            failureThreshold: 6
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: beamdata-vllm-fp16
+  namespace: shahad
+spec:
+  type: ClusterIP
+  selector:
+    app: beamdata-vllm-7b-fp16
+  ports:
+    - port: 8000
+      targetPort: 8000
+---
+# Second copy of the FastAPI wrapper, identical image, pointed at the fp16
+# vLLM service instead of the AWQ one via VLLM_BASE_URL (model_v8.py already
+# reads this env var; the model *name* is handled by --served-model-name above).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beamdata-v8-api-fp16-compare
+  namespace: shahad
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: beamdata-v8-api-fp16-compare
+  template:
+    metadata:
+      labels:
+        app: beamdata-v8-api-fp16-compare
+    spec:
+      containers:
+        - name: api
+          image: shahad09/beamdata-v8-api:v8.4     # same image, no rebuild needed
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: VLLM_BASE_URL
+              value: "http://beamdata-vllm-fp16:8000"   # <- the only change that matters
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "2Gi"
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            failureThreshold: 6
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: beamdata-v8-api-fp16-compare
+  namespace: shahad
+spec:
+  type: ClusterIP
+  selector:
+    app: beamdata-v8-api-fp16-compare
+  ports:
+    - port: 8000
+      targetPort: 8000

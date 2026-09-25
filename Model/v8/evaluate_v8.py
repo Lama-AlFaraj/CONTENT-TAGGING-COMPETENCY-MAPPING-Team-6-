@@ -1,14 +1,17 @@
 import ast
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PRED_PATH = ROOT / "Model" / "v8" / "results" / "v8_predictions.csv"
+# Override with env vars to score any backend without touching the baseline files:
+#   PRED_PATH=results/fp16_predictions.csv OUT_PATH=results/fp16_evaluation.csv python3 evaluate_v8.py
+PRED_PATH = Path(os.getenv("PRED_PATH", ROOT / "Model" / "v8" / "results" / "v8_predictions.csv"))
 GOLD_PATH = ROOT / "data" / "competency_gold_labels_review.csv"
-OUT_PATH = ROOT / "Model" / "v8" / "results" / "v8_evaluation.csv"
+OUT_PATH = Path(os.getenv("OUT_PATH", ROOT / "Model" / "v8" / "results" / "v8_evaluation.csv"))
 
 
 def parse_list(value):

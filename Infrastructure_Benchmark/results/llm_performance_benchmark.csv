@@ -1,0 +1,10 @@
+metric,value
+benchmark_duration_s,70.7993
+generation_tokens,5924.0
+generation_requests,78.0
+tokens_per_second,83.6732
+generation_tokens_per_request,75.9487
+avg_ttft_s,0.029191
+avg_ttft_ms,29.191
+avg_inter_token_latency_s,0.00811
+avg_inter_token_latency_ms,8.11
