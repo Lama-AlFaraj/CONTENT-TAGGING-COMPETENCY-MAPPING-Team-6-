@@ -1,0 +1,10 @@
+name,ready,status,restarts,ip,node,image
+beamdata-ai-hub-7fb7c95bff-fgqw8,true,Running,0,10.42.1.72,aidc-t12,beamdata-ai-hub:1.0
+beamdata-v8-api-6f54f8d8bb-jh8ns,true,Running,0,10.42.1.82,aidc-t12,shahad09/beamdata-v8-api:v8.4
+beamdata-vllm-7b-75945f6c55-8jj94,true,Running,0,10.42.1.81,aidc-t12,vllm/vllm-openai:latest
+curl-upload,false,Succeeded,0,10.42.1.77,aidc-t12,curlimages/curl
+loadgen,false,Succeeded,0,<none>,aidc-t12,shahad09/aidc-serving:cpu-v1
+loadgen2,false,Succeeded,0,<none>,aidc-t12,shahad09/aidc-serving:cpu-v2
+memtest,false,Succeeded,0,<none>,aidc-t12,shahad09/aidc-serving:cpu-v1
+serving-unlimited,false,Failed,0,<none>,aidc-t12,shahad09/aidc-serving:cpu-v1
+team-serving-6b97766668-4b95j,true,Running,1,10.42.1.8,aidc-t12,shahad09/aidc-serving:cpu-v2

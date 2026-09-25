@@ -5,6 +5,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.concurrency import run_in_threadpool
+from fastapi.middleware.cors import CORSMiddleware
 from pptx import Presentation
 from openpyxl import load_workbook
 import nbformat
@@ -17,6 +18,16 @@ from model_v8 import process_document
 app = FastAPI(
     title="BeamData Content Tagging & Competency Mapping",
     version="8.4",
+)
+
+# Added for the browser-based evaluation UI (eval-ui/index.html) to be able to
+# call this API directly from a different origin/port. Tighten allow_origins
+# to the UI's actual host before exposing this beyond local testing.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["POST", "GET"],
+    allow_headers=["*"],
 )
 
 

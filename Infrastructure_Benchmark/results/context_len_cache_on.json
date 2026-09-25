@@ -1,0 +1,367 @@
+{
+  "timestamp": 1790274496,
+  "base_url": "http://127.0.0.1:8001",
+  "data_dir": "Model/evaluation_data",
+  "tokenizer_used": "Qwen/Qwen2.5-7B-Instruct",
+  "per_file": [
+    {
+      "file": "Decision Trees Revised.pptx",
+      "status_code": 200,
+      "latency_s": 7.4695,
+      "ok": true,
+      "estimated_tokens": 1756,
+      "bucket": "short (<2k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Decision Trees Revised.pptx",
+      "status_code": 200,
+      "latency_s": 7.4032,
+      "ok": true,
+      "estimated_tokens": 1756,
+      "bucket": "short (<2k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Decision Trees Revised.pptx",
+      "status_code": 200,
+      "latency_s": 7.0898,
+      "ok": true,
+      "estimated_tokens": 1756,
+      "bucket": "short (<2k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "HandsOn1_Window_Functions.md",
+      "status_code": 200,
+      "latency_s": 7.0569,
+      "ok": true,
+      "estimated_tokens": 2370,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "HandsOn1_Window_Functions.md",
+      "status_code": 200,
+      "latency_s": 6.7875,
+      "ok": true,
+      "estimated_tokens": 2370,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "HandsOn1_Window_Functions.md",
+      "status_code": 200,
+      "latency_s": 6.7006,
+      "ok": true,
+      "estimated_tokens": 2370,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "Introduction to Pandas_.pptx",
+      "status_code": 200,
+      "latency_s": 6.8328,
+      "ok": true,
+      "estimated_tokens": 1958,
+      "bucket": "short (<2k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Introduction to Pandas_.pptx",
+      "status_code": 200,
+      "latency_s": 7.1942,
+      "ok": true,
+      "estimated_tokens": 1958,
+      "bucket": "short (<2k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Introduction to Pandas_.pptx",
+      "status_code": 200,
+      "latency_s": 6.9095,
+      "ok": true,
+      "estimated_tokens": 1958,
+      "bucket": "short (<2k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "Lecture - Decision Trees.ipynb",
+      "status_code": 200,
+      "latency_s": 9.3631,
+      "ok": true,
+      "estimated_tokens": 3788,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Lecture - Decision Trees.ipynb",
+      "status_code": 200,
+      "latency_s": 9.2965,
+      "ok": true,
+      "estimated_tokens": 3788,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Lecture - Decision Trees.ipynb",
+      "status_code": 200,
+      "latency_s": 9.414,
+      "ok": true,
+      "estimated_tokens": 3788,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "Lecture - Pandas Basics.ipynb",
+      "status_code": 200,
+      "latency_s": 7.2091,
+      "ok": true,
+      "estimated_tokens": 2156,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Lecture - Pandas Basics.ipynb",
+      "status_code": 200,
+      "latency_s": 7.0156,
+      "ok": true,
+      "estimated_tokens": 2156,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Lecture - Pandas Basics.ipynb",
+      "status_code": 200,
+      "latency_s": 6.994,
+      "ok": true,
+      "estimated_tokens": 2156,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "Lecture_ML_Workflow.ipynb",
+      "status_code": 200,
+      "latency_s": 10.2562,
+      "ok": true,
+      "estimated_tokens": 3680,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Lecture_ML_Workflow.ipynb",
+      "status_code": 200,
+      "latency_s": 10.4868,
+      "ok": true,
+      "estimated_tokens": 3680,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Lecture_ML_Workflow.ipynb",
+      "status_code": 200,
+      "latency_s": 10.5023,
+      "ok": true,
+      "estimated_tokens": 3680,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "ML Workflow Introduction.pptx",
+      "status_code": 200,
+      "latency_s": 7.2912,
+      "ok": true,
+      "estimated_tokens": 3046,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "ML Workflow Introduction.pptx",
+      "status_code": 200,
+      "latency_s": 7.0095,
+      "ok": true,
+      "estimated_tokens": 3046,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "ML Workflow Introduction.pptx",
+      "status_code": 200,
+      "latency_s": 7.2035,
+      "ok": true,
+      "estimated_tokens": 3046,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "Prompt_Engineering.ipynb",
+      "status_code": 200,
+      "latency_s": 22.445,
+      "ok": true,
+      "estimated_tokens": 8972,
+      "bucket": "long (6k-12k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Prompt_Engineering.ipynb",
+      "status_code": 200,
+      "latency_s": 22.4005,
+      "ok": true,
+      "estimated_tokens": 8972,
+      "bucket": "long (6k-12k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Prompt_Engineering.ipynb",
+      "status_code": 200,
+      "latency_s": 21.8997,
+      "ok": true,
+      "estimated_tokens": 8972,
+      "bucket": "long (6k-12k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "Retrieval_Augmented_Generation.ipynb",
+      "status_code": 200,
+      "latency_s": 22.1879,
+      "ok": true,
+      "estimated_tokens": 8380,
+      "bucket": "long (6k-12k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "Retrieval_Augmented_Generation.ipynb",
+      "status_code": 200,
+      "latency_s": 22.4031,
+      "ok": true,
+      "estimated_tokens": 8380,
+      "bucket": "long (6k-12k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "Retrieval_Augmented_Generation.ipynb",
+      "status_code": 200,
+      "latency_s": 22.2607,
+      "ok": true,
+      "estimated_tokens": 8380,
+      "bucket": "long (6k-12k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "SQL_Foundations_for_Data_Science.pptx",
+      "status_code": 200,
+      "latency_s": 6.8032,
+      "ok": true,
+      "estimated_tokens": 2757,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "SQL_Foundations_for_Data_Science.pptx",
+      "status_code": 200,
+      "latency_s": 6.6936,
+      "ok": true,
+      "estimated_tokens": 2757,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "SQL_Foundations_for_Data_Science.pptx",
+      "status_code": 200,
+      "latency_s": 6.7971,
+      "ok": true,
+      "estimated_tokens": 2757,
+      "bucket": "medium (2k-6k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+      "status_code": 200,
+      "latency_s": 3.9812,
+      "ok": true,
+      "estimated_tokens": 986,
+      "bucket": "short (<2k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+      "status_code": 200,
+      "latency_s": 4.3029,
+      "ok": true,
+      "estimated_tokens": 986,
+      "bucket": "short (<2k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "WK2_D1_Quiz1_IntroToML_LectureNotebook.xlsx",
+      "status_code": 200,
+      "latency_s": 3.9001,
+      "ok": true,
+      "estimated_tokens": 986,
+      "bucket": "short (<2k tokens)",
+      "repeat": 3
+    },
+    {
+      "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+      "status_code": 200,
+      "latency_s": 3.8444,
+      "ok": true,
+      "estimated_tokens": 872,
+      "bucket": "short (<2k tokens)",
+      "repeat": 1
+    },
+    {
+      "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+      "status_code": 200,
+      "latency_s": 3.8028,
+      "ok": true,
+      "estimated_tokens": 872,
+      "bucket": "short (<2k tokens)",
+      "repeat": 2
+    },
+    {
+      "file": "WK4_D2_Quiz2_EnsembleLearningScenarios_Afternoon.xlsx",
+      "status_code": 200,
+      "latency_s": 3.6969,
+      "ok": true,
+      "estimated_tokens": 872,
+      "bucket": "short (<2k tokens)",
+      "repeat": 3
+    }
+  ],
+  "by_bucket": {
+    "short (<2k tokens)": {
+      "n_files": 4,
+      "n_requests": 12,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 5.5356,
+      "p50_latency_s": 4.3029,
+      "p95_latency_s": 7.4032,
+      "min_tokens": 872,
+      "max_tokens": 1958
+    },
+    "medium (2k-6k tokens)": {
+      "n_files": 6,
+      "n_requests": 18,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 7.9378,
+      "p50_latency_s": 7.0569,
+      "p95_latency_s": 10.4868,
+      "min_tokens": 2156,
+      "max_tokens": 3788
+    },
+    "long (6k-12k tokens)": {
+      "n_files": 2,
+      "n_requests": 6,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_latency_s": 22.2661,
+      "p50_latency_s": 22.2607,
+      "p95_latency_s": 22.445,
+      "min_tokens": 8380,
+      "max_tokens": 8972
+    }
+  }
+}

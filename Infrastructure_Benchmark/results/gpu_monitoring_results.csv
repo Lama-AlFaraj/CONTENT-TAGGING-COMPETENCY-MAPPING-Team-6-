@@ -1,0 +1,7 @@
+metric,value,unit
+GPU Utilization,100,%
+GPU VRAM Used,42821,MiB
+GPU Power,297.104,W
+vLLM Running Requests,2,requests
+vLLM Waiting Requests,0,requests
+KV Cache Usage,0.4330446369,%

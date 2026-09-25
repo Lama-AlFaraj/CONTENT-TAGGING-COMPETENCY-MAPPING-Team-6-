@@ -1,2 +1,0 @@
-model,tag_micro_precision,tag_micro_recall,tag_micro_f1,tag_macro_f1,competency_micro_precision,competency_micro_recall,competency_micro_f1,competency_macro_f1,competency_exact_match,difficulty_accuracy
-Qwen2.5-7B-Instruct-4bit,0.09090909090909091,0.042105263157894736,0.05755395683453238,0.0553030303030303,0.375,0.1875,0.25,0.25555555555555554,0.0,0.5833333333333334

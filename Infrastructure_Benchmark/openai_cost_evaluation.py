@@ -18,14 +18,11 @@ from Model.v8.retrieval_v8 import TaxonomyRetriever
 
 DATA_DIR = ROOT_DIR / "Model" / "evaluation_data"
 TAXONOMY_PATH = ROOT_DIR / "Model" / "saudi_skills_taxonomy_v1_final.csv"
-OUTPUT_DIR = ROOT_DIR / "Infrastructure_Benchmark" / "results"
+OUTPUT_DIR = ROOT_DIR / "benchmark" / "results"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 MODEL_NAME = os.getenv("OPENAI_MODEL", "gpt-5.6-luna")
-# One output file per model so a second run never overwrites the first.
-_SAFE = re.sub(r"[^A-Za-z0-9._-]+", "_", MODEL_NAME)
-OUTPUT_NAME = "openai_evaluation.json" if MODEL_NAME == "gpt-5.6-luna" else f"openai_evaluation_{_SAFE}.json"
 
 CHUNK_SIZE = 6000
 CHUNK_OVERLAP = 500
@@ -36,6 +33,23 @@ RETRIEVAL_FINAL_K = 10
 MAX_OUTPUT_TOKENS = 350
 
 client = OpenAI()
+
+USAGE_TOTAL = {
+    "api_calls": 0,
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+}
+
+
+def reset_usage():
+    for key in USAGE_TOTAL:
+        USAGE_TOTAL[key] = 0
+
+
+def get_usage():
+    return dict(USAGE_TOTAL)
 
 print("=" * 70)
 print("OPENAI COMPETENCY EVALUATION")
@@ -220,17 +234,31 @@ def openai_json(system_prompt, user_prompt):
     response = client.responses.create(
         model=MODEL_NAME,
         input=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": user_prompt,
-            },
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
         ],
         max_output_tokens=MAX_OUTPUT_TOKENS,
     )
+
+    usage = getattr(response, "usage", None)
+
+    USAGE_TOTAL["api_calls"] += 1
+
+    if usage:
+        input_tokens = getattr(usage, "input_tokens", 0) or 0
+        output_tokens = getattr(usage, "output_tokens", 0) or 0
+        total_tokens = getattr(usage, "total_tokens", 0) or 0
+
+        input_details = getattr(usage, "input_tokens_details", None)
+        cached_tokens = (
+            getattr(input_details, "cached_tokens", 0) or 0
+            if input_details else 0
+        )
+
+        USAGE_TOTAL["input_tokens"] += input_tokens
+        USAGE_TOTAL["cached_input_tokens"] += cached_tokens
+        USAGE_TOTAL["output_tokens"] += output_tokens
+        USAGE_TOTAL["total_tokens"] += total_tokens
 
     return clean_json(response.output_text)
 
@@ -638,9 +666,12 @@ def main():
                     "No text could be extracted."
                 )
 
+            reset_usage()
+
             output = process_document(content)
 
             record.update(output)
+            record["token_usage"] = get_usage()
             record["status"] = "success"
 
         except Exception as exc:
@@ -671,6 +702,29 @@ def main():
                 f"{record['difficulty_level']}"
             )
 
+    total_usage = {
+        "api_calls": sum(
+            r.get("token_usage", {}).get("api_calls", 0)
+            for r in results
+        ),
+        "input_tokens": sum(
+            r.get("token_usage", {}).get("input_tokens", 0)
+            for r in results
+        ),
+        "cached_input_tokens": sum(
+            r.get("token_usage", {}).get("cached_input_tokens", 0)
+            for r in results
+        ),
+        "output_tokens": sum(
+            r.get("token_usage", {}).get("output_tokens", 0)
+            for r in results
+        ),
+        "total_tokens": sum(
+            r.get("token_usage", {}).get("total_tokens", 0)
+            for r in results
+        ),
+    }        
+
     output = {
         "timestamp": time.strftime(
             "%Y-%m-%dT%H:%M:%S"
@@ -681,6 +735,7 @@ def main():
         "file_count": len(files),
         "chunk_size": CHUNK_SIZE,
         "chunk_overlap": CHUNK_OVERLAP,
+        "total_token_usage": total_usage,
         "retrieval_top_k_per_chunk": (
             RETRIEVAL_TOP_K_PER_CHUNK
         ),
@@ -688,7 +743,10 @@ def main():
         "results": results,
     }
 
-    output_path = OUTPUT_DIR / OUTPUT_NAME
+    output_path = (
+        OUTPUT_DIR
+        / "openai_cost_evaluation.json"
+    )
 
     output_path.write_text(
         json.dumps(

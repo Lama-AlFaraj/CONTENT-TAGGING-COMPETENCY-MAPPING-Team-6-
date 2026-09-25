@@ -1,0 +1,5 @@
+name,type,cluster_ip,port,created
+beamdata-ai-hub,ClusterIP,10.43.111.139,8000,2026-09-22T12:27:39Z
+beamdata-v8-api,ClusterIP,10.43.113.247,8000,2026-09-21T12:13:32Z
+beamdata-vllm,ClusterIP,10.43.245.55,8000,2026-09-21T08:50:16Z
+team-serving,ClusterIP,10.43.5.11,8000,2026-09-09T10:56:11Z
