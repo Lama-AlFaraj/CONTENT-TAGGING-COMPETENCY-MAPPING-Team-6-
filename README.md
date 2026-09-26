@@ -2,245 +2,201 @@
 
 ## 1. Project Overview
 
-This project develops an AI-based pipeline for **content tagging and competency mapping**. The system analyzes learning content, identifies relevant topics and competencies, and maps the extracted content to competencies from the **Saudi Skills Taxonomy**.
+This project develops an AI-based pipeline for **learning-content tagging and competency mapping**.
 
-The project focuses on building and evaluating an end-to-end pipeline that combines:
+The system processes educational content, identifies relevant topics, and maps the content to competencies from a standardized **Saudi Skills Taxonomy**.
 
-* AI-based topic and competency extraction
-* Semantic summarization
-* Semantic and lexical retrieval
-* Cross-chunk aggregation
-* LLM-based reranking
-* Final competency mapping
-* Automated evaluation against a human-reviewed benchmark
+The project covers the development and evaluation of the AI pipeline as well as its deployment and serving infrastructure.
 
-The final implementation is **V8.4**, which represents the final evaluated checkpoint of the project.
+The work includes:
 
----
+* Learning-content extraction
+* AI-based topic tagging
+* Semantic representation of content
+* Competency retrieval
+* Hybrid semantic and lexical retrieval experiments
+* Candidate aggregation across content chunks
+* Competency ranking and selection experiments
+* Automated evaluation against human-reviewed ground truth
+* Containerized API deployment
+* Kubernetes-based model serving
+* GPU monitoring and benchmarking
 
-## 2. Problem
-
-Learning materials can contain multiple concepts, topics, and skills distributed across different sections or content chunks. Manually identifying the relevant competencies and mapping them to a standardized skills taxonomy is time-consuming and can lead to inconsistent results.
-
-The project addresses this problem by creating an automated pipeline that transforms learning content into structured competency mappings.
-
----
-
-## 3. Project Objective
-
-The objective is to build a pipeline that can:
-
-1. Process learning content.
-2. Identify relevant topics and competencies.
-3. Generate a semantic representation of the content.
-4. Retrieve relevant competencies from the Saudi Skills Taxonomy.
-5. Aggregate evidence across content chunks.
-6. Rerank candidate competencies using an LLM.
-7. Produce final competency mappings.
-8. Evaluate the results against human-reviewed gold labels.
-
+The project reached a final evaluated model checkpoint of **V8.4** for the end-to-end pipeline.
 
 ---
 
-The project covers the complete workflow:
+# 2. Problem
+
+Educational learning materials can contain multiple concepts and skills distributed across slides, notebook cells, tables, documents, and other content sections.
+
+Manually identifying the relevant topics and mapping them to a standardized competency taxonomy is:
+
+* Time-consuming
+* Difficult to scale
+* Potentially inconsistent across annotators
+* Challenging when relevant concepts are distributed across a long document
+
+This project addresses the problem by transforming unstructured learning content into structured topic and competency information and evaluating the resulting mappings against human-reviewed annotations.
+
+---
+
+# 3. Project Objectives
+
+The project aims to build a system that can:
+
+1. Process different learning-content formats.
+2. Extract and normalize content.
+3. Identify relevant topics from the content.
+4. Generate semantic representations for retrieval.
+5. Retrieve relevant competencies from the Saudi Skills Taxonomy.
+6. Combine evidence across content chunks where applicable.
+7. Produce structured competency predictions.
+8. Evaluate predictions against a human-reviewed benchmark.
+9. Serve the pipeline through an API.
+10. Benchmark and monitor the deployed AI system.
+
+---
+
+# 4. High-Level Architecture
+
+The overall project workflow is:
 
 ```text
 Learning Content
-      ↓
+       │
+       ▼
 Content Extraction
-      ↓
-Topic / Competency Tagging
-      ↓
+       │
+       ▼
+Topic Tagging
+       │
+       ▼
 Semantic Representation
-      ↓
-Hybrid Retrieval
-(E5 + Lexical)
-      ↓
-Cross-Chunk Aggregation
-      ↓
-Qwen Reranking
-      ↓
-Final Competency Mapping
-      ↓
-Difficulty / Confidence / Notes
-      ↓
+       │
+       ▼
+Competency Retrieval
+       │
+       ├── Semantic Retrieval
+       │
+       └── Lexical Retrieval
+       │
+       ▼
+Candidate Aggregation
+       │
+       ▼
+Competency Selection / Ranking
+       │
+       ▼
 Structured Output
-      ↓
+       │
+       ▼
 Evaluation
-      ↓
+       │
+       ▼
 Docker + Kubernetes Deployment
-      ↓
+       │
+       ▼
 Benchmarking + Monitoring
 ```
 
-The final model checkpoint is **V8.4**.
+The project contains several experiments and configurations. Therefore, not every component shown above belongs to the final selected configuration.
+
+In particular, **LLM reranking was tested during development but was not retained as the final retrieval configuration because its evaluation performance was lower overall.**
 
 ---
 
-# 2. Project / Group Structure
+# 5. Dataset and Evaluation Benchmark
 
-The project is organized into the following main workstreams:
+## 5.1 Evaluation Dataset
+
+The final benchmark contains:
 
 ```text
-BeamData Content Tagging & Competency Mapping
-│
-├── 1. Dataset & Evaluation
-│   ├── Evaluation files
-│   ├── Human annotations
-│   ├── Ground-truth labels
-│   ├── Saudi Skills Taxonomy
-│   └── Evaluation methodology
-│
-├── 2. Model / AI Pipeline
-│   ├── Content extraction
-│   ├── Qwen tagging
-│   ├── Semantic summarization
-│   ├── E5 retrieval
-│   ├── Lexical retrieval
-│   ├── Cross-chunk aggregation
-│   ├── Qwen reranking
-│   └── Final competency mapping
-│
-├── 3. Infrastructure / Deployment
-│   ├── Docker
-│   ├── FastAPI
-│   ├── Kubernetes
-│   ├── vLLM
-│   └── GPU deployment
-│
-├── 4. Benchmarking
-│   ├── Model evaluation
-│   ├── API benchmarking
-│   ├── Concurrency testing
-│   └── GPU / serving measurements
-│
-└── 5. Monitoring
-    ├── DCGM Exporter
-    ├── Prometheus
-    └── Grafana
+12 annotated learning-content files
 ```
 
-The project was developed as a group, with the work divided across the dataset/evaluation, model/pipeline, infrastructure, monitoring, benchmarking, documentation, and presentation tasks.
+The benchmark includes multiple educational-content formats, including:
 
-Track owners for the BeamData track are **Salman and Emad**.
+* PowerPoint presentations (`.pptx`)
+* Jupyter notebooks (`.ipynb`)
+* Markdown (`.md`)
+* Spreadsheet/structured learning-content files
+
+The 12-file benchmark includes material covering topics such as:
+
+* Machine learning
+* Decision trees
+* Ensemble learning
+* Pandas
+* SQL
+* Prompt engineering
+* Retrieval-Augmented Generation
+* Window functions
+* ML workflows
 
 ---
 
-# 3. Repository Structure
+## 5.2 Topic Ground Truth
 
-Current repository:
+The 12 evaluation files were manually reviewed and assigned topic-level ground-truth tags.
+
+These annotations are used to evaluate the **content-tagging stage** separately from competency retrieval.
+
+The topic-tag evaluation measures whether the generated topic tags correctly represent the concepts present in each document.
+
+This evaluation is separate from the competency-mapping evaluation.
+
+---
+
+## 5.3 Final Competency Ground Truth
+
+The competency ground truth was subsequently reviewed and finalized.
+
+The final competency evaluation set contains:
 
 ```text
-CONTENT-TAGGING-COMPETENCY-MAPPING-Team-6-
-│
-├── Model/
-│   ├── v8/
-│   │   ├── api.py
-│   │   ├── model_v8.py
-│   │   ├── model_v8_backup.py
-│   │   ├── model_v8_local_backup.py
-│   │   ├── model_v8_before_semantic_retrieval.py
-│   │   ├── retrieval_v8.py
-│   │   ├── run_v8.py
-│   │   ├── evaluate_v8.py
-│   │   ├── evaluate_retrieval_hybrid.py
-│   │   ├── requirements.txt
-│   │   ├── hybrid_retrieval_results.csv
-│   │   ├── hybrid_retrieval_summary.csv
-│   │   └── results/
-│   │       ├── v8_predictions.csv
-│   │       └── v8_evaluation.csv
-│   │
-│   ├── evaluation_data/
-│   │   └── official evaluation files
-│   │
-│   └── saudi_skills_taxonomy_v1_final.csv
-│
-├── Infrastructure/
-│   └── k8s/
-│       ├── vllm-7b.yaml
-│       └── beamdata-v8-api.yaml
-│
-├── Infrastructure_Benchmark/
-│   ├── bench.py
-│   ├── v84_api_e2e.py
-│   ├── Infrastructure_Benchmark_Report.md
-│   └── results/
-│       ├── v84_api_e2e.json
-│       ├── v84_api_e2e_c1.json
-│       ├── v84_api_e2e_c1_clean.json
-│       ├── v84_api_e2e_c2.json
-│       └── v84_monitoring_c4.json
-│
-├── Dockerfile
-└── README.md
+12 files
+34 validated competency mappings
 ```
 
----
-
-# 4. Dataset & Evaluation Work
-
-## 4.1 Evaluation Dataset
-
-A fixed benchmark of **12 official evaluation files** was prepared.
-
-The evaluation set contains different learning-content formats, including:
-
-* PPTX
-* Jupyter Notebook
-* Markdown
-* Other structured learning-content files
-
-Examples include:
+The final mapping file is:
 
 ```text
-Decision Trees Revised.pptx
-HandsOn1_Window_Functions.md
-Introduction to Pandas_.pptx
-Lecture - Decision Trees.ipynb
-Lecture - Pandas Basics.ipynb
-Lecture_ML_Workflow.ipynb
-ML Workflow Introduction.pptx
-Prompt Engineering
-RAG
-SQL Foundations
-WK2 IntroToML
-WK4 EnsembleLearning
+competency_gold_labels_final.csv
 ```
 
----
-
-## 4.2 Human Annotations
-
-Human-reviewed annotations were prepared for the evaluation files.
-
-The annotation structure includes:
+Each mapping contains:
 
 ```text
 file_name
-annotator_name
-predicted_tags
-proposed_competencies
-difficulty
-confidence
-notes
+ground_truth_concept
+taxonomy_skill
+match_decision
+review_notes
 ```
 
-Competency names were copied from the valid taxonomy reference to ensure that the gold labels use valid taxonomy terminology.
+Only mappings marked as **validated** are included in the final competency evaluation.
+
+The earlier project evaluation used **39 proposed mappings**. Those should not be treated as the final ground truth.
 
 ---
 
-## 4.3 Saudi Skills Taxonomy
+# 6. Saudi Skills Taxonomy
 
-The project uses the frozen taxonomy:
+The project uses the finalized taxonomy:
 
 ```text
 saudi_skills_taxonomy_v1_final.csv
 ```
 
-The taxonomy contains **134 competency rows**.
+The taxonomy contains:
 
-Main columns:
+```text
+134 competency entries
+```
+
+Main fields include:
 
 ```text
 skill_name_en
@@ -250,79 +206,221 @@ related_job_families_en
 needs_review
 ```
 
-The taxonomy is treated as the standardized competency reference for the mapping stage.
+The taxonomy provides the standardized competency vocabulary used by the retrieval and mapping stages.
 
 ---
 
-# 5. Evaluation Methodology
+# 7. Evaluation Layers
 
-The evaluation covers both content tagging and competency mapping.
+The project evaluates the system at separate stages.
 
-## Tag Evaluation
-
-AI-generated tags were compared with the human-reviewed ground truth using semantic matching.
-
-Previously measured tag performance:
+## Layer 1 — Topic Tagging
 
 ```text
-Precision: 100%
-Recall: approximately 72.7%
+Learning Content
+      ↓
+Generated Topic Tags
+      ↓
+Compared with
+      ↓
+Human-reviewed Topic Ground Truth
 ```
 
-The evaluation indicates that the system generally produced relevant tags, while some expected tags were missed.
+This measures the quality of the system's topic-level understanding.
 
 ---
 
-## Competency Evaluation
-
-The competency evaluation uses:
-
-* Macro Precision
-* Macro Recall
-* Macro F1
-* Micro Precision
-* Micro Recall
-* Micro F1
-* Recall@1
-* Recall@3
-* Recall@5
-* Recall@10
-* Hit Rate@10
-
-The final evaluation contains:
+## Layer 2 — E5 Competency Retrieval
 
 ```text
-Evaluation files: 12
-Gold competency mappings: 39
-```
-
----
-
-# 6. Model / AI Pipeline
-
-The final model version is **V8.4**.
-
-V8.4 combines:
-
-```text
-Qwen
-+
-Semantic Summarization
-+
+Predicted Topic Tags
+      ↓
+Domain-Aware Query Expansion
+      ↓
 Multilingual E5
-+
-Lexical Retrieval
-+
-Cross-Chunk Aggregation
-+
-Qwen Reranking
+      ↓
+Top-5 Taxonomy Competencies
+      ↓
+Compared with
+      ↓
+34 Validated Competency Mappings
+```
+
+This measures whether semantic retrieval can find validated competencies from the taxonomy.
+
+The final E5 evaluation is the source of the **83.33% Hit@1, 100% Hit@3, and 100% Hit@5** results described below.
+
+---
+
+## Layer 3 — End-to-End V8.4 Evaluation
+
+The V8.4 pipeline was evaluated as a broader end-to-end system using an earlier competency benchmark.
+
+Those results are retained as historical development results and should not be confused with the final 34-mapping E5 evaluation.
+
+---
+
+# 8. Final E5 Competency Retrieval Evaluation
+
+The final E5 retrieval evaluation uses:
+
+```text
+Evaluation files:       12
+Validated gold mappings: 34
+Retrieval results:      60
+Predictions per file:   Top-5
+```
+
+The retrieval output is:
+
+```text
+embedding_e5_domain_aware_results.csv
+```
+
+The evaluation output is:
+
+```text
+embedding_e5_final_evaluation_per_file.csv
+embedding_e5_final_evaluation_summary.csv
+```
+
+## Final Results
+
+| Metric      |      Result |
+| ----------- | ----------: |
+| Hit@1       |  **83.33%** |
+| Hit@3       | **100.00%** |
+| Hit@5       | **100.00%** |
+| Precision@1 |  **83.33%** |
+| Precision@3 |  **63.89%** |
+| Precision@5 |  **45.00%** |
+| Recall@1    |  **33.33%** |
+| Recall@3    |  **70.14%** |
+| Recall@5    |  **81.25%** |
+| F1@1        |  **46.94%** |
+| F1@3        |  **65.56%** |
+| F1@5        |  **56.85%** |
+| MRR         |  **90.28%** |
+
+### Interpretation
+
+The final E5 retrieval evaluation shows that:
+
+* At least one validated competency was retrieved at **Top-1 for 83.33% of files**.
+* At least one validated competency was retrieved within **Top-3 for all 12 files**.
+* At least one validated competency was retrieved within **Top-5 for all 12 files**.
+* **Recall@5 was 81.25%**, indicating that the Top-5 candidate sets covered a substantial portion of the validated competencies.
+* **MRR was 90.28%**, indicating that the first relevant competency generally appeared near the top of the retrieved list.
+
+Precision decreases as more candidates are included because the Top-5 set contains additional taxonomy competencies that are not part of the validated gold mapping for a particular document.
+
+---
+
+# 9. E5 Retrieval Methodology
+
+The final domain-aware E5 evaluation uses:
+
+```text
+Model:
+intfloat/multilingual-e5-base
+
+Retrieval:
+Top-5
+
+Ranking:
+60% skill-name similarity
+40% full taxonomy-text similarity
+```
+
+The taxonomy representation combines the competency name and its description.
+
+The query is constructed from the topic information generated for the learning content and expanded with broader domain terminology before being embedded.
+
+The ground-truth competency mappings are **not used to construct the retrieval query**.
+
+They are used only after retrieval for evaluation.
+
+This separation prevents the gold competency labels from leaking into the retrieval stage.
+
+---
+
+# 10. E5 Experiment History
+
+Several retrieval configurations were tested during development.
+
+Earlier retrieval experiments produced:
+
+```text
+Initial E5:
+Top-1 33.3%
+Top-3 50.0%
+Top-5 58.3%
+
+Improved E5:
+Top-1 33.3%
+Top-3 83.3%
+Top-5 91.7%
+
+Previous domain-aware E5 evaluation:
+Top-1 75.0%
+Top-3 100%
+Top-5 100%
+```
+
+These historical results were evaluated against an **earlier competency ground truth**.
+
+They should therefore not be directly compared numerically with the final evaluation above, which uses the finalized **34 validated competency mappings**.
+
+The final domain-aware E5 retrieval output is retained as:
+
+```text
+embedding_e5_domain_aware_results.csv
 ```
 
 ---
 
-## 6.1 Content Extraction
+# 11. End-to-End V8.4 Pipeline
 
-The FastAPI application supports:
+V8.4 represents the final evaluated checkpoint of the broader project pipeline.
+
+The end-to-end pipeline includes:
+
+```text
+Content Extraction
+       ↓
+Topic / Concept Tagging
+       ↓
+Semantic Representation
+       ↓
+Hybrid Retrieval
+       ↓
+Cross-Chunk Aggregation
+       ↓
+Competency Selection
+       ↓
+Structured Output
+```
+
+The retrieval experiments included:
+
+```text
+Multilingual E5 semantic retrieval
++
+Lexical retrieval
+```
+
+with the evaluated hybrid configuration using:
+
+```text
+E5 semantic retrieval: 60%
+Lexical retrieval:     40%
+```
+
+---
+
+# 12. Content Extraction
+
+The API pipeline supports learning-content formats including:
 
 ```text
 .pptx
@@ -333,732 +431,205 @@ The FastAPI application supports:
 .csv
 ```
 
-The content is extracted and converted into a common representation before being passed to the AI pipeline.
+The extracted material is normalized into a representation that can be processed by the downstream AI pipeline.
 
 ---
 
-## 6.2 Qwen Topic / Competency Tagging
+# 13. Topic Tagging
 
-Qwen analyzes the learning content and extracts relevant topics and competency-related concepts.
+The AI pipeline identifies relevant topic-level concepts from the extracted learning content.
 
-This provides the semantic information required for downstream retrieval.
+These tags provide a compact semantic representation that can be used to construct retrieval queries.
 
----
-
-## 6.3 Semantic Summarization
-
-The extracted content is converted into a semantic representation that preserves the concepts important for competency mapping.
-
-This representation is used to improve retrieval queries.
+The topic-tagging stage and competency-retrieval stage are evaluated separately so that errors can be analyzed by stage.
 
 ---
 
-## 6.4 Hybrid Retrieval
+# 14. Semantic Retrieval
 
-The retrieval stage combines:
+The project evaluated multilingual E5 embeddings for semantic competency retrieval.
+
+The taxonomy entries are represented using their competency names and descriptions.
+
+The final domain-aware E5 experiment uses a combined score based on:
 
 ```text
-Multilingual E5 semantic retrieval
-              +
+60% skill-name similarity
+40% full taxonomy-text similarity
+```
+
+This configuration was evaluated using the final 12-file benchmark and 34 validated competency mappings.
+
+---
+
+# 15. Hybrid Retrieval
+
+The broader V8.4 pipeline also evaluated a hybrid retrieval strategy combining:
+
+```text
+Semantic retrieval
++
 Lexical retrieval
 ```
 
-The current retrieval implementation uses:
+The purpose of the hybrid approach is to combine semantic similarity with lexical evidence when matching learning-content concepts to taxonomy terminology.
 
-```text
-Model:
-intfloat/multilingual-e5-base
-
-Semantic weight:
-0.6
-
-Lexical weight:
-0.4
-```
-
-The taxonomy competency name and description are used during retrieval.
+The hybrid retrieval results are documented separately from the final domain-aware E5 evaluation.
 
 ---
 
-## 6.5 Cross-Chunk Aggregation
+# 16. Cross-Chunk Aggregation
 
-Long learning materials are divided into chunks.
+Longer learning materials may contain relevant competencies in different parts of the document.
 
-The system retrieves competency candidates for individual chunks and aggregates the evidence across chunks.
+The pipeline therefore supports processing content in chunks and aggregating candidate evidence across those chunks.
 
-This prevents the final mapping from depending only on a single section of the learning material.
+This allows competency candidates to be supported by multiple portions of the same learning material rather than relying on a single local section.
 
 ---
 
-## 6.6 Qwen Reranking
+# 17. Reranking Experiment
 
-The retrieved candidates are passed to Qwen for reranking.
+An LLM-based reranking stage was evaluated during development.
 
-The process is:
+The tested architecture was:
 
 ```text
 Hybrid Retrieval
       ↓
 Candidate Set
       ↓
-Qwen Reranking
+LLM Reranking
       ↓
-Final Competencies
+Final Competency Selection
 ```
 
-An important property of the architecture is:
+However, the reranker was **not retained in the final selected configuration** because it performed worse overall during evaluation.
 
-> The reranker can only select from retrieved candidates.
+An important architectural constraint is:
 
-Therefore, if a correct competency is absent from the candidate set, the reranker cannot recover it.
+> The reranker can only select from the retrieved candidate set.
+
+Therefore, a competency that is not retrieved during the candidate-generation stage cannot be recovered by reranking.
 
 ---
 
-## 6.7 Final Structured Output
+# 18. Structured Output
 
-The V8.4 pipeline produces:
+The V8.4 pipeline produces structured results containing information such as:
 
 ```text
-predicted_tags
-proposed_competencies
-difficulty_level
+predicted tags
+proposed competencies
+difficulty level
 confidence
 notes
-retrieval_candidates
-chunk_count
+retrieval candidates
+chunk count
 ```
+
+This provides both the final prediction and supporting information that can be used for evaluation and analysis.
 
 ---
 
-# 7. V8 Experiment History
+# 19. Earlier V8.4 Evaluation
 
-Several pipeline versions were evaluated.
+Before the competency ground truth was finalized, the broader V8.4 pipeline was evaluated using an earlier set of **39 competency mappings**.
 
-## V8.1
+The recorded results were:
 
-Intermediate pipeline configuration used as a baseline for subsequent improvements.
+| Metric          | Earlier V8.4 Result |
+| --------------- | ------------------: |
+| Macro Precision |          **75.00%** |
+| Macro Recall    |          **27.08%** |
+| Macro F1        |          **39.17%** |
+| Micro Precision |          **76.92%** |
+| Micro Recall    |          **25.64%** |
+| Micro F1        |          **38.46%** |
+| Recall@10       |          **31.25%** |
+| Hit Rate@10     |          **91.67%** |
 
-## V8.2
+These results are retained as **historical V8.4 benchmark results**.
 
-Introduced additional retrieval and mapping changes and was evaluated against the same benchmark.
-
-## V8.3
-
-Tested as an alternative configuration.
-
-The changes were evaluated but ultimately reverted.
-
-## V8.4
-
-V8.4 became the final selected checkpoint.
-
-It was:
-
-* Evaluated on the full benchmark
-* Cleaned up
-* Syntax validated
-* Checked with `git diff --check`
-* Committed to Git
-* Pushed to the `hybrid-v8` branch
+They are not the final competency-retrieval evaluation because the underlying competency ground truth was subsequently reviewed and reduced from 39 proposed mappings to **34 validated mappings**.
 
 ---
 
-# 8. Final V8.4 Model Results
+# 20. Why the Two E5 Result Sets Differ
+
+Two sets of results exist in the project because they answer different evaluation questions.
+
+### Earlier V8.4 evaluation
 
 ```text
-Evaluation files: 12
-Gold competency mappings: 39
+Earlier 39-mapping competency ground truth
+        ↓
+Broader V8.4 end-to-end pipeline
+        ↓
+Historical evaluation metrics
 ```
 
-| Metric          |       V8.4 |
-| --------------- | ---------: |
-| Macro Precision | **75.00%** |
-| Macro Recall    | **27.08%** |
-| Macro F1        | **39.17%** |
-| Micro Precision | **76.92%** |
-| Micro Recall    | **25.64%** |
-| Micro F1        | **38.46%** |
-| Recall@1        |  **4.86%** |
-| Recall@3        | **11.81%** |
-| Recall@5        | **16.67%** |
-| Recall@10       | **31.25%** |
-| Hit Rate@10     | **91.67%** |
-
-Confusion counts:
+### Final E5 evaluation
 
 ```text
-True Positives: 10
-False Positives: 3
-False Negatives: 29
+Final 34 validated competency mappings
+        ↓
+Domain-aware E5 retrieval
+        ↓
+Top-5 taxonomy candidates
+        ↓
+Final E5 retrieval metrics
 ```
+
+Therefore, the two result sets should **not be presented as if they were measurements of exactly the same experiment**.
 
 ---
 
-# 9. Interpretation of Model Results
+# 21. Deployment
 
-The results show an important distinction between candidate retrieval and final competency selection.
+The V8.4 API was containerized using Docker and deployed to Kubernetes.
 
-The **91.67% Hit Rate@10** means that most evaluation files had at least one relevant competency somewhere in the top-10 candidate set.
-
-However:
+The deployment architecture is:
 
 ```text
-Hit Rate@10 = 91.67%
-Recall@10   = 31.25%
-Micro F1    = 38.46%
+Client
+  │
+  ▼
+FastAPI
+  │
+  ▼
+AI Processing Pipeline
+  │
+  ▼
+vLLM
+  │
+  ▼
+Qwen 7B AWQ
+  │
+  ▼
+NVIDIA RTX A6000
 ```
 
-This indicates that finding a relevant candidate does not automatically mean that the system selects all correct competencies in the final mapping.
-
-The remaining errors occur across both:
-
-1. Candidate retrieval coverage
-2. Final competency selection / reranking
-
-Retrieval coverage remains a major area for future improvement.
-
----
-
-# 10. Docker Deployment
-
-The V8.4 API was containerized using Docker.
-
-Docker image:
-
-```text
-shahad09/beamdata-v8-api:v8.4
-```
-
-The image contains:
-
-* Python 3.11
-* FastAPI
-* Uvicorn
-* Sentence Transformers
-* PyTorch
-* Transformers
-* Pandas
-* NumPy
-* python-pptx
-* openpyxl
-* nbformat
-
-The image was pushed to Docker Hub.
-
----
-
-# 11. FastAPI Service
-
-The final API is:
-
-```text
-Model/v8/api.py
-```
-
-Endpoints include:
-
-```text
-GET  /health
-POST /predict
-```
-
-The API was updated to use a thread pool for the synchronous model pipeline:
-
-```python
-result = await run_in_threadpool(process_document, content)
-```
-
-This allows concurrent API requests without blocking the FastAPI event loop.
-
-The final API image was rebuilt and redeployed after this fix.
-
-## 11.1 External API Access
-
-The FastAPI service is exposed through a Kubernetes NodePort:
-
-```text
-Service: beamdata-v8-api-public
-Type: NodePort
-Port: 8000
-NodePort: 31542
-Node IP: 10.0.0.222
-```
-
-The API was verified internally through:
-
-```text
-http://10.0.0.222:31542/health
-```
-
-For temporary external demonstration access, a Cloudflare Quick Tunnel was created:
-
-```text
-https://reconstruction-diversity-trading-booking.trycloudflare.com
-```
-
-Endpoints:
-
-```text
-GET  /health
-POST /predict
-```
-
-The public endpoint is:
-
-```text
-https://reconstruction-diversity-trading-booking.trycloudflare.com/health
-```
-
-The health response was verified as:
-
-```json
-{"status":"ok","service":"beamdata-v8-api","version":"8.4"}
-```
-
-The Cloudflare Quick Tunnel is temporary and remains available only while the `cloudflared` process is running.
-
----
-
-# 12. Kubernetes Deployment
-
-The project is deployed in:
-
-```text
-Namespace: shahad
-Node: aidc-t12
-```
-
-Main deployments:
-
-```text
-beamdata-v8-api
-beamdata-vllm-7b
-```
-
-Main services:
-
-```text
-beamdata-v8-api
-beamdata-vllm
-```
-
----
-
-# 13. vLLM / Qwen Deployment
-
-The LLM serving layer uses:
+The deployed model-serving layer uses:
 
 ```text
 Qwen/Qwen2.5-7B-Instruct-AWQ
 ```
 
-served using:
+served with:
 
 ```text
 vLLM
 ```
 
-Configuration includes:
+The API provides:
 
 ```text
-AWQ quantization
-FP16
-max model length: 16384
-GPU memory utilization: 0.85
-prefix caching enabled
+GET  /health
+POST /predict
 ```
 
-The model runs on the NVIDIA RTX A6000.
-
-Observed environment:
-
-```text
-GPU:
-NVIDIA RTX A6000
-
-VRAM:
-~49 GB
-
-Driver:
-550.90.12
-
-CUDA:
-12.4
-```
-
----
-
-# 14. API Architecture
-
-The deployed architecture is:
-
-```text
-User / AI Hub
-      ↓
-V8.4 FastAPI
-      ↓
-┌─────────────────────────────┐
-│ Content Processing          │
-│ Qwen Tagging                │
-│ Semantic Representation     │
-│ E5 + Lexical Retrieval      │
-│ Cross-Chunk Aggregation     │
-│ Qwen Reranking              │
-└─────────────────────────────┘
-      ↓
-Saudi Skills Taxonomy
-      ↓
-Final Competency Mapping
-```
-
-The API communicates with the internal vLLM service:
-
-```text
-beamdata-v8-api
-        ↓
-beamdata-vllm:8000
-        ↓
-Qwen 7B AWQ
-        ↓
-RTX A6000
-```
-
----
-
-# 15. API Benchmarking
-
-The API was benchmarked using the 12-file evaluation set at multiple concurrency levels.
-
-## Concurrency Results
-
-| Concurrency | Requests | Success | Avg Latency |     P50 |     P95 |     P99 |   Throughput |
-| ----------: | -------: | ------: | ----------: | ------: | ------: | ------: | -----------: |
-|           1 |       12 |      12 |     16.3852s | 11.7233s | 37.0397s | 39.2675s | 0.0610 req/s |
-|           2 |       12 |       7 |     25.6102s | 21.8278s | 50.9775s | 50.9775s | 0.1024 req/s |
-|           4 |       12 |      12 |     20.4990s | 17.8900s | 40.3760s | 45.3010s | 0.1700 req/s |
-|           8 |       12 |      12 |     30.7950s | 30.1906s | 38.8238s | 61.3319s | 0.1783 req/s |
-
-Overall:
-
-```text
-Total requests: 48
-Successful: 43
-Errors: 5
-Error rate: 10.42%
-```
-
-The API successfully completed all requests at concurrency 1, 4, and 8. Concurrency 2 recorded 5 errors in the authoritative benchmark run.
-
-Throughput increased with concurrency and reached 0.1783 req/s at concurrency 8, while latency also increased.
-
----
-
-# 16. Controlled Monitoring Benchmark
-
-A dedicated monitoring run was executed at concurrency 4:
-
-```text
-Requests: 12
-Successful: 12
-Errors: 0
-Wall time: 70.7993s
-```
-
-Results:
-
-```text
-Average latency: 20.499s
-P50:             17.890s
-P95:             40.376s
-P99:             45.301s
-Throughput:      0.1700 req/s
-```
-
-This run was used to observe GPU and vLLM behavior through Prometheus.
-
-### LLM serving metrics
-
-The benchmark also recorded:
-
-```text
-Generation tokens:             5924
-Generation throughput:         83.6732 tokens/s
-Tokens per request:            75.9487
-Average TTFT:                  29.191 ms
-Average inter-token latency:    8.11 ms
-```
-
-The vLLM metric-delta `generation_requests` value was 78. This is a serving-metric count and should not be interpreted as the number of API benchmark requests.
-
----
-
-# 17. Monitoring Architecture
-
-The monitoring stack is:
-
-```text
-GPU
- ↓
-DCGM Exporter
- ↓
-Prometheus
- ↓
-Grafana
-```
-
-The AI serving layer is also monitored:
-
-```text
-vLLM
- ↓
-Prometheus
- ↓
-Grafana
-```
-
-Monitoring targets include:
-
-```text
-vLLM metrics
-GPU metrics
-API/application metrics
-```
-
----
-
-# 18. DCGM GPU Monitoring
-
-DCGM Exporter was deployed to expose NVIDIA GPU metrics.
-
-The initial exporter encountered a profiling-module issue.
-
-The configuration was adjusted to use a custom counter set containing:
-
-```text
-DCGM_FI_DEV_GPU_UTIL
-DCGM_FI_DEV_FB_FREE
-DCGM_FI_DEV_FB_USED
-DCGM_FI_DEV_GPU_TEMP
-DCGM_FI_DEV_POWER_USAGE
-```
-
-The exporter was successfully redeployed.
-
-Current state:
-
-```text
-dcgm-exporter: Running
-Prometheus target: UP
-```
-
----
-
-# 19. Prometheus
-
-Prometheus is running in:
-
-```text
-Namespace: team
-Service: prometheus
-Port: 9090
-```
-
-The Prometheus configuration includes the BeamData vLLM and DCGM exporters.
-
-Important active targets:
-
-```text
-beamdata-vllm
-dcgm-exporter
-```
-
-Both were verified as:
-
-```text
-UP
-```
-
-Older serving targets also exist in the Prometheus configuration, but they belong to older/unrelated services and should not be treated as BeamData V8.4 monitoring targets.
-
----
-
-# 20. GPU Monitoring Results
-
-During the controlled monitoring benchmark, Prometheus recorded:
-
-| Metric                | Maximum Observed |
-| --------------------- | ---------------: |
-| GPU Utilization       |         **100%** |
-| GPU VRAM Used         |   **42,821 MiB** |
-| GPU Power             |    **297.104 W** |
-| vLLM Running Requests |            **2** |
-| vLLM Waiting Requests |            **0** |
-| KV Cache Usage        |      **43.30%** |
-
-These measurements demonstrate that GPU-level monitoring is working and that the benchmark traffic reached the deployed GPU model.
-
----
-
-# 21. Grafana
-
-Grafana is deployed in:
-
-```text
-Namespace: team
-Service: grafana
-Port: 3000
-NodePort: 30300
-```
-
-Current Kubernetes state:
-
-```text
-Grafana pod: Running
-Grafana service: 3000:30300
-Grafana endpoint: 10.42.1.63:3000
-```
-
-Grafana itself has been verified as healthy internally.
-
-The required dashboard is intended to display:
-
-### API
-
-* Request count
-* Errors
-* Latency
-* Throughput
-
-### vLLM
-
-* Running requests
-* Waiting requests
-* KV cache usage
-* Token-related metrics where available
-
-### GPU
-
-* GPU utilization
-* VRAM used/free
-* Temperature
-* Power usage
-
-### Current Grafana Status
-
-Grafana Cloud monitoring is configured and the BeamData dashboard has been built using the Prometheus data source connected through Grafana Private Datasource Connect (PDC).
-
-The dashboard includes:
-
-### GPU
-
-* GPU utilization
-* GPU VRAM
-* GPU power
-* GPU temperature
-
-### vLLM
-
-* Running requests
-* Waiting requests
-* KV cache usage
-* Generation throughput
-
-The Grafana Cloud Prometheus datasource successfully queried the Kubernetes Prometheus API through the PDC network.
-
-Current monitoring status:
-
-```text
-Grafana dashboard: COMPLETE
-Prometheus monitoring: COMPLETE
-DCGM monitoring: COMPLETE
-Grafana Cloud / PDC connection: COMPLETE
-```
-
----
-
-# 22. Port / Access Structure
-
-The current local port-forward setup used during development and benchmarking is:
-
-```text
-8001 → vLLM
-8002 → V8.4 FastAPI
-9091 → Prometheus
-3000 → Grafana
-```
-
-The first three ports are independent of Grafana:
-
-```text
-8001 = vLLM
-8002 = V8.4 API
-9091 = Prometheus
-3000 = Grafana
-```
-
-These ports should not be confused with Kubernetes service ports.
-
----
-
-# 23. AI Hub
-
-The project architecture allows the V8.4 API to be integrated with AI Hub.
-
-However, **AI Hub integration has not yet been independently verified as completed**.
-
-Therefore it should currently be documented as:
-
-```text
-AI Hub integration: Not verified / pending final confirmation
-```
-
-The model/API/Kubernetes deployment itself is already completed.
-
----
-
-# 24. Validation Completed
-
-The final V8.4 implementation was checked using:
-
-```text
-Python syntax validation
-git diff --check
-API health checks
-Kubernetes deployment checks
-vLLM health checks
-Prometheus target checks
-DCGM exporter checks
-End-to-end API benchmarking
-GPU monitoring benchmark
-```
-
-Completed status:
-
-```text
-Python syntax validation: Passed
-git diff --check: Passed
-API health: Passed
-vLLM deployment: Passed
-Kubernetes deployment: Passed
-Prometheus target: UP
-DCGM target: UP
-API benchmark: Passed
-GPU monitoring: Passed
-```
-
----
-
-# 25. Final Git Status
-
-Final model checkpoint:
-
-```text
-Version: V8.4
-Branch: hybrid-v8
-Status: Completed and pushed
-```
-
-Docker image:
+The container image used for the V8.4 API is:
 
 ```text
 shahad09/beamdata-v8-api:v8.4
@@ -1066,125 +637,230 @@ shahad09/beamdata-v8-api:v8.4
 
 ---
 
-# 26. Overall Project Completion Status
+# 22. Kubernetes Infrastructure
 
-| Workstream             | Status               |
-| ---------------------- | -------------------- |
-| Dataset preparation    | Complete             |
-| Evaluation dataset     | Complete             |
-| Human annotations      | Complete             |
-| Saudi Skills Taxonomy  | Complete             |
-| Evaluation methodology | Complete             |
-| Baseline retrieval     | Complete             |
-| Improved retrieval     | Complete             |
-| V8 experiments         | Complete             |
-| Final V8.4 pipeline    | Complete             |
-| FastAPI API            | Complete             |
-| Docker image           | Complete             |
-| Kubernetes deployment  | Complete             |
-| Qwen/vLLM deployment   | Complete             |
-| API benchmarking       | Complete             |
-| GPU monitoring         | Complete             |
-| DCGM Exporter          | Complete             |
-| Prometheus             | Complete             |
-| Grafana deployment     | Complete             |
-| Grafana dashboard      | Complete             |
-| AI Hub integration     | **Not yet verified** |
-| Final documentation    | In progress          |
-| Final presentation     | In progress          |
-
----
-
-# 27. Final Technical Architecture
-
-The complete project can be represented as:
+The project was deployed in a Kubernetes environment with separate services for:
 
 ```text
-                         ┌──────────────────────┐
-                         │   Learning Content   │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │  Content Extraction  │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │   Qwen Tagging       │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ Semantic Summarizing │
-                         └──────────┬───────────┘
-                                    │
-                         ┌──────────┴───────────┐
-                         ▼                      ▼
-                ┌────────────────┐     ┌────────────────┐
-                │ E5 Retrieval   │     │ Lexical Search │
-                └───────┬────────┘     └───────┬────────┘
-                        │                      │
-                        └──────────┬───────────┘
-                                   ▼
-                         ┌──────────────────────┐
-                         │ Candidate Aggregation│
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │   Qwen Reranking     │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ Saudi Skills         │
-                         │ Taxonomy Mapping     │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ Structured Results   │
-                         └──────────────────────┘
-
-
-Deployment / Infrastructure:
-
-              Docker
-                 │
-                 ▼
-             Kubernetes
-                 │
-        ┌────────┴─────────┐
-        ▼                  ▼
-   FastAPI V8.4         vLLM
-        │                  │
-        │                  ▼
-        │             Qwen 7B AWQ
-        │                  │
-        └─────────┬────────┘
-                  ▼
-             RTX A6000
-
-
-Monitoring:
-
- RTX A6000 ──► DCGM Exporter ──► Prometheus ──► Grafana
-                                      ▲
-                                      │
-                                    vLLM
-                                      ▲
-                                      │
-                                  V8.4 API
+V8.4 FastAPI
+vLLM model serving
+Monitoring
 ```
+
+The deployment uses GPU-backed inference on an NVIDIA RTX A6000.
+
+The infrastructure work includes:
+
+* Docker containerization
+* FastAPI serving
+* Kubernetes deployment
+* GPU-backed vLLM serving
+* Service exposure
+* Health checks
+* End-to-end API testing
 
 ---
 
-# 28. Final Results Summary
+# 23. Benchmarking
 
-The project has completed the major technical stages from dataset preparation through AI model development, deployment, benchmarking, and GPU monitoring.
+The deployed V8.4 API was tested at multiple concurrency levels.
 
-The final V8.4 competency results are:
+The authoritative benchmark contained:
+
+```text
+Total requests: 48
+Successful requests: 43
+Errors: 5
+Overall error rate: 10.42%
+```
+
+The highest observed throughput in the recorded benchmark was:
+
+```text
+0.1783 requests/second
+```
+
+at concurrency 8.
+
+A controlled monitoring run at concurrency 4 completed:
+
+```text
+12 / 12 successful requests
+Average latency: 20.499 seconds
+Throughput: 0.1700 requests/second
+```
+
+These are **serving-performance measurements**, not model-quality metrics.
+
+---
+
+# 24. GPU and Model Monitoring
+
+The monitoring architecture is:
+
+```text
+NVIDIA GPU
+    ↓
+DCGM Exporter
+    ↓
+Prometheus
+    ↓
+Grafana
+```
+
+vLLM metrics are also collected through Prometheus.
+
+The monitoring setup covers:
+
+### GPU
+
+* GPU utilization
+* GPU memory usage
+* GPU temperature
+* GPU power
+
+### vLLM
+
+* Running requests
+* Waiting requests
+* KV-cache usage
+* Generation throughput
+* Token-level serving metrics where available
+
+---
+
+# 25. Monitoring Results
+
+During the controlled monitoring benchmark, the following maximum/observed values were recorded:
+
+| Metric                |       Observed |
+| --------------------- | -------------: |
+| GPU utilization       |       **100%** |
+| GPU VRAM used         | **42,821 MiB** |
+| GPU power             |  **297.104 W** |
+| KV-cache usage        |     **43.30%** |
+| vLLM running requests |          **2** |
+| vLLM waiting requests |          **0** |
+
+The monitoring stack successfully exposed GPU and vLLM metrics through Prometheus and Grafana.
+
+---
+
+# 26. Grafana
+
+The monitoring dashboard provides visibility into:
+
+```text
+API / serving behavior
+GPU utilization
+GPU memory
+GPU power
+GPU temperature
+vLLM request activity
+KV-cache usage
+Generation throughput
+```
+
+Grafana Cloud / Private Datasource Connect was also configured for remote monitoring of the Prometheus data.
+
+---
+
+# 27. Repository Structure
+
+The repository contains the major components of the project:
+
+```text
+CONTENT-TAGGING-COMPETENCY-MAPPING-Team-6-
+│
+├── Model/
+│   ├── v8/
+│   │   ├── API / model pipeline
+│   │   ├── retrieval
+│   │   ├── evaluation
+│   │   └── results
+│   │
+│   ├── evaluation_data/
+│   └── saudi_skills_taxonomy_v1_final.csv
+│
+├── Infrastructure/
+│   └── k8s/
+│       ├── vLLM deployment
+│       └── V8.4 API deployment
+│
+├── Infrastructure_Benchmark/
+│   ├── benchmarking scripts
+│   ├── benchmark reports
+│   └── benchmark results
+│
+├── Dockerfile
+└── README.md
+```
+
+The repository contains multiple experiment artifacts because the project was developed iteratively across several model and retrieval configurations.
+
+---
+
+# 28. Important Evaluation Files
+
+The main finalized evaluation artifacts are:
+
+```text
+ground_truth_key_freezed.csv
+```
+
+Final content-level ground truth for the 12 evaluation files.
+
+```text
+competency_gold_labels_final.csv
+```
+
+Final **34 validated competency mappings** used for competency evaluation.
+
+```text
+saudi_skills_taxonomy_v1_final.csv
+```
+
+Final **134-entry Saudi Skills Taxonomy**.
+
+```text
+embedding_e5_domain_aware_results.csv
+```
+
+Final domain-aware E5 Top-5 retrieval output.
+
+```text
+embedding_e5_final_evaluation_per_file.csv
+```
+
+Per-file final E5 competency evaluation.
+
+```text
+embedding_e5_final_evaluation_summary.csv
+```
+
+Aggregate final E5 competency evaluation metrics.
+
+---
+
+# 29. Final Project Results
+
+The project produced results at both the AI-quality and infrastructure levels.
+
+## Final E5 competency retrieval
+
+```text
+12 evaluation files
+34 validated competency mappings
+60 Top-5 retrieval results
+
+Hit@1:       83.33%
+Hit@3:      100.00%
+Hit@5:      100.00%
+Recall@5:    81.25%
+MRR:         90.28%
+```
+
+## Earlier V8.4 end-to-end evaluation
 
 ```text
 Macro F1:       39.17%
@@ -1193,88 +869,92 @@ Recall@10:      31.25%
 Hit Rate@10:    91.67%
 ```
 
-The deployed API achieved:
+## Infrastructure benchmark
 
 ```text
-43 / 48 successful benchmark requests
-5 errors
+48 total requests
+43 successful
 10.42% overall error rate
-Successful runs at concurrency 1, 4, and 8
+0.1783 req/s maximum recorded throughput
 ```
 
-The monitoring stack successfully captured:
-
-```text
-100% maximum GPU utilization
-42,821 MiB maximum VRAM used
-297.104 W maximum GPU power
-vLLM running/waiting request metrics
-KV cache metrics
-```
-Freezed the Infrastructure_Benchmark/report CSV.
----
-
-# 29. Remaining Final Tasks
-
-The remaining work is primarily finalization rather than another model-development cycle:
-
-1. Confirm whether the AI Hub integration has been completed.
-2. Finalize the README and project documentation.
-3. Prepare the final presentation and demonstration.
-
-The final evaluated model remains **V8.4**. No additional model version is currently required for the completed benchmark.
+These metrics describe different stages of the project and should not be treated as interchangeable.
 
 ---
 
-# 30. Final Project Status
+# 30. Project Status
+
+| Workstream              | Status                     |
+| ----------------------- | -------------------------- |
+| Evaluation dataset      | Complete                   |
+| Topic ground truth      | Complete                   |
+| Competency ground truth | Complete                   |
+| 34 validated mappings   | Complete                   |
+| 134-entry taxonomy      | Complete                   |
+| E5 retrieval evaluation | Complete                   |
+| V8.4 model checkpoint   | Complete                   |
+| Docker deployment       | Complete                   |
+| FastAPI service         | Complete                   |
+| Kubernetes deployment   | Complete                   |
+| vLLM / Qwen serving     | Complete                   |
+| API benchmarking        | Complete                   |
+| GPU monitoring          | Complete                   |
+| DCGM Exporter           | Complete                   |
+| Prometheus              | Complete                   |
+| Grafana dashboard       | Complete                   |
+| Grafana Cloud / PDC     | Complete                   |
+| AI Hub integration      | Pending final verification |
+| Final documentation     | In progress                |
+| Final presentation      | In progress                |
+
+---
+
+# 31. Final Technical Summary
+
+This project demonstrates an end-to-end approach to **AI-assisted learning-content tagging and competency mapping**.
+
+The system combines:
 
 ```text
-PROJECT: Content Tagging & Competency Mapping
-
-FINAL MODEL:
-V8.4
-
-FINAL BRANCH:
-hybrid-v8
-
-DATASET / EVALUATION:
-Complete
-
-MODEL / PIPELINE:
-Complete
-
-DOCKER:
-Complete
-
-KUBERNETES:
-Complete
-
-vLLM / QWEN:
-Complete
-
-API:
-Complete
-
-BENCHMARK:
-Complete
-
-GPU MONITORING:
-Complete
-
-PROMETHEUS:
-Complete
-
-GRAFANA:
-Dashboard complete
-
-GRAFANA CLOUD / PDC:
-Complete
-
-AI HUB:
-Not yet verified
-
-FINAL PRESENTATION:
-Pending
+Learning-content processing
+        +
+AI topic understanding
+        +
+Semantic competency retrieval
+        +
+Lexical retrieval experiments
+        +
+Taxonomy-based candidate generation
+        +
+Structured competency output
+        +
+Human-reviewed evaluation
+        +
+GPU-backed API deployment
+        +
+Kubernetes
+        +
+Monitoring
 ```
 
+The final evaluation package is based on:
 
+```text
+12 learning-content files
+34 validated competency mappings
+134 taxonomy entries
+```
+
+The final domain-aware E5 retrieval evaluation achieved:
+
+```text
+Hit@1:    83.33%
+Hit@3:   100.00%
+Hit@5:   100.00%
+Recall@5: 81.25%
+MRR:      90.28%
+```
+
+The project also progressed from model experimentation to a containerized, GPU-backed V8.4 service with Kubernetes deployment, benchmarking, Prometheus monitoring, DCGM GPU metrics, and Grafana visualization.
+
+**Final evaluated end-to-end checkpoint: V8.4**
